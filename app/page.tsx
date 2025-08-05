@@ -13,6 +13,7 @@ import swsh from "../public/data/swsh.json";
 import xy from "../public/data/xy.json";
 
 import Card from "../components/Card";
+import FilterableCardList from "@/components/FilterableCardList";
 
 const allCards: CardData[] = [
   ...base,
@@ -99,20 +100,11 @@ const PokemonTCGApp = () => {
     setCardInventory(removedCards);
   }
 
-  const cards = cardData.map((card: CardData) => {
-    const isAdded =
-      cardInventory.filter((inventoryCard) => inventoryCard.id === card.id)
-        .length > 0;
-    return (
-      <Card
-        card={card}
-        isAdded={isAdded}
-        setModalImage={setModalImage}
-        addCardToInventory={addCardToInventory}
-        removeCardFromInventory={removeCardFromInventory}
-      />
-    );
-  });
+  function importCardInventory() {}
+
+  function exportCardInventory() {}
+
+  function addComment() {}
 
   const inventoryCards = cardInventory.map((card) => {
     return (
@@ -194,12 +186,18 @@ const PokemonTCGApp = () => {
           <button onClick={() => filterData()}>Search</button>
         </div>
       </div>
-      <div
-        className="card-list search-cards"
-        style={{ margin: "0 10px 0 10px", flex: 1, overflow: "auto" }}
-      >
-        {cards}
-      </div>
+      <FilterableCardList
+        cardInventory={cardInventory}
+        cardData={cardData}
+        setSearchFilter={setSearchFilter}
+        setSortCategory={setSortCategory}
+        importCardInventory={importCardInventory}
+        exportCardInventory={exportCardInventory}
+        addCardToInventory={addCardToInventory}
+        removeCardFromInventory={removeCardFromInventory}
+        setModalImage={setModalImage}
+        addComment={addComment}
+      />
       <div className={`inventory-panel${inventoryOpen ? "" : " closed"}`}>
         <button
           className="inventory-toggle"
