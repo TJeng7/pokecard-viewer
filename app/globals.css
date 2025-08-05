@@ -186,3 +186,7 @@ h1 {
   padding: 2px 12px;
   font-family: "Comic Sans MS";
 }
+
+.pages {
+  display: flex;
+}

@@ -1,6 +1,8 @@
+import React from "react";
 import Card from "./Card";
 
 type FilterableCardListProps = {
+  currPage: string;
   cardInventory: InventoryCard[];
   cardData: CardData[];
   setSearchFilter: any;
@@ -14,6 +16,7 @@ type FilterableCardListProps = {
 };
 
 export default function FilterableCardList({
+  currPage,
   cardInventory,
   cardData,
   setSearchFilter,
@@ -25,20 +28,22 @@ export default function FilterableCardList({
   setModalImage,
   addComment,
 }: FilterableCardListProps) {
-  const cards = cardData.map((card: CardData) => {
-    const isAdded =
-      cardInventory.filter((inventoryCard) => inventoryCard.id === card.id)
-        .length > 0;
-    return (
-      <Card
-        card={card}
-        isAdded={isAdded}
-        setModalImage={setModalImage}
-        addCardToInventory={addCardToInventory}
-        removeCardFromInventory={removeCardFromInventory}
-      />
-    );
-  });
+  const cards = (currPage === "Search" ? cardData : cardInventory).map(
+    (card: CardData) => {
+      const isAdded =
+        cardInventory.filter((inventoryCard) => inventoryCard.id === card.id)
+          .length > 0;
+      return (
+        <Card
+          card={card}
+          isAdded={isAdded}
+          setModalImage={setModalImage}
+          addCardToInventory={addCardToInventory}
+          removeCardFromInventory={removeCardFromInventory}
+        />
+      );
+    }
+  );
 
   return (
     <div
