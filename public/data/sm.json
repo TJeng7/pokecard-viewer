@@ -1503,7 +1503,8 @@
       "small": "https://images.pokemontcg.io/sm1/136.png",
       "large": "https://images.pokemontcg.io/sm1/136_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-137",
@@ -1513,7 +1514,8 @@
       "small": "https://images.pokemontcg.io/sm1/137.png",
       "large": "https://images.pokemontcg.io/sm1/137_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-138",
@@ -1787,7 +1789,8 @@
       "small": "https://images.pokemontcg.io/sm1/162.png",
       "large": "https://images.pokemontcg.io/sm1/162_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-163",
@@ -1797,7 +1800,8 @@
       "small": "https://images.pokemontcg.io/sm1/163.png",
       "large": "https://images.pokemontcg.io/sm1/163_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-164",
@@ -1807,7 +1811,8 @@
       "small": "https://images.pokemontcg.io/sm1/164.png",
       "large": "https://images.pokemontcg.io/sm1/164_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-165",
@@ -1817,7 +1822,8 @@
       "small": "https://images.pokemontcg.io/sm1/165.png",
       "large": "https://images.pokemontcg.io/sm1/165_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-166",
@@ -1827,7 +1833,8 @@
       "small": "https://images.pokemontcg.io/sm1/166.png",
       "large": "https://images.pokemontcg.io/sm1/166_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-167",
@@ -1837,7 +1844,8 @@
       "small": "https://images.pokemontcg.io/sm1/167.png",
       "large": "https://images.pokemontcg.io/sm1/167_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-168",
@@ -1847,7 +1855,8 @@
       "small": "https://images.pokemontcg.io/sm1/168.png",
       "large": "https://images.pokemontcg.io/sm1/168_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-169",
@@ -1857,7 +1866,8 @@
       "small": "https://images.pokemontcg.io/sm1/169.png",
       "large": "https://images.pokemontcg.io/sm1/169_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-170",
@@ -1867,7 +1877,8 @@
       "small": "https://images.pokemontcg.io/sm1/170.png",
       "large": "https://images.pokemontcg.io/sm1/170_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-171",
@@ -1877,7 +1888,8 @@
       "small": "https://images.pokemontcg.io/sm1/171.png",
       "large": "https://images.pokemontcg.io/sm1/171_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm1-172",
@@ -1887,7 +1899,8 @@
       "small": "https://images.pokemontcg.io/sm1/172.png",
       "large": "https://images.pokemontcg.io/sm1/172_hires.png"
     },
-    "series": "Sun & Moon"
+    "series": "Sun & Moon",
+    "artist": null
   },
   {
     "id": "sm10-1",
@@ -4009,7 +4022,8 @@
       "small": "https://images.pokemontcg.io/sm10/190.png",
       "large": "https://images.pokemontcg.io/sm10/190_hires.png"
     },
-    "series": "Unbroken Bonds"
+    "series": "Unbroken Bonds",
+    "artist": null
   },
   {
     "id": "sm10-191",
@@ -4503,7 +4517,8 @@
       "small": "https://images.pokemontcg.io/sm10/234.png",
       "large": "https://images.pokemontcg.io/sm10/234_hires.png"
     },
-    "series": "Unbroken Bonds"
+    "series": "Unbroken Bonds",
+    "artist": null
   },
   {
     "id": "sm11-1",
@@ -6867,7 +6882,8 @@
       "small": "https://images.pokemontcg.io/sm11/212.png",
       "large": "https://images.pokemontcg.io/sm11/212_hires.png"
     },
-    "series": "Unified Minds"
+    "series": "Unified Minds",
+    "artist": null
   },
   {
     "id": "sm11-213",
@@ -6877,7 +6893,8 @@
       "small": "https://images.pokemontcg.io/sm11/213.png",
       "large": "https://images.pokemontcg.io/sm11/213_hires.png"
     },
-    "series": "Unified Minds"
+    "series": "Unified Minds",
+    "artist": null
   },
   {
     "id": "sm11-214",
@@ -7360,7 +7377,8 @@
       "small": "https://images.pokemontcg.io/sm11/257.png",
       "large": "https://images.pokemontcg.io/sm11/257_hires.png"
     },
-    "series": "Unified Minds"
+    "series": "Unified Minds",
+    "artist": null
   },
   {
     "id": "sm11-258",
@@ -7370,7 +7388,8 @@
       "small": "https://images.pokemontcg.io/sm11/258.png",
       "large": "https://images.pokemontcg.io/sm11/258_hires.png"
     },
-    "series": "Unified Minds"
+    "series": "Unified Minds",
+    "artist": null
   },
   {
     "id": "sm115-1",
@@ -10438,7 +10457,8 @@
       "small": "https://images.pokemontcg.io/sm12/209.png",
       "large": "https://images.pokemontcg.io/sm12/209_hires.png"
     },
-    "series": "Cosmic Eclipse"
+    "series": "Cosmic Eclipse",
+    "artist": null
   },
   {
     "id": "sm12-210",
@@ -11119,7 +11139,8 @@
       "small": "https://images.pokemontcg.io/sm12/271.png",
       "large": "https://images.pokemontcg.io/sm12/271_hires.png"
     },
-    "series": "Cosmic Eclipse"
+    "series": "Cosmic Eclipse",
+    "artist": null
   },
   {
     "id": "sm2-1",
@@ -13065,7 +13086,8 @@
       "small": "https://images.pokemontcg.io/sm2/166.png",
       "large": "https://images.pokemontcg.io/sm2/166_hires.png"
     },
-    "series": "Guardians Rising"
+    "series": "Guardians Rising",
+    "artist": null
   },
   {
     "id": "sm2-167",
@@ -13075,7 +13097,8 @@
       "small": "https://images.pokemontcg.io/sm2/167.png",
       "large": "https://images.pokemontcg.io/sm2/167_hires.png"
     },
-    "series": "Guardians Rising"
+    "series": "Guardians Rising",
+    "artist": null
   },
   {
     "id": "sm2-168",
@@ -13085,7 +13108,8 @@
       "small": "https://images.pokemontcg.io/sm2/168.png",
       "large": "https://images.pokemontcg.io/sm2/168_hires.png"
     },
-    "series": "Guardians Rising"
+    "series": "Guardians Rising",
+    "artist": null
   },
   {
     "id": "sm2-169",
@@ -13095,7 +13119,8 @@
       "small": "https://images.pokemontcg.io/sm2/169.png",
       "large": "https://images.pokemontcg.io/sm2/169_hires.png"
     },
-    "series": "Guardians Rising"
+    "series": "Guardians Rising",
+    "artist": null
   },
   {
     "id": "sm3-1",
@@ -15019,7 +15044,8 @@
       "small": "https://images.pokemontcg.io/sm3/167.png",
       "large": "https://images.pokemontcg.io/sm3/167_hires.png"
     },
-    "series": "Burning Shadows"
+    "series": "Burning Shadows",
+    "artist": null
   },
   {
     "id": "sm3-168",
@@ -15029,7 +15055,8 @@
       "small": "https://images.pokemontcg.io/sm3/168.png",
       "large": "https://images.pokemontcg.io/sm3/168_hires.png"
     },
-    "series": "Burning Shadows"
+    "series": "Burning Shadows",
+    "artist": null
   },
   {
     "id": "sm3-169",
@@ -15039,7 +15066,8 @@
       "small": "https://images.pokemontcg.io/sm3/169.png",
       "large": "https://images.pokemontcg.io/sm3/169_hires.png"
     },
-    "series": "Burning Shadows"
+    "series": "Burning Shadows",
+    "artist": null
   },
   {
     "id": "sm35-1",
@@ -15819,7 +15847,8 @@
       "small": "https://images.pokemontcg.io/sm35/69.png",
       "large": "https://images.pokemontcg.io/sm35/69_hires.png"
     },
-    "series": "Shining Legends"
+    "series": "Shining Legends",
+    "artist": null
   },
   {
     "id": "sm35-70",
@@ -15829,7 +15858,8 @@
       "small": "https://images.pokemontcg.io/sm35/70.png",
       "large": "https://images.pokemontcg.io/sm35/70_hires.png"
     },
-    "series": "Shining Legends"
+    "series": "Shining Legends",
+    "artist": null
   },
   {
     "id": "sm35-71",
@@ -17049,7 +17079,8 @@
       "small": "https://images.pokemontcg.io/sm4/100.png",
       "large": "https://images.pokemontcg.io/sm4/100_hires.png"
     },
-    "series": "Crimson Invasion"
+    "series": "Crimson Invasion",
+    "artist": null
   },
   {
     "id": "sm4-101",
@@ -17290,7 +17321,8 @@
       "small": "https://images.pokemontcg.io/sm4/122.png",
       "large": "https://images.pokemontcg.io/sm4/122_hires.png"
     },
-    "series": "Crimson Invasion"
+    "series": "Crimson Invasion",
+    "artist": null
   },
   {
     "id": "sm4-123",
@@ -17300,7 +17332,8 @@
       "small": "https://images.pokemontcg.io/sm4/123.png",
       "large": "https://images.pokemontcg.io/sm4/123_hires.png"
     },
-    "series": "Crimson Invasion"
+    "series": "Crimson Invasion",
+    "artist": null
   },
   {
     "id": "sm4-124",
@@ -17310,7 +17343,8 @@
       "small": "https://images.pokemontcg.io/sm4/124.png",
       "large": "https://images.pokemontcg.io/sm4/124_hires.png"
     },
-    "series": "Crimson Invasion"
+    "series": "Crimson Invasion",
+    "artist": null
   },
   {
     "id": "sm5-1",
@@ -18849,7 +18883,8 @@
       "small": "https://images.pokemontcg.io/sm5/136.png",
       "large": "https://images.pokemontcg.io/sm5/136_hires.png"
     },
-    "series": "Ultra Prism"
+    "series": "Ultra Prism",
+    "artist": null
   },
   {
     "id": "sm5-137",
@@ -18859,7 +18894,8 @@
       "small": "https://images.pokemontcg.io/sm5/137.png",
       "large": "https://images.pokemontcg.io/sm5/137_hires.png"
     },
-    "series": "Ultra Prism"
+    "series": "Ultra Prism",
+    "artist": null
   },
   {
     "id": "sm5-138",
@@ -18869,7 +18905,8 @@
       "small": "https://images.pokemontcg.io/sm5/138.png",
       "large": "https://images.pokemontcg.io/sm5/138_hires.png"
     },
-    "series": "Ultra Prism"
+    "series": "Ultra Prism",
+    "artist": null
   },
   {
     "id": "sm5-139",
@@ -19231,7 +19268,8 @@
       "small": "https://images.pokemontcg.io/sm5/170.png",
       "large": "https://images.pokemontcg.io/sm5/170_hires.png"
     },
-    "series": "Ultra Prism"
+    "series": "Ultra Prism",
+    "artist": null
   },
   {
     "id": "sm5-171",
@@ -19241,7 +19279,8 @@
       "small": "https://images.pokemontcg.io/sm5/171.png",
       "large": "https://images.pokemontcg.io/sm5/171_hires.png"
     },
-    "series": "Ultra Prism"
+    "series": "Ultra Prism",
+    "artist": null
   },
   {
     "id": "sm5-172",
@@ -20593,7 +20632,8 @@
       "small": "https://images.pokemontcg.io/sm6/117.png",
       "large": "https://images.pokemontcg.io/sm6/117_hires.png"
     },
-    "series": "Forbidden Light"
+    "series": "Forbidden Light",
+    "artist": null
   },
   {
     "id": "sm6-118",
@@ -20603,7 +20643,8 @@
       "small": "https://images.pokemontcg.io/sm6/118.png",
       "large": "https://images.pokemontcg.io/sm6/118_hires.png"
     },
-    "series": "Forbidden Light"
+    "series": "Forbidden Light",
+    "artist": null
   },
   {
     "id": "sm6-119",
@@ -20910,7 +20951,8 @@
       "small": "https://images.pokemontcg.io/sm6/146.png",
       "large": "https://images.pokemontcg.io/sm6/146_hires.png"
     },
-    "series": "Forbidden Light"
+    "series": "Forbidden Light",
+    "artist": null
   },
   {
     "id": "sm7-1",
@@ -22603,7 +22645,8 @@
       "small": "https://images.pokemontcg.io/sm7/151.png",
       "large": "https://images.pokemontcg.io/sm7/151_hires.png"
     },
-    "series": "Celestial Storm"
+    "series": "Celestial Storm",
+    "artist": null
   },
   {
     "id": "sm7-152",
@@ -22965,7 +23008,8 @@
       "small": "https://images.pokemontcg.io/sm7/183.png",
       "large": "https://images.pokemontcg.io/sm7/183_hires.png"
     },
-    "series": "Celestial Storm"
+    "series": "Celestial Storm",
+    "artist": null
   },
   {
     "id": "sm75-1",
@@ -26022,7 +26066,8 @@
       "small": "https://images.pokemontcg.io/sm8/194.png",
       "large": "https://images.pokemontcg.io/sm8/194_hires.png"
     },
-    "series": "Lost Thunder"
+    "series": "Lost Thunder",
+    "artist": null
   },
   {
     "id": "sm8-195",
@@ -31598,7 +31643,8 @@
       "small": "https://images.pokemontcg.io/smp/SM170.png",
       "large": "https://images.pokemontcg.io/smp/SM170_hires.png"
     },
-    "series": "SM Black Star Promos"
+    "series": "SM Black Star Promos",
+    "artist": null
   },
   {
     "id": "smp-SM171",

@@ -1,18 +1,40 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Divider from "@mui/material/Divider";
+import base from "../public/data/base.json";
+import bw from "../public/data/bw.json";
+import dp from "../public/data/dp.json";
+import ex from "../public/data/ex.json";
+import pop from "../public/data/pop.json";
+import sm from "../public/data/sm.json";
+import sv from "../public/data/sv.json";
+import swsh from "../public/data/swsh.json";
+import xy from "../public/data/xy.json";
+
+const allCards: CardData[] = [
+  ...base,
+  ...bw,
+  ...dp,
+  ...ex,
+  ...pop,
+  ...sm,
+  ...sv,
+  ...swsh,
+  ...xy,
+];
 
 // List your file options manually or fetch from an API if you want it dynamic
-const setOptions = [
-  { label: "Scarlet & Violet", value: "sv_full_trim.json" },
-  { label: "Sword & Shield", value: "swsh_full_trim.json" },
-  { label: "Sun & Moon", value: "sm_full_trim.json" },
-  { label: "X & Y", value: "xy_full_trim.json" },
-  { label: "Black & White", value: "bw_full_trim.json" },
-  { label: "Diamond & Pearl", value: "dp_full_trim.json" },
-  { label: "Pop Series", value: "pop_full_trim.json" },
-  { label: "EX", value: "ex_full_trim.json" },
-  { label: "Base Set", value: "base_full_trim.json" },
+const setOptions: SetOption[] = [
+  { label: "Scarlet & Violet", data: sv },
+  { label: "Sword & Shield", data: swsh },
+  { label: "Sun & Moon", data: sm },
+  { label: "X & Y", data: xy },
+  { label: "Black & White", data: bw },
+  { label: "Diamond & Pearl", data: dp },
+  { label: "Pop Series", data: pop },
+  { label: "EX", data: ex },
+  { label: "Base Set", data: base },
+  { label: "All Sets", data: allCards },
   // Add more files here as needed
 ];
 
@@ -21,34 +43,36 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    set: setOptions[0].value,
+    set: setOptions[0].label,
   });
-  const [selectedSet, setSelectedSet] = useState(setOptions[0].value);
   const [cardInventory, setCardInventory] = useState<InventoryCard[]>([]);
   const [inventoryOpen, setInventoryOpen] = useState<boolean>(true);
   const [modalImage, setModalImage] = useState<string | null>(null);
   const [cardData, setCardData] = useState<CardData[]>([]);
 
   useEffect(() => {
-    fetch(`/data/${selectedSet}`)
-      .then((res) => res.json())
-      .then((fileData) => {
-        setCardData(
-          fileData.filter(
-            (card: CardData) =>
-              card.name
-                ?.toLowerCase()
-                .includes(searchTerm.name.toLowerCase()) ||
-              card.rarity
-                ?.toLowerCase()
-                .includes(searchTerm.rarity.toLowerCase()) ||
-              card.artist
-                ?.toLowerCase()
-                .includes(searchTerm.artist.toLowerCase())
-          )
-        );
-      });
-  }, [selectedSet, searchTerm]);
+    const selectedSetData: CardData[] = setOptions.filter((set) => {
+      return set.label === searchTerm.set;
+    })[0].data;
+
+    const filteredData: CardData[] = selectedSetData.filter((card) => {
+      const nameMatch =
+        searchTerm.name === "" ||
+        card.name.toLowerCase() === searchTerm.name.toLowerCase();
+      const artistMatch =
+        searchTerm.artist === "" ||
+        card.artist?.toLowerCase() === searchTerm.artist.toLowerCase();
+      const rarityMatch =
+        searchTerm.rarity === "" ||
+        card.rarity?.toLowerCase() === searchTerm.rarity.toLowerCase();
+
+      if (nameMatch && artistMatch && rarityMatch) {
+        return card;
+      }
+    });
+
+    setCardData(filteredData);
+  }, [searchTerm]);
 
   function addCard(toAdd: CardData) {
     if (cardInventory.filter((card) => card.id === toAdd.id).length > 0) {
@@ -96,23 +120,27 @@ const PokemonTCGApp = () => {
     );
   });
 
-  const inventoryCards = cardInventory.map((card) => (
-    <div key={card.id} className="card">
-      <img
-        src={card.images?.small}
-        alt={card.name}
-        style={{ cursor: "pointer" }}
-        onClick={() => setModalImage(card.images?.large || card.images?.small)}
-      />
-      <div className="card-details">
-        <div className="card-name">{card.name || "Unknown Name"}</div>
-        <div>{card.rarity || "Unknown Rarity"}</div>
-        <div>{card.artist || "Unknown Artist"}</div>
-        <div>{card.series || "Unknown Series"}</div>
+  const inventoryCards = cardInventory.map((card) => {
+    return (
+      <div key={card.id} className="card">
+        <img
+          src={card.images?.small}
+          alt={card.name}
+          style={{ cursor: "pointer" }}
+          onClick={() =>
+            setModalImage(card.images?.large || card.images?.small)
+          }
+        />
+        <div className="card-details">
+          <div className="card-name">{card.name || "Unknown Name"}</div>
+          <div>{card.rarity || "Unknown Rarity"}</div>
+          <div>{card.artist || "Unknown Artist"}</div>
+          <div>{card.series || "Unknown Series"}</div>
+        </div>
+        <button onClick={() => removeCard(card)}>Remove from Inventory</button>
       </div>
-      <button onClick={() => removeCard(card)}>Remove from Inventory</button>
-    </div>
-  ));
+    );
+  });
 
   return (
     <div className="main vertical-layout">
@@ -150,8 +178,15 @@ const PokemonTCGApp = () => {
             }}
           />
           <select
-            value={selectedSet}
-            onChange={(e) => setSelectedSet(e.target.value)}
+            value={searchTerm.set}
+            onChange={(e) =>
+              setSearchTerm({
+                name: searchTerm.name,
+                artist: searchTerm.artist,
+                rarity: searchTerm.rarity,
+                set: e.target.value,
+              })
+            }
             style={{
               fontSize: "1.1rem",
               padding: "2px 12px",
@@ -160,8 +195,8 @@ const PokemonTCGApp = () => {
           >
             {setOptions.map((opt) => (
               <option
-                key={opt.value}
-                value={opt.value}
+                key={opt.label}
+                value={opt.label}
                 style={{ fontFamily: "Comic Sans MS" }}
               >
                 {opt.label}

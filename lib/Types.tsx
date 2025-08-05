@@ -3,13 +3,13 @@
 type CardData = {
   id: string;
   name: string;
-  artist: string;
-  rarity: string;
+  artist: string | null;
+  rarity: string | null;
   images: {
     small: string;
     large: string;
   };
-  series: string;
+  series: string | null;
 };
 
 type CardComment = {
@@ -21,13 +21,13 @@ type CardComment = {
 type InventoryCard = {
   id: string;
   name: string;
-  artist: string;
-  rarity: string;
+  artist: string | null;
+  rarity: string | null;
   images: {
     small: string;
     large: string;
   };
-  series: string;
+  series: string | null;
   comments: CardComment[];
 };
 
@@ -36,4 +36,9 @@ type SearchTerm = {
   artist: string;
   rarity: string;
   set: string;
+};
+
+type SetOption = {
+  label: string;
+  data: CardData[];
 };
