@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Trash2, Plus, Search } from 'lucide-react';
 import data from '../data.json'
+import Divider from '@mui/material/Divider';
 
 const PokemonTCGApp = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -9,6 +10,7 @@ const PokemonTCGApp = () => {
     return card.name?.toLowerCase().includes(searchTerm.toLowerCase()) || card.rarity?.toLowerCase().includes(searchTerm.toLowerCase()) || card.artist?.toLowerCase().includes(searchTerm.toLowerCase())
   })
   const [cardInventory, setCardInventory] = useState([]);
+  const [inventoryOpen, setInventoryOpen] = useState(true);
 
   function addCard(toAdd) {
     // Don't add card if already added
@@ -25,11 +27,8 @@ const PokemonTCGApp = () => {
   }
 
   function removeCard(toRemove) {
-    const removedCards = cardInventory.filter((card) => {
-      card.id !== toRemove.id
-    })
-
-    setCardInventory(removedCards)
+    const removedCards = cardInventory.filter((card) => card.id !== toRemove.id);
+    setCardInventory(removedCards);
   }
 
   const cards = cardData.map((card) => {
@@ -76,7 +75,10 @@ const PokemonTCGApp = () => {
             {card.name || 'Unknown'}
           </div>
           <div>
-            {card.id}
+            {card.rarity || 'Unknown'}
+          </div>
+          <div>
+            {card.artist || 'Unknown'}
           </div>
         </div>
         <button onClick={() => removeCard(card)}>
@@ -87,26 +89,43 @@ const PokemonTCGApp = () => {
   })
 
   return (
-    <div className="main">
-      <input
-        type="text"
-        placeholder="Search for cards..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <div className="card-list search-cards">
-        {cards}
-      </div>
-      <h1>Inventory</h1>
-      {inventoryCards.length !== 0 ? (
-        <div className="card-list">
-          {inventoryCards}
-        </div>) : (
-        <div>
-          No cards in inventory lmao
-        </div>
-      )}
+  <div className="main vertical-layout">
+    <h1 style={{ fontSize: '2.5rem', textAlign: 'left', margin: '0 10px 0 10px' }}>Pokecard Viewer</h1>
+    <input
+      type="text"
+      placeholder="Search for cards..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      style={{ width: '500px', textAlign: 'left', fontSize: '1.2rem', margin: '0 10px 0 10px', display: 'block' }}
+    />
+    <div className="card-list search-cards" style={{ margin: '0 10px 0 10px', flex: 1, overflow: 'auto' }}>
+      {cards}
     </div>
+    <div className={`inventory-panel${inventoryOpen ? '' : ' closed'}`}>
+      <button
+        className="inventory-toggle"
+        onClick={() => setInventoryOpen((open) => !open)}
+        style={{ marginBottom: '8px' }}
+      >
+        {inventoryOpen ? 'Hide Inventory' : 'Show Inventory'}
+      </button>
+      <div className="inventory-content" style={{ display: inventoryOpen ? 'block' : 'none' }}>
+        <h1>Inventory</h1>
+        {inventoryCards.length !== 0 ? (
+          <>
+            <Divider variant="middle" style={{ margin: '12px 0', borderColor: 'white', backgroundColor: 'white', color: 'white' }} />
+            <div className="card-list">
+              {inventoryCards}
+            </div>
+          </>
+        ) : (
+          <div>
+            No cards in inventory lmao
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
   );
 };
 

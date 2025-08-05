@@ -56,6 +56,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .card {
@@ -81,7 +82,53 @@ button {
   row-gap: 20px;
 }
 
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card-list.search-cards {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
 .search-cards {
   height: 500px;
   overflow-y: auto;
+  size: 300%;
+}
+
+.inventory-panel {
+  background: #000000;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 90vh; /* Adjust as needed for your inventory */
+  border-top: 1px solid #ddd;
+  padding: 16px;
+}
+
+.inventory-panel.closed {
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 40px; /* Just enough for the toggle button */
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.inventory-toggle {
+  width: 100%;
+}
+
+.inventory-panel .inventory-content {
+  max-height: 90vh; /* Set desired visible height */
+  overflow-y: auto;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inventory-panel .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
