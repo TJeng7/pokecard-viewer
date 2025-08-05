@@ -160,8 +160,20 @@ const PokemonTCGApp = () => {
           </select>
           <button onClick={() => filterData()}>Search</button>
         </div>
+        <div className="pages">
+          <button className="page-button" onClick={() => setCurrPage("Search")}>
+            Search
+          </button>
+          <button
+            className="page-button"
+            onClick={() => setCurrPage("Inventory")}
+          >
+            Inventory
+          </button>
+        </div>
       </div>
       <FilterableCardList
+        currPage={currPage}
         cardInventory={cardInventory}
         cardData={cardData}
         setSearchFilter={setSearchFilter}
@@ -173,37 +185,6 @@ const PokemonTCGApp = () => {
         setModalImage={setModalImage}
         addComment={addComment}
       />
-      <div className={`inventory-panel${inventoryOpen ? "" : " closed"}`}>
-        <button
-          className="inventory-toggle"
-          onClick={() => setInventoryOpen((open) => !open)}
-          style={{ marginBottom: "8px" }}
-        >
-          {inventoryOpen ? "Hide Inventory" : "Show Inventory"}
-        </button>
-        <div
-          className="inventory-content"
-          style={{ display: inventoryOpen ? "block" : "none" }}
-        >
-          <h1>Inventory</h1>
-          {inventoryCards.length !== 0 ? (
-            <>
-              <Divider
-                variant="middle"
-                style={{
-                  margin: "12px 0",
-                  borderColor: "white",
-                  backgroundColor: "white",
-                  color: "white",
-                }}
-              />
-              <div className="card-list">{inventoryCards}</div>
-            </>
-          ) : (
-            <div>No cards in inventory lmao</div>
-          )}
-        </div>
-      </div>
       {modalImage && (
         <div className="modal-image" onClick={() => setModalImage(null)}>
           <img
