@@ -2042,7 +2042,8 @@
       "small": "https://images.pokemontcg.io/swsh1/186.png",
       "large": "https://images.pokemontcg.io/swsh1/186_hires.png"
     },
-    "series": "Sword & Shield"
+    "series": "Sword & Shield",
+    "artist": null
   },
   {
     "id": "swsh1-187",
@@ -4747,7 +4748,8 @@
       "small": "https://images.pokemontcg.io/swsh10/216.png",
       "large": "https://images.pokemontcg.io/swsh10/216_hires.png"
     },
-    "series": "Astral Radiance"
+    "series": "Astral Radiance",
+    "artist": null
   },
   {
     "id": "swsh10tg-TG01",
@@ -6957,7 +6959,8 @@
       "small": "https://images.pokemontcg.io/swsh11/171.png",
       "large": "https://images.pokemontcg.io/swsh11/171_hires.png"
     },
-    "series": "Lost Origin"
+    "series": "Lost Origin",
+    "artist": null
   },
   {
     "id": "swsh11-172",
@@ -9640,7 +9643,8 @@
       "small": "https://images.pokemontcg.io/swsh12/168.png",
       "large": "https://images.pokemontcg.io/swsh12/168_hires.png"
     },
-    "series": "Silver Tempest"
+    "series": "Silver Tempest",
+    "artist": null
   },
   {
     "id": "swsh12-169",
@@ -9650,7 +9654,8 @@
       "small": "https://images.pokemontcg.io/swsh12/169.png",
       "large": "https://images.pokemontcg.io/swsh12/169_hires.png"
     },
-    "series": "Silver Tempest"
+    "series": "Silver Tempest",
+    "artist": null
   },
   {
     "id": "swsh12-170",
@@ -10155,7 +10160,8 @@
       "small": "https://images.pokemontcg.io/swsh12/215.png",
       "large": "https://images.pokemontcg.io/swsh12/215_hires.png"
     },
-    "series": "Silver Tempest"
+    "series": "Silver Tempest",
+    "artist": null
   },
   {
     "id": "swsh12pt5-1",
@@ -11826,7 +11832,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/152.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/152_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-153",
@@ -11836,7 +11843,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/153.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/153_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-154",
@@ -11846,7 +11854,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/154.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/154_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-155",
@@ -11856,7 +11865,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/155.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/155_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-156",
@@ -11866,7 +11876,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/156.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/156_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-157",
@@ -11876,7 +11887,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/157.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/157_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-158",
@@ -11886,7 +11898,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/158.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/158_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-159",
@@ -11896,7 +11909,8 @@
       "small": "https://images.pokemontcg.io/swsh12pt5/159.png",
       "large": "https://images.pokemontcg.io/swsh12pt5/159_hires.png"
     },
-    "series": "Crown Zenith"
+    "series": "Crown Zenith",
+    "artist": null
   },
   {
     "id": "swsh12pt5-160",
@@ -14887,7 +14901,8 @@
       "small": "https://images.pokemontcg.io/swsh2/171.png",
       "large": "https://images.pokemontcg.io/swsh2/171_hires.png"
     },
-    "series": "Rebel Clash"
+    "series": "Rebel Clash",
+    "artist": null
   },
   {
     "id": "swsh2-172",
@@ -14897,7 +14912,8 @@
       "small": "https://images.pokemontcg.io/swsh2/172.png",
       "large": "https://images.pokemontcg.io/swsh2/172_hires.png"
     },
-    "series": "Rebel Clash"
+    "series": "Rebel Clash",
+    "artist": null
   },
   {
     "id": "swsh2-173",
@@ -14907,7 +14923,8 @@
       "small": "https://images.pokemontcg.io/swsh2/173.png",
       "large": "https://images.pokemontcg.io/swsh2/173_hires.png"
     },
-    "series": "Rebel Clash"
+    "series": "Rebel Clash",
+    "artist": null
   },
   {
     "id": "swsh2-174",
@@ -14917,7 +14934,8 @@
       "small": "https://images.pokemontcg.io/swsh2/174.png",
       "large": "https://images.pokemontcg.io/swsh2/174_hires.png"
     },
-    "series": "Rebel Clash"
+    "series": "Rebel Clash",
+    "artist": null
   },
   {
     "id": "swsh2-175",
@@ -15301,7 +15319,8 @@
       "small": "https://images.pokemontcg.io/swsh2/209.png",
       "large": "https://images.pokemontcg.io/swsh2/209_hires.png"
     },
-    "series": "Rebel Clash"
+    "series": "Rebel Clash",
+    "artist": null
   },
   {
     "id": "swsh3-1",
@@ -17214,7 +17233,8 @@
       "small": "https://images.pokemontcg.io/swsh3/174.png",
       "large": "https://images.pokemontcg.io/swsh3/174_hires.png"
     },
-    "series": "Darkness Ablaze"
+    "series": "Darkness Ablaze",
+    "artist": null
   },
   {
     "id": "swsh3-175",
@@ -17224,7 +17244,8 @@
       "small": "https://images.pokemontcg.io/swsh3/175.png",
       "large": "https://images.pokemontcg.io/swsh3/175_hires.png"
     },
-    "series": "Darkness Ablaze"
+    "series": "Darkness Ablaze",
+    "artist": null
   },
   {
     "id": "swsh3-176",
@@ -17234,7 +17255,8 @@
       "small": "https://images.pokemontcg.io/swsh3/176.png",
       "large": "https://images.pokemontcg.io/swsh3/176_hires.png"
     },
-    "series": "Darkness Ablaze"
+    "series": "Darkness Ablaze",
+    "artist": null
   },
   {
     "id": "swsh3-177",
@@ -17508,7 +17530,8 @@
       "small": "https://images.pokemontcg.io/swsh3/201.png",
       "large": "https://images.pokemontcg.io/swsh3/201_hires.png"
     },
-    "series": "Darkness Ablaze"
+    "series": "Darkness Ablaze",
+    "artist": null
   },
   {
     "id": "swsh35-1",
@@ -20169,7 +20192,8 @@
       "small": "https://images.pokemontcg.io/swsh4/162.png",
       "large": "https://images.pokemontcg.io/swsh4/162_hires.png"
     },
-    "series": "Vivid Voltage"
+    "series": "Vivid Voltage",
+    "artist": null
   },
   {
     "id": "swsh4-163",
@@ -20179,7 +20203,8 @@
       "small": "https://images.pokemontcg.io/swsh4/163.png",
       "large": "https://images.pokemontcg.io/swsh4/163_hires.png"
     },
-    "series": "Vivid Voltage"
+    "series": "Vivid Voltage",
+    "artist": null
   },
   {
     "id": "swsh4-164",
@@ -20189,7 +20214,8 @@
       "small": "https://images.pokemontcg.io/swsh4/164.png",
       "large": "https://images.pokemontcg.io/swsh4/164_hires.png"
     },
-    "series": "Vivid Voltage"
+    "series": "Vivid Voltage",
+    "artist": null
   },
   {
     "id": "swsh4-165",
@@ -20199,7 +20225,8 @@
       "small": "https://images.pokemontcg.io/swsh4/165.png",
       "large": "https://images.pokemontcg.io/swsh4/165_hires.png"
     },
-    "series": "Vivid Voltage"
+    "series": "Vivid Voltage",
+    "artist": null
   },
   {
     "id": "swsh4-166",
@@ -24301,7 +24328,8 @@
       "small": "https://images.pokemontcg.io/swsh5/140.png",
       "large": "https://images.pokemontcg.io/swsh5/140_hires.png"
     },
-    "series": "Battle Styles"
+    "series": "Battle Styles",
+    "artist": null
   },
   {
     "id": "swsh5-141",
@@ -24311,7 +24339,8 @@
       "small": "https://images.pokemontcg.io/swsh5/141.png",
       "large": "https://images.pokemontcg.io/swsh5/141_hires.png"
     },
-    "series": "Battle Styles"
+    "series": "Battle Styles",
+    "artist": null
   },
   {
     "id": "swsh5-142",
@@ -24761,7 +24790,8 @@
       "small": "https://images.pokemontcg.io/swsh5/182.png",
       "large": "https://images.pokemontcg.io/swsh5/182_hires.png"
     },
-    "series": "Battle Styles"
+    "series": "Battle Styles",
+    "artist": null
   },
   {
     "id": "swsh5-183",
@@ -24771,7 +24801,8 @@
       "small": "https://images.pokemontcg.io/swsh5/183.png",
       "large": "https://images.pokemontcg.io/swsh5/183_hires.png"
     },
-    "series": "Battle Styles"
+    "series": "Battle Styles",
+    "artist": null
   },
   {
     "id": "swsh6-1",
@@ -26497,7 +26528,8 @@
       "small": "https://images.pokemontcg.io/swsh6/157.png",
       "large": "https://images.pokemontcg.io/swsh6/157_hires.png"
     },
-    "series": "Chilling Reign"
+    "series": "Chilling Reign",
+    "artist": null
   },
   {
     "id": "swsh6-158",
@@ -26507,7 +26539,8 @@
       "small": "https://images.pokemontcg.io/swsh6/158.png",
       "large": "https://images.pokemontcg.io/swsh6/158_hires.png"
     },
-    "series": "Chilling Reign"
+    "series": "Chilling Reign",
+    "artist": null
   },
   {
     "id": "swsh6-159",
@@ -26517,7 +26550,8 @@
       "small": "https://images.pokemontcg.io/swsh6/159.png",
       "large": "https://images.pokemontcg.io/swsh6/159_hires.png"
     },
-    "series": "Chilling Reign"
+    "series": "Chilling Reign",
+    "artist": null
   },
   {
     "id": "swsh6-160",
@@ -27308,7 +27342,8 @@
       "small": "https://images.pokemontcg.io/swsh6/231.png",
       "large": "https://images.pokemontcg.io/swsh6/231_hires.png"
     },
-    "series": "Chilling Reign"
+    "series": "Chilling Reign",
+    "artist": null
   },
   {
     "id": "swsh6-232",
@@ -27318,7 +27353,8 @@
       "small": "https://images.pokemontcg.io/swsh6/232.png",
       "large": "https://images.pokemontcg.io/swsh6/232_hires.png"
     },
-    "series": "Chilling Reign"
+    "series": "Chilling Reign",
+    "artist": null
   },
   {
     "id": "swsh6-233",
@@ -27328,7 +27364,8 @@
       "small": "https://images.pokemontcg.io/swsh6/233.png",
       "large": "https://images.pokemontcg.io/swsh6/233_hires.png"
     },
-    "series": "Chilling Reign"
+    "series": "Chilling Reign",
+    "artist": null
   },
   {
     "id": "swsh7-1",
@@ -29142,7 +29179,8 @@
       "small": "https://images.pokemontcg.io/swsh7/165.png",
       "large": "https://images.pokemontcg.io/swsh7/165_hires.png"
     },
-    "series": "Evolving Skies"
+    "series": "Evolving Skies",
+    "artist": null
   },
   {
     "id": "swsh7-166",
@@ -29911,7 +29949,8 @@
       "small": "https://images.pokemontcg.io/swsh7/235.png",
       "large": "https://images.pokemontcg.io/swsh7/235_hires.png"
     },
-    "series": "Evolving Skies"
+    "series": "Evolving Skies",
+    "artist": null
   },
   {
     "id": "swsh7-236",
@@ -29921,7 +29960,8 @@
       "small": "https://images.pokemontcg.io/swsh7/236.png",
       "large": "https://images.pokemontcg.io/swsh7/236_hires.png"
     },
-    "series": "Evolving Skies"
+    "series": "Evolving Skies",
+    "artist": null
   },
   {
     "id": "swsh7-237",
@@ -29931,7 +29971,8 @@
       "small": "https://images.pokemontcg.io/swsh7/237.png",
       "large": "https://images.pokemontcg.io/swsh7/237_hires.png"
     },
-    "series": "Evolving Skies"
+    "series": "Evolving Skies",
+    "artist": null
   },
   {
     "id": "swsh8-1",
@@ -32614,7 +32655,8 @@
       "small": "https://images.pokemontcg.io/swsh8/244.png",
       "large": "https://images.pokemontcg.io/swsh8/244_hires.png"
     },
-    "series": "Fusion Strike"
+    "series": "Fusion Strike",
+    "artist": null
   },
   {
     "id": "swsh8-245",
@@ -33042,7 +33084,8 @@
       "small": "https://images.pokemontcg.io/swsh8/283.png",
       "large": "https://images.pokemontcg.io/swsh8/283_hires.png"
     },
-    "series": "Fusion Strike"
+    "series": "Fusion Strike",
+    "artist": null
   },
   {
     "id": "swsh8-284",
@@ -33052,7 +33095,8 @@
       "small": "https://images.pokemontcg.io/swsh8/284.png",
       "large": "https://images.pokemontcg.io/swsh8/284_hires.png"
     },
-    "series": "Fusion Strike"
+    "series": "Fusion Strike",
+    "artist": null
   },
   {
     "id": "swsh9-1",
@@ -34712,7 +34756,8 @@
       "small": "https://images.pokemontcg.io/swsh9/151.png",
       "large": "https://images.pokemontcg.io/swsh9/151_hires.png"
     },
-    "series": "Brilliant Stars"
+    "series": "Brilliant Stars",
+    "artist": null
   },
   {
     "id": "swsh9-152",
@@ -36955,7 +37000,8 @@
       "small": "https://images.pokemontcg.io/swshp/SWSH139.png",
       "large": "https://images.pokemontcg.io/swshp/SWSH139_hires.png"
     },
-    "series": "SWSH Black Star Promos"
+    "series": "SWSH Black Star Promos",
+    "artist": null
   },
   {
     "id": "swshp-SWSH140",
@@ -36965,7 +37011,8 @@
       "small": "https://images.pokemontcg.io/swshp/SWSH140.png",
       "large": "https://images.pokemontcg.io/swshp/SWSH140_hires.png"
     },
-    "series": "SWSH Black Star Promos"
+    "series": "SWSH Black Star Promos",
+    "artist": null
   },
   {
     "id": "swshp-SWSH141",
@@ -36975,7 +37022,8 @@
       "small": "https://images.pokemontcg.io/swshp/SWSH141.png",
       "large": "https://images.pokemontcg.io/swshp/SWSH141_hires.png"
     },
-    "series": "SWSH Black Star Promos"
+    "series": "SWSH Black Star Promos",
+    "artist": null
   },
   {
     "id": "swshp-SWSH142",
@@ -36985,7 +37033,8 @@
       "small": "https://images.pokemontcg.io/swshp/SWSH142.png",
       "large": "https://images.pokemontcg.io/swshp/SWSH142_hires.png"
     },
-    "series": "SWSH Black Star Promos"
+    "series": "SWSH Black Star Promos",
+    "artist": null
   },
   {
     "id": "swshp-SWSH143",

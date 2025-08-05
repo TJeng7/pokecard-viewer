@@ -1063,7 +1063,8 @@
       "small": "https://images.pokemontcg.io/base1/97.png",
       "large": "https://images.pokemontcg.io/base1/97_hires.png"
     },
-    "series": "Base"
+    "series": "Base",
+    "rarity": null
   },
   {
     "id": "base1-98",
@@ -1073,7 +1074,8 @@
       "small": "https://images.pokemontcg.io/base1/98.png",
       "large": "https://images.pokemontcg.io/base1/98_hires.png"
     },
-    "series": "Base"
+    "series": "Base",
+    "rarity": null
   },
   {
     "id": "base1-99",
@@ -1083,7 +1085,8 @@
       "small": "https://images.pokemontcg.io/base1/99.png",
       "large": "https://images.pokemontcg.io/base1/99_hires.png"
     },
-    "series": "Base"
+    "series": "Base",
+    "rarity": null
   },
   {
     "id": "base1-100",
@@ -1093,7 +1096,8 @@
       "small": "https://images.pokemontcg.io/base1/100.png",
       "large": "https://images.pokemontcg.io/base1/100_hires.png"
     },
-    "series": "Base"
+    "series": "Base",
+    "rarity": null
   },
   {
     "id": "base1-101",
@@ -1103,7 +1107,8 @@
       "small": "https://images.pokemontcg.io/base1/101.png",
       "large": "https://images.pokemontcg.io/base1/101_hires.png"
     },
-    "series": "Base"
+    "series": "Base",
+    "rarity": null
   },
   {
     "id": "base1-102",
@@ -1113,7 +1118,8 @@
       "small": "https://images.pokemontcg.io/base1/102.png",
       "large": "https://images.pokemontcg.io/base1/102_hires.png"
     },
-    "series": "Base"
+    "series": "Base",
+    "rarity": null
   },
   {
     "id": "base2-1",
@@ -3873,7 +3879,8 @@
       "small": "https://images.pokemontcg.io/base4/125.png",
       "large": "https://images.pokemontcg.io/base4/125_hires.png"
     },
-    "series": "Base Set 2"
+    "series": "Base Set 2",
+    "rarity": null
   },
   {
     "id": "base4-126",
@@ -3883,7 +3890,8 @@
       "small": "https://images.pokemontcg.io/base4/126.png",
       "large": "https://images.pokemontcg.io/base4/126_hires.png"
     },
-    "series": "Base Set 2"
+    "series": "Base Set 2",
+    "rarity": null
   },
   {
     "id": "base4-127",
@@ -3893,7 +3901,8 @@
       "small": "https://images.pokemontcg.io/base4/127.png",
       "large": "https://images.pokemontcg.io/base4/127_hires.png"
     },
-    "series": "Base Set 2"
+    "series": "Base Set 2",
+    "rarity": null
   },
   {
     "id": "base4-128",
@@ -3903,7 +3912,8 @@
       "small": "https://images.pokemontcg.io/base4/128.png",
       "large": "https://images.pokemontcg.io/base4/128_hires.png"
     },
-    "series": "Base Set 2"
+    "series": "Base Set 2",
+    "rarity": null
   },
   {
     "id": "base4-129",
@@ -3913,7 +3923,8 @@
       "small": "https://images.pokemontcg.io/base4/129.png",
       "large": "https://images.pokemontcg.io/base4/129_hires.png"
     },
-    "series": "Base Set 2"
+    "series": "Base Set 2",
+    "rarity": null
   },
   {
     "id": "base4-130",
@@ -3923,7 +3934,8 @@
       "small": "https://images.pokemontcg.io/base4/130.png",
       "large": "https://images.pokemontcg.io/base4/130_hires.png"
     },
-    "series": "Base Set 2"
+    "series": "Base Set 2",
+    "rarity": null
   },
   {
     "id": "base5-1",

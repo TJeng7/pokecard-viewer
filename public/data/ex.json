@@ -1140,7 +1140,8 @@
       "small": "https://images.pokemontcg.io/ex1/104.png",
       "large": "https://images.pokemontcg.io/ex1/104_hires.png"
     },
-    "series": "Ruby & Sapphire"
+    "series": "Ruby & Sapphire",
+    "artist": null
   },
   {
     "id": "ex1-105",
@@ -1150,7 +1151,8 @@
       "small": "https://images.pokemontcg.io/ex1/105.png",
       "large": "https://images.pokemontcg.io/ex1/105_hires.png"
     },
-    "series": "Ruby & Sapphire"
+    "series": "Ruby & Sapphire",
+    "artist": null
   },
   {
     "id": "ex1-106",
@@ -1160,7 +1162,8 @@
       "small": "https://images.pokemontcg.io/ex1/106.png",
       "large": "https://images.pokemontcg.io/ex1/106_hires.png"
     },
-    "series": "Ruby & Sapphire"
+    "series": "Ruby & Sapphire",
+    "artist": null
   },
   {
     "id": "ex1-107",
@@ -1170,7 +1173,8 @@
       "small": "https://images.pokemontcg.io/ex1/107.png",
       "large": "https://images.pokemontcg.io/ex1/107_hires.png"
     },
-    "series": "Ruby & Sapphire"
+    "series": "Ruby & Sapphire",
+    "artist": null
   },
   {
     "id": "ex1-108",
@@ -1180,7 +1184,8 @@
       "small": "https://images.pokemontcg.io/ex1/108.png",
       "large": "https://images.pokemontcg.io/ex1/108_hires.png"
     },
-    "series": "Ruby & Sapphire"
+    "series": "Ruby & Sapphire",
+    "artist": null
   },
   {
     "id": "ex1-109",
@@ -1190,7 +1195,8 @@
       "small": "https://images.pokemontcg.io/ex1/109.png",
       "large": "https://images.pokemontcg.io/ex1/109_hires.png"
     },
-    "series": "Ruby & Sapphire"
+    "series": "Ruby & Sapphire",
+    "artist": null
   },
   {
     "id": "ex10-1",
@@ -6216,7 +6222,8 @@
       "small": "https://images.pokemontcg.io/ex13/105.png",
       "large": "https://images.pokemontcg.io/ex13/105_hires.png"
     },
-    "series": "Holon Phantoms"
+    "series": "Holon Phantoms",
+    "artist": null
   },
   {
     "id": "ex13-106",
@@ -6226,7 +6233,8 @@
       "small": "https://images.pokemontcg.io/ex13/106.png",
       "large": "https://images.pokemontcg.io/ex13/106_hires.png"
     },
-    "series": "Holon Phantoms"
+    "series": "Holon Phantoms",
+    "artist": null
   },
   {
     "id": "ex13-107",
@@ -6236,7 +6244,8 @@
       "small": "https://images.pokemontcg.io/ex13/107.png",
       "large": "https://images.pokemontcg.io/ex13/107_hires.png"
     },
-    "series": "Holon Phantoms"
+    "series": "Holon Phantoms",
+    "artist": null
   },
   {
     "id": "ex13-108",
@@ -6246,7 +6255,8 @@
       "small": "https://images.pokemontcg.io/ex13/108.png",
       "large": "https://images.pokemontcg.io/ex13/108_hires.png"
     },
-    "series": "Holon Phantoms"
+    "series": "Holon Phantoms",
+    "artist": null
   },
   {
     "id": "ex13-109",
@@ -6256,7 +6266,8 @@
       "small": "https://images.pokemontcg.io/ex13/109.png",
       "large": "https://images.pokemontcg.io/ex13/109_hires.png"
     },
-    "series": "Holon Phantoms"
+    "series": "Holon Phantoms",
+    "artist": null
   },
   {
     "id": "ex13-110",
@@ -6266,7 +6277,8 @@
       "small": "https://images.pokemontcg.io/ex13/110.png",
       "large": "https://images.pokemontcg.io/ex13/110_hires.png"
     },
-    "series": "Holon Phantoms"
+    "series": "Holon Phantoms",
+    "artist": null
   },
   {
     "id": "ex13-111",
@@ -9620,7 +9632,8 @@
       "small": "https://images.pokemontcg.io/ex16/103.png",
       "large": "https://images.pokemontcg.io/ex16/103_hires.png"
     },
-    "series": "Power Keepers"
+    "series": "Power Keepers",
+    "artist": null
   },
   {
     "id": "ex16-104",
@@ -9630,7 +9643,8 @@
       "small": "https://images.pokemontcg.io/ex16/104.png",
       "large": "https://images.pokemontcg.io/ex16/104_hires.png"
     },
-    "series": "Power Keepers"
+    "series": "Power Keepers",
+    "artist": null
   },
   {
     "id": "ex16-105",
@@ -9640,7 +9654,8 @@
       "small": "https://images.pokemontcg.io/ex16/105.png",
       "large": "https://images.pokemontcg.io/ex16/105_hires.png"
     },
-    "series": "Power Keepers"
+    "series": "Power Keepers",
+    "artist": null
   },
   {
     "id": "ex16-106",
@@ -9650,7 +9665,8 @@
       "small": "https://images.pokemontcg.io/ex16/106.png",
       "large": "https://images.pokemontcg.io/ex16/106_hires.png"
     },
-    "series": "Power Keepers"
+    "series": "Power Keepers",
+    "artist": null
   },
   {
     "id": "ex16-107",
@@ -9660,7 +9676,8 @@
       "small": "https://images.pokemontcg.io/ex16/107.png",
       "large": "https://images.pokemontcg.io/ex16/107_hires.png"
     },
-    "series": "Power Keepers"
+    "series": "Power Keepers",
+    "artist": null
   },
   {
     "id": "ex16-108",
@@ -9670,7 +9687,8 @@
       "small": "https://images.pokemontcg.io/ex16/108.png",
       "large": "https://images.pokemontcg.io/ex16/108_hires.png"
     },
-    "series": "Power Keepers"
+    "series": "Power Keepers",
+    "artist": null
   },
   {
     "id": "ex2-1",
@@ -18854,7 +18872,8 @@
       "small": "https://images.pokemontcg.io/ex9/101.png",
       "large": "https://images.pokemontcg.io/ex9/101_hires.png"
     },
-    "series": "Emerald"
+    "series": "Emerald",
+    "artist": null
   },
   {
     "id": "ex9-102",
@@ -18864,7 +18883,8 @@
       "small": "https://images.pokemontcg.io/ex9/102.png",
       "large": "https://images.pokemontcg.io/ex9/102_hires.png"
     },
-    "series": "Emerald"
+    "series": "Emerald",
+    "artist": null
   },
   {
     "id": "ex9-103",
@@ -18874,7 +18894,8 @@
       "small": "https://images.pokemontcg.io/ex9/103.png",
       "large": "https://images.pokemontcg.io/ex9/103_hires.png"
     },
-    "series": "Emerald"
+    "series": "Emerald",
+    "artist": null
   },
   {
     "id": "ex9-104",
@@ -18884,7 +18905,8 @@
       "small": "https://images.pokemontcg.io/ex9/104.png",
       "large": "https://images.pokemontcg.io/ex9/104_hires.png"
     },
-    "series": "Emerald"
+    "series": "Emerald",
+    "artist": null
   },
   {
     "id": "ex9-105",
@@ -18894,7 +18916,8 @@
       "small": "https://images.pokemontcg.io/ex9/105.png",
       "large": "https://images.pokemontcg.io/ex9/105_hires.png"
     },
-    "series": "Emerald"
+    "series": "Emerald",
+    "artist": null
   },
   {
     "id": "ex9-106",
@@ -18904,7 +18927,8 @@
       "small": "https://images.pokemontcg.io/ex9/106.png",
       "large": "https://images.pokemontcg.io/ex9/106_hires.png"
     },
-    "series": "Emerald"
+    "series": "Emerald",
+    "artist": null
   },
   {
     "id": "ex9-107",
