@@ -11,6 +11,7 @@ const PokemonTCGApp = () => {
   })
   const [cardInventory, setCardInventory] = useState([]);
   const [inventoryOpen, setInventoryOpen] = useState(true);
+  const [modalImage, setModalImage] = useState(null);
 
   function addCard(toAdd) {
     // Don't add card if already added
@@ -36,9 +37,11 @@ const PokemonTCGApp = () => {
     return (
       <div key={card.id} className="card">
         <img
-            src={card.images?.small}
-            alt={card.name}
-          />
+          src={card.images?.small}
+          alt={card.name}
+          style={{ cursor: 'pointer' }}
+          onClick={() => setModalImage(card.images?.large || card.images?.small)}
+        />
         <div className="card-details">
           <div className="card-name">
             {card.name || 'Unknown'}
@@ -67,9 +70,11 @@ const PokemonTCGApp = () => {
     return (
       <div key={card.id} className="card">
         <img
-            src={card.images?.small}
-            alt={card.name}
-          />
+          src={card.images?.small}
+          alt={card.name}
+          style={{ cursor: 'pointer' }}
+          onClick={() => setModalImage(card.images?.large || card.images?.small)}
+        />
         <div className="card-details">
           <div className="card-name">
             {card.name || 'Unknown'}
@@ -89,43 +94,70 @@ const PokemonTCGApp = () => {
   })
 
   return (
-  <div className="main vertical-layout">
-    <h1 style={{ fontSize: '2.5rem', textAlign: 'left', margin: '0 10px 0 10px' }}>Pokecard Viewer</h1>
-    <input
-      type="text"
-      placeholder="Search for cards..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      style={{ width: '500px', textAlign: 'left', fontSize: '1.2rem', margin: '0 10px 0 10px', display: 'block' }}
-    />
-    <div className="card-list search-cards" style={{ margin: '0 10px 0 10px', flex: 1, overflow: 'auto' }}>
-      {cards}
-    </div>
-    <div className={`inventory-panel${inventoryOpen ? '' : ' closed'}`}>
-      <button
-        className="inventory-toggle"
-        onClick={() => setInventoryOpen((open) => !open)}
-        style={{ marginBottom: '8px' }}
-      >
-        {inventoryOpen ? 'Hide Inventory' : 'Show Inventory'}
-      </button>
-      <div className="inventory-content" style={{ display: inventoryOpen ? 'block' : 'none' }}>
-        <h1>Inventory</h1>
-        {inventoryCards.length !== 0 ? (
-          <>
-            <Divider variant="middle" style={{ margin: '12px 0', borderColor: 'white', backgroundColor: 'white', color: 'white' }} />
-            <div className="card-list">
-              {inventoryCards}
-            </div>
-          </>
-        ) : (
-          <div>
-            No cards in inventory lmao
-          </div>
-        )}
+    <div className="main vertical-layout">
+      <h1 style={{ fontSize: '2.5rem', textAlign: 'left', margin: '0 10px 0 10px' }}>Pokecard Viewer</h1>
+      <input
+        type="text"
+        placeholder="Search for cards..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        style={{ width: '500px', textAlign: 'left', fontSize: '1.2rem', margin: '0 10px 0 10px', display: 'block' }}
+      />
+      <div className="card-list search-cards" style={{ margin: '0 10px 0 10px', flex: 1, overflow: 'auto' }}>
+        {cards}
       </div>
+      <div className={`inventory-panel${inventoryOpen ? '' : ' closed'}`}>
+        <button
+          className="inventory-toggle"
+          onClick={() => setInventoryOpen((open) => !open)}
+          style={{ marginBottom: '8px' }}
+        >
+          {inventoryOpen ? 'Hide Inventory' : 'Show Inventory'}
+        </button>
+        <div className="inventory-content" style={{ display: inventoryOpen ? 'block' : 'none' }}>
+          <h1>Inventory</h1>
+          {inventoryCards.length !== 0 ? (
+            <>
+              <Divider variant="middle" style={{ margin: '12px 0', borderColor: 'white', backgroundColor: 'white', color: 'white' }} />
+              <div className="card-list">
+                {inventoryCards}
+              </div>
+            </>
+          ) : (
+            <div>
+              No cards in inventory lmao
+            </div>
+          )}
+        </div>
+      </div>
+      {modalImage && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(0,0,0,0.8)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999
+          }}
+          onClick={() => setModalImage(null)}
+        >
+          <img
+            src={modalImage}
+            alt="Large Card"
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              borderRadius: '12px',
+              boxShadow: '0 4px 32px rgba(0,0,0,0.7)',
+              background: '#fff'
+            }}
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
-  </div>
   );
 };
 
