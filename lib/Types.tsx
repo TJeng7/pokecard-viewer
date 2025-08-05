@@ -31,8 +31,7 @@ type InventoryCard = {
   comments: CardComment[];
 };
 
-type SearchTerm = {
-  name: string;
+type SearchFilter = {
   artist: string;
   rarity: string;
   set: string;

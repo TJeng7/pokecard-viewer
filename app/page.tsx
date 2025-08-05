@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
 import Divider from "@mui/material/Divider";
 import base from "../public/data/base.json";
 import bw from "../public/data/bw.json";
@@ -10,6 +11,8 @@ import sm from "../public/data/sm.json";
 import sv from "../public/data/sv.json";
 import swsh from "../public/data/swsh.json";
 import xy from "../public/data/xy.json";
+
+import Card from "../components/Card";
 
 const allCards: CardData[] = [
   ...base,
@@ -23,7 +26,6 @@ const allCards: CardData[] = [
   ...xy,
 ];
 
-// List your file options manually or fetch from an API if you want it dynamic
 const setOptions: SetOption[] = [
   { label: "Scarlet & Violet", data: sv },
   { label: "Sword & Shield", data: swsh },
@@ -35,36 +37,44 @@ const setOptions: SetOption[] = [
   { label: "EX", data: ex },
   { label: "Base Set", data: base },
   { label: "All Sets", data: allCards },
-  // Add more files here as needed
 ];
 
 const PokemonTCGApp = () => {
-  const [searchTerm, setSearchTerm] = useState<SearchTerm>({
-    name: "",
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchFilter, setSearchFilter] = useState<SearchFilter>({
     artist: "",
     rarity: "",
     set: setOptions[0].label,
   });
-  const [cardInventory, setCardInventory] = useState<InventoryCard[]>([]);
-  const [inventoryOpen, setInventoryOpen] = useState<boolean>(true);
-  const [modalImage, setModalImage] = useState<string | null>(null);
-  const [cardData, setCardData] = useState<CardData[]>([]);
+  const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
-  useEffect(() => {
+  const [cardData, setCardData] = useState<CardData[]>(sv);
+  const [cardInventory, setCardInventory] = useState<InventoryCard[]>([]);
+  // TO DO: Replace with new state
+  const [inventoryOpen, setInventoryOpen] = useState<boolean>(true);
+
+  // Tracks the currently opened page to determine which CardData to render
+  const [currPage, setCurrPage] = useState<string>("Search");
+  const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
+
+  const [modalImage, setModalImage] = useState<string | null>(null);
+
+  // TO DO: Change to filter the correct data set based on currently opened page
+  function filterData() {
     const selectedSetData: CardData[] = setOptions.filter((set) => {
-      return set.label === searchTerm.set;
+      return set.label === searchFilter.set;
     })[0].data;
 
     const filteredData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
-        searchTerm.name === "" ||
-        card.name.toLowerCase() === searchTerm.name.toLowerCase();
+        searchTerm === "" ||
+        card.name.toLowerCase().includes(searchTerm.toLowerCase());
       const artistMatch =
-        searchTerm.artist === "" ||
-        card.artist?.toLowerCase() === searchTerm.artist.toLowerCase();
+        searchFilter.artist === "" ||
+        card.artist?.toLowerCase().includes(searchFilter.artist.toLowerCase());
       const rarityMatch =
-        searchTerm.rarity === "" ||
-        card.rarity?.toLowerCase() === searchTerm.rarity.toLowerCase();
+        searchFilter.rarity === "" ||
+        card.rarity?.toLowerCase().includes(searchFilter.rarity.toLowerCase());
 
       if (nameMatch && artistMatch && rarityMatch) {
         return card;
@@ -72,9 +82,9 @@ const PokemonTCGApp = () => {
     });
 
     setCardData(filteredData);
-  }, [searchTerm]);
+  }
 
-  function addCard(toAdd: CardData) {
+  function addCardToInventory(toAdd: CardData) {
     if (cardInventory.filter((card) => card.id === toAdd.id).length > 0) {
       return;
     } else {
@@ -82,7 +92,7 @@ const PokemonTCGApp = () => {
     }
   }
 
-  function removeCard(toRemove: CardData) {
+  function removeCardFromInventory(toRemove: CardData) {
     const removedCards = cardInventory.filter(
       (card) => card.id !== toRemove.id
     );
@@ -94,29 +104,13 @@ const PokemonTCGApp = () => {
       cardInventory.filter((inventoryCard) => inventoryCard.id === card.id)
         .length > 0;
     return (
-      <div key={card.id} className="card">
-        <img
-          src={card.images?.small}
-          alt={card.name}
-          style={{ cursor: "pointer" }}
-          onClick={() =>
-            setModalImage(card.images?.large || card.images?.small)
-          }
-        />
-        <div className="card-details">
-          <div className="card-name">{card.name || "Unknown Name"}</div>
-          <div>{card.rarity || "Unknown Rarity"}</div>
-          <div>{card.artist || "Unknown Artist"}</div>
-          <div>{card.series || "Unknown Series"}</div>
-        </div>
-        {isAdded ? (
-          <button onClick={() => removeCard(card)}>
-            Remove from Inventory
-          </button>
-        ) : (
-          <button onClick={() => addCard(card)}>Add to Inventory</button>
-        )}
-      </div>
+      <Card
+        card={card}
+        isAdded={isAdded}
+        setModalImage={setModalImage}
+        addCardToInventory={addCardToInventory}
+        removeCardFromInventory={removeCardFromInventory}
+      />
     );
   });
 
@@ -137,7 +131,9 @@ const PokemonTCGApp = () => {
           <div>{card.artist || "Unknown Artist"}</div>
           <div>{card.series || "Unknown Series"}</div>
         </div>
-        <button onClick={() => removeCard(card)}>Remove from Inventory</button>
+        <button onClick={() => removeCardFromInventory(card)}>
+          Remove from Inventory
+        </button>
       </div>
     );
   });
@@ -159,15 +155,8 @@ const PokemonTCGApp = () => {
           <input
             type="text"
             placeholder="Search for cards..."
-            value={searchTerm.name}
-            onChange={(e) =>
-              setSearchTerm({
-                name: e.target.value,
-                artist: searchTerm.artist,
-                rarity: searchTerm.rarity,
-                set: searchTerm.set,
-              })
-            }
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             style={{
               width: "500px",
               textAlign: "left",
@@ -178,12 +167,11 @@ const PokemonTCGApp = () => {
             }}
           />
           <select
-            value={searchTerm.set}
+            value={searchFilter.set}
             onChange={(e) =>
-              setSearchTerm({
-                name: searchTerm.name,
-                artist: searchTerm.artist,
-                rarity: searchTerm.rarity,
+              setSearchFilter({
+                artist: searchFilter.artist,
+                rarity: searchFilter.rarity,
                 set: e.target.value,
               })
             }
@@ -203,6 +191,7 @@ const PokemonTCGApp = () => {
               </option>
             ))}
           </select>
+          <button onClick={() => filterData()}>Search</button>
         </div>
       </div>
       <div
