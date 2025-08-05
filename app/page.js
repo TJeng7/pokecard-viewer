@@ -1,29 +1,48 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { Trash2, Plus, Search } from 'lucide-react';
-import data from '../data.json'
 import Divider from '@mui/material/Divider';
+
+// List your file options manually or fetch from an API if you want it dynamic
+const fileOptions = [
+  { label: 'Scarlet & Violet', value: 'sv_full_trim.json' },
+  { label: 'Sword & Shield', value: 'swsh_full_trim.json' },
+  { label: 'Sun & Moon', value: 'sm_full_trim.json' },
+  { label: 'X & Y', value: 'xy_full_trim.json' },
+  { label: 'Black & White', value: 'bw_full_trim.json' },
+  { label: 'Diamond & Pearl', value: 'dp_full_trim.json' },
+  { label: 'Pop Series', value: 'pop_full_trim.json' },
+  { label: 'EX', value: 'ex_full_trim.json' },
+  { label: 'Base Set', value: 'base_full_trim.json' },
+  // Add more files here as needed
+];
 
 const PokemonTCGApp = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const cardData = data.filter((card) => {
-    return card.name?.toLowerCase().includes(searchTerm.toLowerCase()) || card.rarity?.toLowerCase().includes(searchTerm.toLowerCase()) || card.artist?.toLowerCase().includes(searchTerm.toLowerCase())
-  })
+  const [selectedFile, setSelectedFile] = useState(fileOptions[0].value);
   const [cardInventory, setCardInventory] = useState([]);
   const [inventoryOpen, setInventoryOpen] = useState(true);
   const [modalImage, setModalImage] = useState(null);
+  const [cardData, setCardData] = useState([]);
+
+  useEffect(() => {
+    fetch(`/data/${selectedFile}`)
+      .then(res => res.json())
+      .then(fileData => {
+        setCardData(
+          fileData.filter((card) =>
+            card.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            card.rarity?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            card.artist?.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+        );
+      });
+  }, [selectedFile, searchTerm]);
 
   function addCard(toAdd) {
-    // Don't add card if already added
     if (cardInventory.filter((card) => card.id === toAdd.id).length > 0) {
-      return
+      return;
     } else {
-      setCardInventory(
-        [
-          ...cardInventory,
-          toAdd
-        ]
-      )
+      setCardInventory([...cardInventory, toAdd]);
     }
   }
 
@@ -33,7 +52,7 @@ const PokemonTCGApp = () => {
   }
 
   const cards = cardData.map((card) => {
-    const isAdded = cardInventory.filter((inventoryCard) => inventoryCard.id === card.id).length > 0
+    const isAdded = cardInventory.filter((inventoryCard) => inventoryCard.id === card.id).length > 0;
     return (
       <div key={card.id} className="card">
         <img
@@ -43,66 +62,67 @@ const PokemonTCGApp = () => {
           onClick={() => setModalImage(card.images?.large || card.images?.small)}
         />
         <div className="card-details">
-          <div className="card-name">
-            {card.name || 'Unknown'}
-          </div>
-          <div>
-            {card.rarity || 'Unknown'}
-          </div>
-          <div>
-            {card.artist || 'Unknown'}
-          </div>
+          <div className="card-name">{card.name || 'Unknown Name'}</div>
+          <div>{card.rarity || 'Unknown Rarity'}</div>
+          <div>{card.artist || 'Unknown Artist'}</div>
+          <div>{card.series || 'Unknown Series'}</div>
         </div>
-        {isAdded ?
-          <button onClick={() => removeCard(card)}>
-            Remove from Inventory
-          </button>
-        :
-          <button onClick={() => addCard(card)}>
-            Add to Inventory
-          </button>
-        }
+        {isAdded ? (
+          <button onClick={() => removeCard(card)}>Remove from Inventory</button>
+        ) : (
+          <button onClick={() => addCard(card)}>Add to Inventory</button>
+        )}
       </div>
-    )
-  })
+    );
+  });
 
-  const inventoryCards = cardInventory.map((card) => {
-    return (
-      <div key={card.id} className="card">
-        <img
-          src={card.images?.small}
-          alt={card.name}
-          style={{ cursor: 'pointer' }}
-          onClick={() => setModalImage(card.images?.large || card.images?.small)}
-        />
-        <div className="card-details">
-          <div className="card-name">
-            {card.name || 'Unknown'}
-          </div>
-          <div>
-            {card.rarity || 'Unknown'}
-          </div>
-          <div>
-            {card.artist || 'Unknown'}
-          </div>
-        </div>
-        <button onClick={() => removeCard(card)}>
-          Remove from Inventory
-        </button>
+  const inventoryCards = cardInventory.map((card) => (
+    <div key={card.id} className="card">
+      <img
+        src={card.images?.small}
+        alt={card.name}
+        style={{ cursor: 'pointer' }}
+        onClick={() => setModalImage(card.images?.large || card.images?.small)}
+      />
+      <div className="card-details">
+        <div className="card-name">{card.name || 'Unknown Name'}</div>
+          <div>{card.rarity || 'Unknown Rarity'}</div>
+          <div>{card.artist || 'Unknown Artist'}</div>
+          <div>{card.series || 'Unknown Series'}</div>
       </div>
-    )
-  })
+      <button onClick={() => removeCard(card)}>Remove from Inventory</button>
+    </div>
+  ));
 
   return (
     <div className="main vertical-layout">
-      <h1 style={{ fontSize: '2.5rem', textAlign: 'left', margin: '0 10px 0 10px' }}>Pokecard Viewer</h1>
-      <input
-        type="text"
-        placeholder="Search for cards..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ width: '500px', textAlign: 'left', fontSize: '1.2rem', margin: '0 10px 0 10px', display: 'block' }}
-      />
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '24px 10px 8px 10px' }}>
+        <h1 style={{ fontSize: '2.5rem', textAlign: 'left', margin: 0 }}>Pokecard Viewer</h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <input
+            type="text"
+            placeholder="Search for cards..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            style={{ width: '500px', textAlign: 'left', fontFamily: "Comic Sans MS", fontSize: '1.2rem', margin: 0, display: 'block' }}
+          />
+          <select
+            value={selectedFile}
+            onChange={e => setSelectedFile(e.target.value)}
+            style={{ fontSize: '1.1rem', padding: '2px 12px', fontFamily: 'Comic Sans MS' }}
+          >
+            {fileOptions.map(opt => (
+              <option
+                key={opt.value}
+                value={opt.value}
+                style={{ fontFamily: 'Comic Sans MS' }}
+              >
+                {opt.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
       <div className="card-list search-cards" style={{ margin: '0 10px 0 10px', flex: 1, overflow: 'auto' }}>
         {cards}
       </div>
