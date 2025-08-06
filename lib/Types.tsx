@@ -20,6 +20,7 @@ type CardComment = {
 };
 
 type SearchFilter = {
+  name: string;
   artist: string;
   rarity: string;
   set: string;

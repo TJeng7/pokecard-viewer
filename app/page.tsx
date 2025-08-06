@@ -42,6 +42,7 @@ const setOptions: SetOption[] = [
 const PokemonTCGApp = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchFilter, setSearchFilter] = useState<SearchFilter>({
+    name: "",
     artist: "",
     rarity: "",
     set: setOptions[0].label,
@@ -52,24 +53,21 @@ const PokemonTCGApp = () => {
   const [inventoryCards, setInventoryCards] = useState<CardData[]>([]);
 
   // Tracks the currently opened page to determine which CardData to render
-  const [currPage, setCurrPage] = useState<string>("Search");
+  const [currPage, setCurrPage] = useState<string>("search");
   const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
-
-  let filteredSearchCards = filterCards("search");
-  let filteredInventoryCards = filterCards("inventory");
 
   // Pagination for current pages
   const [paginationData, setPaginationData] = useState<PaginationData>({
     pageSize: 50,
     currPage: 1,
-    totalPages: Math.ceil(
-      (currPage === "Search" ? filteredSearchCards : filteredInventoryCards)
-        .length / 50
-    ),
+    totalPages: Math.ceil(sv.length / 50),
   });
 
+  const filteredSearchCards = filterCards("search");
+  const filteredInventoryCards = filterCards("inventory");
+
   const paginatedCards =
-    currPage === "Search"
+    currPage === "search"
       ? filteredSearchCards.slice(
           (paginationData.currPage - 1) * paginationData.pageSize,
           paginationData.currPage * paginationData.pageSize
@@ -81,10 +79,6 @@ const PokemonTCGApp = () => {
 
   const [modalImage, setModalImage] = useState<string | null>(null);
 
-  function handleFilter() {
-    handlePageChange(null, 1);
-  }
-
   function filterCards(view: string) {
     const toFilter = view === "search" ? cards : inventoryCards;
     const selectedSetData: CardData[] =
@@ -95,8 +89,8 @@ const PokemonTCGApp = () => {
           });
     const filteredSetData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
-        searchTerm === "" ||
-        card.name.toLowerCase().includes(searchTerm.toLowerCase());
+        searchFilter.name === "" ||
+        card.name.toLowerCase().includes(searchFilter.name.toLowerCase());
       const artistMatch =
         searchFilter.artist === "" ||
         card.artist?.toLowerCase().includes(searchFilter.artist.toLowerCase());
@@ -137,6 +131,11 @@ const PokemonTCGApp = () => {
     event: React.ChangeEvent<unknown> | null,
     page: number
   ) {
+    setPaginationData({
+      ...paginationData,
+      currPage: page,
+    });
+
     const element = document.getElementsByClassName("card-list")[0];
     element?.scroll({
       top: 0,
@@ -144,13 +143,30 @@ const PokemonTCGApp = () => {
     });
   }
 
+  useEffect(() => {
+    setPaginationData({
+      ...paginationData,
+      currPage: 1,
+      totalPages: Math.ceil(
+        (currPage === "search" ? filteredSearchCards : filteredInventoryCards)
+          .length / 50
+      ),
+    });
+
+    const element = document.getElementsByClassName("card-list")[0];
+    element?.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [searchFilter]);
+
   function handleCurrPageChange(page: string) {
     setCurrPage(page);
     setPaginationData({
       pageSize: 50,
       currPage: 1,
       totalPages: Math.ceil(
-        (page === "Search" ? cards : inventoryCards).length / 50
+        (page === "search" ? cards : inventoryCards).length / 50
       ),
     });
   }
@@ -171,6 +187,7 @@ const PokemonTCGApp = () => {
             value={searchFilter.set}
             onChange={(e) => {
               setSearchFilter({
+                name: searchFilter.name,
                 artist: searchFilter.artist,
                 rarity: searchFilter.rarity,
                 set: e.target.value,
@@ -184,18 +201,29 @@ const PokemonTCGApp = () => {
               </option>
             ))}
           </select>
-          <button onClick={() => handleFilter()}>Search</button>
+          <button
+            onClick={() => {
+              setSearchFilter({
+                name: searchTerm,
+                artist: searchFilter.artist,
+                rarity: searchFilter.rarity,
+                set: searchFilter.set,
+              });
+            }}
+          >
+            Search
+          </button>
         </div>
         <div className="pages">
           <button
             className="page-button"
-            onClick={() => handleCurrPageChange("Search")}
+            onClick={() => handleCurrPageChange("search")}
           >
             Search
           </button>
           <button
             className="page-button"
-            onClick={() => handleCurrPageChange("Inventory")}
+            onClick={() => handleCurrPageChange("inventory")}
           >
             Inventory
           </button>
@@ -218,6 +246,7 @@ const PokemonTCGApp = () => {
       <Pagination
         count={paginationData.totalPages}
         onChange={handlePageChange}
+        page={paginationData.currPage}
       />
       {modalImage && (
         <div className="modal-image" onClick={() => setModalImage(null)}>
