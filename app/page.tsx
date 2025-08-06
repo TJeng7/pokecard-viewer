@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import base from "../public/data/base.json";
 import bw from "../public/data/bw.json";
 import dp from "../public/data/dp.json";
@@ -52,6 +52,8 @@ const PokemonTCGApp = () => {
   const [cards, setCards] = useState<CardData[]>(allCards);
   const [inventoryCards, setInventoryCards] = useState<CardData[]>([]);
 
+  const [file, setFile] = useState<File | null>(null);
+
   // Tracks the currently opened page to determine which CardData to render
   const [currPage, setCurrPage] = useState<string>("search");
   const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
@@ -62,6 +64,50 @@ const PokemonTCGApp = () => {
     currPage: 1,
     totalPages: Math.ceil(sv.length / 50),
   });
+
+  const exportJSON = () => {
+    if (inventoryCards.length === 0) { // nothing to export
+      return;
+    }
+
+    // create file in browser
+    const fileName = "pokecard-inventory";
+    const json = JSON.stringify(inventoryCards, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const href = URL.createObjectURL(blob);
+
+    // create "a" HTLM element with href to file
+    const link = document.createElement("a");
+    link.href = href;
+    link.download = fileName + ".json";
+    document.body.appendChild(link);
+    link.click();
+
+    // clean up "a" element & remove ObjectURL
+    document.body.removeChild(link);
+    URL.revokeObjectURL(href);
+  }
+
+  const importJSON = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0 && e.target.files[0].type === "application/json") {
+      const selectedFile = e.target.files[0];
+
+      setFile(selectedFile);
+      const reader = new FileReader();
+
+      reader.onload = (event) => {
+        try {
+          const uploadData = event.target?.result as string;
+          const parsedData = JSON.parse(uploadData);
+          if (Array.isArray(parsedData)) {
+            setInventoryCards(parsedData);
+          } 
+        } catch (error) {
+        }
+      };
+      reader.readAsText(selectedFile);
+    }
+  }
 
   const filteredSearchCards = filterCards("search");
   const filteredInventoryCards = filterCards("inventory");
@@ -212,6 +258,10 @@ const PokemonTCGApp = () => {
             }}
           >
             Search
+          </button>
+          <input type="file" onChange={importJSON}/>
+          <button onClick={() => { exportJSON(); }} >
+            Export Inventory
           </button>
         </div>
         <div className="pages">
