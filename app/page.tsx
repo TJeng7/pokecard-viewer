@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import Divider from "@mui/material/Divider";
+import React, { useState, useEffect } from "react";
 import base from "../public/data/base.json";
 import bw from "../public/data/bw.json";
 import dp from "../public/data/dp.json";
@@ -13,6 +12,7 @@ import swsh from "../public/data/swsh.json";
 import xy from "../public/data/xy.json";
 
 import FilterableCardList from "@/components/FilterableCardList";
+import { Pagination } from "@mui/material";
 
 const allCards: CardData[] = [
   ...base,
@@ -48,24 +48,52 @@ const PokemonTCGApp = () => {
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
-  const [cardData, setCardData] = useState<CardData[]>(sv);
-  const [cardInventory, setCardInventory] = useState<InventoryCard[]>([]);
-  // TO DO: Replace with new state
-  const [inventoryOpen, setInventoryOpen] = useState<boolean>(true);
+  const [cards, setCards] = useState<CardData[]>(allCards);
+  const [inventoryCards, setInventoryCards] = useState<CardData[]>([]);
 
   // Tracks the currently opened page to determine which CardData to render
   const [currPage, setCurrPage] = useState<string>("Search");
   const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
 
+  let filteredSearchCards = filterCards("search");
+  let filteredInventoryCards = filterCards("inventory");
+
+  // Pagination for current pages
+  const [paginationData, setPaginationData] = useState<PaginationData>({
+    pageSize: 50,
+    currPage: 1,
+    totalPages: Math.ceil(
+      (currPage === "Search" ? filteredSearchCards : filteredInventoryCards)
+        .length / 50
+    ),
+  });
+
+  const paginatedCards =
+    currPage === "Search"
+      ? filteredSearchCards.slice(
+          (paginationData.currPage - 1) * paginationData.pageSize,
+          paginationData.currPage * paginationData.pageSize
+        )
+      : filteredInventoryCards.slice(
+          (paginationData.currPage - 1) * paginationData.pageSize,
+          paginationData.currPage * paginationData.pageSize
+        );
+
   const [modalImage, setModalImage] = useState<string | null>(null);
 
-  // TO DO: Change to filter the correct data set based on currently opened page
-  function filterData() {
-    const selectedSetData: CardData[] = setOptions.filter((set) => {
-      return set.label === searchFilter.set;
-    })[0].data;
+  function handleFilter() {
+    handlePageChange(null, 1);
+  }
 
-    const filteredData: CardData[] = selectedSetData.filter((card) => {
+  function filterCards(view: string) {
+    const toFilter = view === "search" ? cards : inventoryCards;
+    const selectedSetData: CardData[] =
+      searchFilter.set === "All Sets"
+        ? toFilter
+        : toFilter.filter((card) => {
+            return card.set === searchFilter.set;
+          });
+    const filteredSetData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
         searchTerm === "" ||
         card.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -81,22 +109,22 @@ const PokemonTCGApp = () => {
       }
     });
 
-    setCardData(filteredData);
+    return filteredSetData;
   }
 
   function addCardToInventory(toAdd: CardData) {
-    if (cardInventory.filter((card) => card.id === toAdd.id).length > 0) {
+    if (inventoryCards.filter((card) => card.id === toAdd.id).length > 0) {
       return;
     } else {
-      setCardInventory([...cardInventory, { ...toAdd, comments: [] }]);
+      setInventoryCards([...inventoryCards, toAdd]);
     }
   }
 
   function removeCardFromInventory(toRemove: CardData) {
-    const removedCards = cardInventory.filter(
+    const removedCards = inventoryCards.filter(
       (card) => card.id !== toRemove.id
     );
-    setCardInventory(removedCards);
+    setInventoryCards(removedCards);
   }
 
   function importCardInventory() {}
@@ -105,29 +133,27 @@ const PokemonTCGApp = () => {
 
   function addComment() {}
 
-  const inventoryCards = cardInventory.map((card) => {
-    return (
-      <div key={card.id} className="card">
-        <img
-          src={card.images?.small}
-          alt={card.name}
-          style={{ cursor: "pointer" }}
-          onClick={() =>
-            setModalImage(card.images?.large || card.images?.small)
-          }
-        />
-        <div className="card-details">
-          <div className="card-name">{card.name || "Unknown Name"}</div>
-          <div>{card.rarity || "Unknown Rarity"}</div>
-          <div>{card.artist || "Unknown Artist"}</div>
-          <div>{card.series || "Unknown Series"}</div>
-        </div>
-        <button onClick={() => removeCardFromInventory(card)}>
-          Remove from Inventory
-        </button>
-      </div>
-    );
-  });
+  function handlePageChange(
+    event: React.ChangeEvent<unknown> | null,
+    page: number
+  ) {
+    const element = document.getElementsByClassName("card-list")[0];
+    element?.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function handleCurrPageChange(page: string) {
+    setCurrPage(page);
+    setPaginationData({
+      pageSize: 50,
+      currPage: 1,
+      totalPages: Math.ceil(
+        (page === "Search" ? cards : inventoryCards).length / 50
+      ),
+    });
+  }
 
   return (
     <div className="main vertical-layout">
@@ -143,13 +169,13 @@ const PokemonTCGApp = () => {
           />
           <select
             value={searchFilter.set}
-            onChange={(e) =>
+            onChange={(e) => {
               setSearchFilter({
                 artist: searchFilter.artist,
                 rarity: searchFilter.rarity,
                 set: e.target.value,
-              })
-            }
+              });
+            }}
             className="dropdown"
           >
             {setOptions.map((opt) => (
@@ -158,15 +184,18 @@ const PokemonTCGApp = () => {
               </option>
             ))}
           </select>
-          <button onClick={() => filterData()}>Search</button>
+          <button onClick={() => handleFilter()}>Search</button>
         </div>
         <div className="pages">
-          <button className="page-button" onClick={() => setCurrPage("Search")}>
+          <button
+            className="page-button"
+            onClick={() => handleCurrPageChange("Search")}
+          >
             Search
           </button>
           <button
             className="page-button"
-            onClick={() => setCurrPage("Inventory")}
+            onClick={() => handleCurrPageChange("Inventory")}
           >
             Inventory
           </button>
@@ -174,8 +203,9 @@ const PokemonTCGApp = () => {
       </div>
       <FilterableCardList
         currPage={currPage}
-        cardInventory={cardInventory}
-        cardData={cardData}
+        cardInventory={inventoryCards}
+        cardData={cards}
+        renderedCards={paginatedCards}
         setSearchFilter={setSearchFilter}
         setSortCategory={setSortCategory}
         importCardInventory={importCardInventory}
@@ -184,6 +214,10 @@ const PokemonTCGApp = () => {
         removeCardFromInventory={removeCardFromInventory}
         setModalImage={setModalImage}
         addComment={addComment}
+      />
+      <Pagination
+        count={paginationData.totalPages}
+        onChange={handlePageChange}
       />
       {modalImage && (
         <div className="modal-image" onClick={() => setModalImage(null)}>
