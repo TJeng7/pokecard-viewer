@@ -10,6 +10,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/1_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-2",
@@ -20,6 +21,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/2_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-3",
@@ -30,6 +32,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/3_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-4",
@@ -40,6 +43,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/4_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-5",
@@ -50,6 +54,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/5_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-6",
@@ -60,6 +65,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/6_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-7",
@@ -70,6 +76,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/7_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-8",
@@ -80,6 +87,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/8_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-9",
@@ -90,6 +98,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/9_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-10",
@@ -100,6 +109,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/10_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-11",
@@ -110,6 +120,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/11_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-12",
@@ -120,6 +131,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/12_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-13",
@@ -130,6 +142,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/13_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-14",
@@ -140,6 +153,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/14_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-15",
@@ -150,6 +164,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/15_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-16",
@@ -160,6 +175,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/16_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-17",
@@ -170,6 +186,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/17_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-18",
@@ -180,6 +197,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/18_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-19",
@@ -190,6 +208,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/19_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-20",
@@ -200,6 +219,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/20_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-21",
@@ -210,6 +230,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/21_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-22",
@@ -220,6 +241,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/22_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-23",
@@ -230,6 +252,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/23_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-24",
@@ -240,6 +263,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/24_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-25",
@@ -250,6 +274,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/25_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-26",
@@ -260,6 +285,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/26_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-27",
@@ -270,6 +296,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/27_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-28",
@@ -280,6 +307,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/28_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-29",
@@ -290,6 +318,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/29_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-30",
@@ -300,6 +329,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/30_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-31",
@@ -310,6 +340,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/31_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-32",
@@ -320,6 +351,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/32_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-33",
@@ -330,6 +362,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/33_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-34",
@@ -340,6 +373,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/34_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-35",
@@ -350,6 +384,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/35_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-36",
@@ -360,6 +395,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/36_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-37",
@@ -370,6 +406,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/37_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-38",
@@ -380,6 +417,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/38_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy0-39",
@@ -390,6 +428,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy0/39_hires.png",
     },
     series: "Kalos Starter Set",
+    rarity: null,
   },
   {
     id: "xy1-1",
@@ -1841,6 +1880,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/132_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-133",
@@ -1851,6 +1891,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/133_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-134",
@@ -1861,6 +1902,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/134_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-135",
@@ -1871,6 +1913,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/135_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-136",
@@ -1881,6 +1924,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/136_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-137",
@@ -1891,6 +1935,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/137_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-138",
@@ -1901,6 +1946,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/138_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-139",
@@ -1911,6 +1957,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/139_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-140",
@@ -1921,6 +1968,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy1/140_hires.png",
     },
     series: "XY",
+    artist: null,
   },
   {
     id: "xy1-141",
@@ -5682,6 +5730,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/91_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-92",
@@ -5692,6 +5741,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/92_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-93",
@@ -5702,6 +5752,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/93_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-94",
@@ -5712,6 +5763,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/94_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-95",
@@ -5722,6 +5774,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/95_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-96",
@@ -5732,6 +5785,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/96_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-97",
@@ -5742,6 +5796,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/97_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-98",
@@ -5752,6 +5807,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/98_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-99",
@@ -5762,6 +5818,7 @@ const base = [
       large: "https://images.pokemontcg.io/xy12/99_hires.png",
     },
     series: "Evolutions",
+    artist: null,
   },
   {
     id: "xy12-100",
@@ -19485,6 +19542,13 @@ const newFile = base.map((card) => {
     newCard = {
       ...newCard,
       artist: null,
+    };
+  }
+
+  if (!card.set) {
+    newCard = {
+      ...newCard,
+      set: "X & Y",
     };
   }
 

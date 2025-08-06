@@ -10,6 +10,7 @@ type CardData = {
     large: string;
   };
   series: string | null;
+  set: string | null;
 };
 
 type CardComment = {
@@ -18,20 +19,8 @@ type CardComment = {
   commentor: string;
 };
 
-type InventoryCard = {
-  id: string;
-  name: string;
-  artist: string | null;
-  rarity: string | null;
-  images: {
-    small: string;
-    large: string;
-  };
-  series: string | null;
-  comments: CardComment[];
-};
-
 type SearchFilter = {
+  name: string;
   artist: string;
   rarity: string;
   set: string;
@@ -40,4 +29,10 @@ type SearchFilter = {
 type SetOption = {
   label: string;
   data: CardData[];
+};
+
+type PaginationData = {
+  pageSize: number;
+  currPage: number;
+  totalPages: number;
 };

@@ -3,8 +3,9 @@ import Card from "./Card";
 
 type FilterableCardListProps = {
   currPage: string;
-  cardInventory: InventoryCard[];
+  cardInventory: CardData[];
   cardData: CardData[];
+  renderedCards: CardData[];
   setSearchFilter: any;
   setSortCategory: any;
   importCardInventory: any;
@@ -19,6 +20,7 @@ export default function FilterableCardList({
   currPage,
   cardInventory,
   cardData,
+  renderedCards,
   setSearchFilter,
   setSortCategory,
   importCardInventory,
@@ -28,22 +30,20 @@ export default function FilterableCardList({
   setModalImage,
   addComment,
 }: FilterableCardListProps) {
-  const cards = (currPage === "Search" ? cardData : cardInventory).map(
-    (card: CardData) => {
-      const isAdded =
-        cardInventory.filter((inventoryCard) => inventoryCard.id === card.id)
-          .length > 0;
-      return (
-        <Card
-          card={card}
-          isAdded={isAdded}
-          setModalImage={setModalImage}
-          addCardToInventory={addCardToInventory}
-          removeCardFromInventory={removeCardFromInventory}
-        />
-      );
-    }
-  );
+  const cards = renderedCards.map((card: CardData) => {
+    const isAdded =
+      cardInventory.filter((inventoryCard) => inventoryCard.id === card.id)
+        .length > 0;
+    return (
+      <Card
+        card={card}
+        isAdded={isAdded}
+        setModalImage={setModalImage}
+        addCardToInventory={addCardToInventory}
+        removeCardFromInventory={removeCardFromInventory}
+      />
+    );
+  });
 
   return (
     <div
