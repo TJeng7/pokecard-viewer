@@ -1,3 +1,5 @@
+import { IoIosAdd, IoMdTrash } from "react-icons/io";
+
 type CardProps = {
   card: CardData;
   setModalImage: any;
@@ -21,19 +23,29 @@ export default function Card({
         style={{ cursor: "pointer" }}
         onClick={() => setModalImage(card.images?.large || card.images?.small)}
       />
-      <div className="card-details">
+      <div className="card-text">
         <div className="card-name">{card.name || "Unknown Name"}</div>
-        <div>{card.rarity || "Unknown Rarity"}</div>
-        <div>{card.artist || "Unknown Artist"}</div>
-        <div>{card.series || "Unknown Series"}</div>
+        <div className="card-details">
+          <div>{card.rarity || "Unknown Rarity"}</div>
+          <div>{card.artist || "Unknown Artist"}</div>
+          <div>{card.series || "Unknown Series"}</div>
+        </div>
       </div>
       {isAdded ? (
-        <button onClick={() => removeCardFromInventory(card)}>
-          Remove from Inventory
+        <button
+          className="remove-inventory"
+          onClick={() => removeCardFromInventory(card)}
+          title="Remove from inventory"
+        >
+          <IoMdTrash className="inventory-icon" />
         </button>
       ) : (
-        <button onClick={() => addCardToInventory(card)}>
-          Add to Inventory
+        <button
+          className="add-inventory"
+          onClick={() => addCardToInventory(card)}
+          title="Add to inventory"
+        >
+          <IoIosAdd className="inventory-icon" />
         </button>
       )}
     </div>

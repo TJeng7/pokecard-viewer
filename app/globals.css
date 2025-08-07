@@ -1,14 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--dark);
+  --foreground: var(--light);
+  --dark: #3b4b4d;
+  --light: #f6f5ed;
+  --light-pale: #f6f5ed73;
+  --accent: #9bdae4;
+  --accent-dark: rgb(118, 187, 197);
+  --accent2: #c2aec4;
+  --accent2-dark: #ad91af;
   font-family: "DM Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--dark);
+    --foreground: var(--light);
   }
 }
 
@@ -20,8 +27,13 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: "DM Sans", sans-serif;
+  background: linear-gradient(#3b4b4d, #3b4b4d00 20%),
+    url("../public/background.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: "Kumbh Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,93 +56,86 @@ a {
 }
 
 input {
-  width: 300px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 button {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
+/* CARD CSS */
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 229px;
   gap: 10px;
+  padding: 15px;
+  background: linear-gradient(#f0c4c1b3, #f5f5f5b3);
+  border-radius: 5px;
+  color: var(--dark);
 }
-
 .card-name {
   font-size: 20px;
   font-weight: bold;
 }
-
 .card-details {
   display: flex;
   flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+}
+.card-text {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.add-inventory,
+.remove-inventory {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border: none;
+}
+.add-inventory {
+  background: var(--accent);
+}
+.remove-inventory {
+  background: var(--accent2);
+}
+.add-inventory:hover {
+  background: var(--accent-dark);
+}
+.remove-inventory:hover {
+  background: var(--accent2-dark);
+}
+.inventory-icon {
+  width: 25px;
+  height: 25px;
+  color: var(--dark);
 }
 
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(254px, 1fr));
-  row-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow-y: auto;
 }
 
 .vertical-layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
-}
-
-.card-list.search-cards {
-  flex: 1 1 auto;
-  overflow: auto;
-}
-
-.search-cards {
-  height: 500px;
-  overflow-y: auto;
-  size: 300%;
-}
-
-.inventory-panel {
-  background: #000000;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 90vh; /* Adjust as needed for your inventory */
-  border-top: 1px solid #ddd;
-  padding: 16px;
-}
-
-.inventory-panel.closed {
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 40px; /* Just enough for the toggle button */
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.inventory-toggle {
-  width: 100%;
-}
-
-.inventory-panel .inventory-content {
-  max-height: 90vh; /* Set desired visible height */
-  overflow-y: auto;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.inventory-panel .card-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .modal-image {
@@ -154,39 +159,127 @@ img.modal-image {
   background: #fff;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.search-bar {
-  width: 500px;
-  text-align: left;
-  font-family: "Comic Sans MS";
-  font-size: 1.2rem;
-  margin: 0;
-  display: block;
-}
-
+/* HEADER CSS */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 24px 10px 8px 10px;
+  width: 100%;
+  padding: 20px 60px;
+  gap: 100px;
+}
+
+.header-search {
+  display: flex;
+  flex: 1;
+  gap: 50px;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 32px;
+  font-weight: 500;
   text-align: left;
   margin: 0;
+  color: var(--light);
+  text-wrap: nowrap;
 }
 
-.dropdown {
-  font-size: 1.1rem;
-  padding: 2px 12px;
-  font-family: "Comic Sans MS";
+.search {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 20px;
+  border: solid 1px var(--light);
+  border-radius: 5px;
+}
+.search:focus-within {
+  border: solid 1.5px var(--light);
+}
+.search-bar {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  display: block;
+  border: none;
+  background: none;
+  color: var(--light);
+}
+.search-bar:active,
+.search-bar:focus-within,
+.search-bar:focus-visible {
+  border: none;
+  outline: none;
+}
+.search-bar::placeholder {
+  color: var(--light-pale);
+  font-size: 18px;
+  font-weight: 300;
+}
+.search-icon {
+  color: var(--light);
+  width: 24px;
+  height: 24px;
 }
 
 .pages {
   display: flex;
+  gap: 40px;
+}
+.page-button {
+  border: none;
+  background: none;
+  color: var(--light);
+  font-size: 22px;
+  font-weight: 500;
+}
+.page-button:hover {
+  color: var(--accent);
+}
+.page-button:active {
+  transform: translateY(2px);
+}
+.page-button.selected {
+  color: var(--accent);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px 60px 30px 60px;
+  gap: 30px;
+}
+
+/* FILTER AND SORT CSS */
+.filter-sort {
+  display: flex;
+}
+.filters {
+  display: flex;
+  gap: 10px;
+}
+.dropdown {
+  padding: 8px 20px;
+  background: none;
+  color: var(--light);
+  border: solid 1px var(--light);
+  border-radius: 5px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.dropdown::picker-icon {
+  color: blue;
+}
+option {
+  color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
 }

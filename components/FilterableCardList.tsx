@@ -36,6 +36,7 @@ export default function FilterableCardList({
         .length > 0;
     return (
       <Card
+        key={card.id}
         card={card}
         isAdded={isAdded}
         setModalImage={setModalImage}
@@ -45,12 +46,5 @@ export default function FilterableCardList({
     );
   });
 
-  return (
-    <div
-      className="card-list search-cards"
-      style={{ margin: "0 10px 0 10px", flex: 1, overflow: "auto" }}
-    >
-      {cards}
-    </div>
-  );
+  return <div className="card-list">{cards}</div>;
 }

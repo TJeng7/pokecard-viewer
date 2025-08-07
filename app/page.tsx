@@ -12,7 +12,9 @@ import swsh from "../public/data/swsh.json";
 import xy from "../public/data/xy.json";
 
 import FilterableCardList from "@/components/FilterableCardList";
-import { Pagination } from "@mui/material";
+import { Input, Pagination } from "@mui/material";
+import { CiSearch } from "react-icons/ci";
+import { IoIosArrowDown } from "react-icons/io";
 
 const allCards: CardData[] = [
   ...base,
@@ -45,7 +47,7 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    set: setOptions[0].label,
+    set: "All Sets",
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
@@ -66,7 +68,8 @@ const PokemonTCGApp = () => {
   });
 
   const exportJSON = () => {
-    if (inventoryCards.length === 0) { // nothing to export
+    if (inventoryCards.length === 0) {
+      // nothing to export
       return;
     }
 
@@ -86,10 +89,14 @@ const PokemonTCGApp = () => {
     // clean up "a" element & remove ObjectURL
     document.body.removeChild(link);
     URL.revokeObjectURL(href);
-  }
+  };
 
   const importJSON = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0 && e.target.files[0].type === "application/json") {
+    if (
+      e.target.files &&
+      e.target.files.length > 0 &&
+      e.target.files[0].type === "application/json"
+    ) {
       const selectedFile = e.target.files[0];
 
       setFile(selectedFile);
@@ -101,13 +108,12 @@ const PokemonTCGApp = () => {
           const parsedData = JSON.parse(uploadData);
           if (Array.isArray(parsedData)) {
             setInventoryCards(parsedData);
-          } 
-        } catch (error) {
-        }
+          }
+        } catch (error) {}
       };
       reader.readAsText(selectedFile);
     }
-  }
+  };
 
   const filteredSearchCards = filterCards("search");
   const filteredInventoryCards = filterCards("inventory");
@@ -220,84 +226,114 @@ const PokemonTCGApp = () => {
   return (
     <div className="main vertical-layout">
       <div className="header">
-        <h1>Pokecard Viewer</h1>
-        <div className="search">
-          <input
-            type="text"
-            placeholder="Search for cards..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-bar"
-          />
-          <select
-            value={searchFilter.set}
-            onChange={(e) => {
-              setSearchFilter({
-                name: searchFilter.name,
-                artist: searchFilter.artist,
-                rarity: searchFilter.rarity,
-                set: e.target.value,
-              });
-            }}
-            className="dropdown"
-          >
-            {setOptions.map((opt) => (
-              <option key={opt.label} value={opt.label}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
-          <button
-            onClick={() => {
-              setSearchFilter({
-                name: searchTerm,
-                artist: searchFilter.artist,
-                rarity: searchFilter.rarity,
-                set: searchFilter.set,
-              });
-            }}
-          >
-            Search
-          </button>
-          <input type="file" onChange={importJSON}/>
-          <button onClick={() => { exportJSON(); }} >
-            Export Inventory
-          </button>
+        <div className="header-search">
+          <h1>Pokecard Viewer</h1>
+          <div className="search">
+            <input
+              type="text"
+              placeholder="Search for cards..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  setSearchFilter({
+                    name: searchTerm,
+                    artist: searchFilter.artist,
+                    rarity: searchFilter.rarity,
+                    set: searchFilter.set,
+                  });
+                }
+              }}
+              className="search-bar"
+            />
+            <CiSearch
+              className="search-icon"
+              onClick={() => {
+                setSearchFilter({
+                  name: searchTerm,
+                  artist: searchFilter.artist,
+                  rarity: searchFilter.rarity,
+                  set: searchFilter.set,
+                });
+              }}
+            />
+          </div>
         </div>
         <div className="pages">
           <button
-            className="page-button"
+            className={`page-button ${currPage === "search" ? "selected" : ""}`}
             onClick={() => handleCurrPageChange("search")}
           >
             Search
           </button>
           <button
-            className="page-button"
+            className={`page-button ${
+              currPage === "inventory" ? "selected" : ""
+            }`}
             onClick={() => handleCurrPageChange("inventory")}
           >
             Inventory
           </button>
         </div>
       </div>
-      <FilterableCardList
-        currPage={currPage}
-        cardInventory={inventoryCards}
-        cardData={cards}
-        renderedCards={paginatedCards}
-        setSearchFilter={setSearchFilter}
-        setSortCategory={setSortCategory}
-        importCardInventory={importCardInventory}
-        exportCardInventory={exportCardInventory}
-        addCardToInventory={addCardToInventory}
-        removeCardFromInventory={removeCardFromInventory}
-        setModalImage={setModalImage}
-        addComment={addComment}
-      />
-      <Pagination
-        count={paginationData.totalPages}
-        onChange={handlePageChange}
-        page={paginationData.currPage}
-      />
+      <div className="body">
+        <div className="filter-sort">
+          <div className="filters">
+            <select
+              value={searchFilter.set}
+              onChange={(e) => {
+                setSearchFilter({
+                  name: searchFilter.name,
+                  artist: searchFilter.artist,
+                  rarity: searchFilter.rarity,
+                  set: e.target.value,
+                });
+              }}
+              className="dropdown"
+            >
+              {setOptions.map((opt) => (
+                <option key={opt.label} value={opt.label}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <FilterableCardList
+          currPage={currPage}
+          cardInventory={inventoryCards}
+          cardData={cards}
+          renderedCards={paginatedCards}
+          setSearchFilter={setSearchFilter}
+          setSortCategory={setSortCategory}
+          importCardInventory={importCardInventory}
+          exportCardInventory={exportCardInventory}
+          addCardToInventory={addCardToInventory}
+          removeCardFromInventory={removeCardFromInventory}
+          setModalImage={setModalImage}
+          addComment={addComment}
+        />
+        <div className="footer">
+          <Pagination
+            count={paginationData.totalPages}
+            onChange={handlePageChange}
+            page={paginationData.currPage}
+            sx={{
+              ".MuiButtonBase-root-MuiPaginationItem-root": {
+                color: "#f6f5ed",
+              },
+            }}
+          />
+          <input type="file" onChange={importJSON} />
+          <button
+            onClick={() => {
+              exportJSON();
+            }}
+          >
+            Export Inventory
+          </button>
+        </div>
+      </div>
       {modalImage && (
         <div className="modal-image" onClick={() => setModalImage(null)}>
           <img
