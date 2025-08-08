@@ -370,6 +370,9 @@ const PokemonTCGApp = () => {
               },
             }}
           />
+          <div> 
+            Credit to <a href="https://www.instagram.com/potato.stirfry/">potato.stirfry</a> on Instagram for background image.
+          </div>
           <input type="file" onChange={importJSON} />
           <button
             onClick={() => {
