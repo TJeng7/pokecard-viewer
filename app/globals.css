@@ -149,6 +149,8 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  min-height: 75vh;
+  min-width: 75vw;
 }
 
 img.modal-image {

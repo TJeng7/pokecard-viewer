@@ -60,6 +60,49 @@ const PokemonTCGApp = () => {
   const [currPage, setCurrPage] = useState<string>("search");
   const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
 
+  // Read a cookie
+  function getCookie(name: string): string | null {
+    // Get all cookies and split into individual cookies
+    const cookies = document.cookie.split(';');
+
+    // Find and return the specific cookie we want
+    const cookie = cookies.find(c => c.trim().startsWith(name + '='));
+    return cookie ? cookie.split('=')[1] : null;
+    return null;
+  }
+
+  // Set a cookie
+  function setCookie(name: string, value: string, days: number) {
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + days);
+    
+    // Create cookie string with name, value, and expiration
+    const cookieString = `${name}=${value};expires=${expirationDate.toUTCString()};path=/`;
+      
+    // Set the cookie
+    document.cookie = cookieString;
+  }
+
+  // On page load, read cookie and set inventoryCards if present
+  useEffect( () => {
+    const cookie = getCookie("pokecard-inventory");
+    if (cookie) {
+      try {
+        const parsedData = JSON.parse(decodeURIComponent(cookie));
+        if (Array.isArray(parsedData)) {
+          setInventoryCards(parsedData);
+        }
+      } catch {
+      }
+    }
+  }, []);
+
+  // Whenever inventoryCards changes, update the cookie
+  useEffect( () => {
+    setCookie("pokecard-inventory", encodeURIComponent(JSON.stringify(inventoryCards)), 30);// expire in 30 days
+    console.log("Inventory updated, cookie set.");
+  }, [inventoryCards]);
+
   // Pagination for current pages
   const [paginationData, setPaginationData] = useState<PaginationData>({
     pageSize: 50,
@@ -68,8 +111,8 @@ const PokemonTCGApp = () => {
   });
 
   const exportJSON = () => {
-    if (inventoryCards.length === 0) {
-      // nothing to export
+    if (inventoryCards.length === 0) { // nothing to export
+      alert("Error: Inventory is empty!");
       return;
     }
 
@@ -86,17 +129,21 @@ const PokemonTCGApp = () => {
     document.body.appendChild(link);
     link.click();
 
+    alert("Inventory exported successfully! Check your downloads folder for a file of format pokecard-inventory.json");
+
     // clean up "a" element & remove ObjectURL
     document.body.removeChild(link);
     URL.revokeObjectURL(href);
   };
 
   const importJSON = (e: ChangeEvent<HTMLInputElement>) => {
-    if (
-      e.target.files &&
-      e.target.files.length > 0 &&
-      e.target.files[0].type === "application/json"
-    ) {
+    if (!e.target.files || e.target.files.length <= 0) {
+      alert("Error: No file selected or file is empty");
+      return;
+    } else if (e.target.files[0].type != "application/json") {
+      alert("Error: File must be a valid JSON file");
+      return;
+    } else {
       const selectedFile = e.target.files[0];
 
       setFile(selectedFile);
@@ -107,7 +154,13 @@ const PokemonTCGApp = () => {
           const uploadData = event.target?.result as string;
           const parsedData = JSON.parse(uploadData);
           if (Array.isArray(parsedData)) {
-            setInventoryCards(parsedData);
+            if (parsedData.length === 0) {
+              alert("Error: File is empty!");
+              return;
+            } else {
+              setInventoryCards(parsedData);
+              alert("File uploaded successfully! Inventory has been overwritten.");
+            }
           }
         } catch (error) {}
       };
