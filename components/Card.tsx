@@ -4,16 +4,16 @@ type CardProps = {
   card: CardData;
   setModalImage: any;
   isAdded: boolean;
-  addCardToInventory: any;
-  removeCardFromInventory: any;
+  addCardToWishlist: any;
+  removeCardFromWishlist: any;
 };
 
 export default function Card({
   card,
   setModalImage,
   isAdded,
-  addCardToInventory,
-  removeCardFromInventory,
+  addCardToWishlist,
+  removeCardFromWishlist,
 }: CardProps) {
   return (
     <div key={card.id} className="card">
@@ -33,19 +33,19 @@ export default function Card({
       </div>
       {isAdded ? (
         <button
-          className="remove-inventory"
-          onClick={() => removeCardFromInventory(card)}
-          title="Remove from inventory"
+          className="remove-wishlist"
+          onClick={() => removeCardFromWishlist(card)}
+          title="Remove from wishlist"
         >
-          <IoMdTrash className="inventory-icon" />
+          <IoMdTrash className="wishlist-icon" />
         </button>
       ) : (
         <button
-          className="add-inventory"
-          onClick={() => addCardToInventory(card)}
-          title="Add to inventory"
+          className="add-wishlist"
+          onClick={() => addCardToWishlist(card)}
+          title="Add to wishlist"
         >
-          <IoIosAdd className="inventory-icon" />
+          <IoIosAdd className="wishlist-icon" />
         </button>
       )}
     </div>

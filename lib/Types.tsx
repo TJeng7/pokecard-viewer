@@ -23,7 +23,7 @@ type SearchFilter = {
   name: string;
   artist: string;
   rarity: string;
-  set: string;
+  series: string;
 };
 
 type SetOption = {

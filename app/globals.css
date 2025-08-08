@@ -96,8 +96,8 @@ button {
   flex-direction: column;
 }
 
-.add-inventory,
-.remove-inventory {
+.add-wishlist,
+.remove-wishlist {
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -107,19 +107,19 @@ button {
   right: 15px;
   border: none;
 }
-.add-inventory {
+.add-wishlist {
   background: var(--accent);
 }
-.remove-inventory {
+.remove-wishlist {
   background: var(--accent2);
 }
-.add-inventory:hover {
+.add-wishlist:hover {
   background: var(--accent-dark);
 }
-.remove-inventory:hover {
+.remove-wishlist:hover {
   background: var(--accent2-dark);
 }
-.inventory-icon {
+.wishlist-icon {
   width: 25px;
   height: 25px;
   color: var(--dark);
@@ -149,6 +149,8 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  min-height: 75vh;
+  min-width: 75vw;
 }
 
 img.modal-image {
@@ -225,24 +227,24 @@ h1 {
   height: 24px;
 }
 
-.pages {
+.tabs {
   display: flex;
   gap: 40px;
 }
-.page-button {
+.tab-button {
   border: none;
   background: none;
   color: var(--light);
   font-size: 22px;
   font-weight: 500;
 }
-.page-button:hover {
+.tab-button:hover {
   color: var(--accent);
 }
-.page-button:active {
+.tab-button:active {
   transform: translateY(2px);
 }
-.page-button.selected {
+.tab-button.selected {
   color: var(--accent);
 }
 
