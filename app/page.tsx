@@ -38,7 +38,7 @@ const setOptions: SetOption[] = [
   { label: "Pop Series", data: pop },
   { label: "EX", data: ex },
   { label: "Base Set", data: base },
-  { label: "All Sets", data: allCards },
+  { label: "All Series", data: allCards },
 ];
 
 const PokemonTCGApp = () => {
@@ -47,61 +47,53 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    set: "All Sets",
+    series: "All Series",
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
   const [cards, setCards] = useState<CardData[]>(allCards);
-  const [inventoryCards, setInventoryCards] = useState<CardData[]>([]);
+  const [wishlistCards, setWishlistCards] = useState<CardData[]>([]);
 
   const [file, setFile] = useState<File | null>(null);
 
   // Tracks the currently opened page to determine which CardData to render
-  const [currPage, setCurrPage] = useState<string>("search");
+  const [currTab, setcurrTab] = useState<string>("search");
   const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
 
-  // Read a cookie
-  function getCookie(name: string): string | null {
-    // Get all cookies and split into individual cookies
-    const cookies = document.cookie.split(';');
-
-    // Find and return the specific cookie we want
-    const cookie = cookies.find(c => c.trim().startsWith(name + '='));
-    return cookie ? cookie.split('=')[1] : null;
-    return null;
-  }
-
-  // Set a cookie
-  function setCookie(name: string, value: string, days: number) {
-    const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + days);
-    
-    // Create cookie string with name, value, and expiration
-    const cookieString = `${name}=${value};expires=${expirationDate.toUTCString()};path=/`;
-      
-    // Set the cookie
-    document.cookie = cookieString;
-  }
-
-  // On page load, read cookie and set inventoryCards if present
-  useEffect( () => {
-    const cookie = getCookie("pokecard-inventory");
-    if (cookie) {
+  // On page load, read from localStorage and series wishlistCards if present
+  useEffect(() => {
+    const storedWishlist = localStorage.getItem("pokecard-wishlist");
+    if (storedWishlist) {
       try {
-        const parsedData = JSON.parse(decodeURIComponent(cookie));
+        const parsedData = JSON.parse(storedWishlist);
         if (Array.isArray(parsedData)) {
-          setInventoryCards(parsedData);
+          setWishlistCards(parsedData);
         }
       } catch {
       }
     }
   }, []);
 
-  // Whenever inventoryCards changes, update the cookie
-  useEffect( () => {
-    setCookie("pokecard-inventory", encodeURIComponent(JSON.stringify(inventoryCards)), 30);// expire in 30 days
-    console.log("Inventory updated, cookie set.");
-  }, [inventoryCards]);
+  // Whenever wishlistCards changes, update localStorage
+  useEffect(() => {
+    localStorage.setItem("pokecard-wishlist", JSON.stringify(wishlistCards));
+  }, [wishlistCards]);
+
+  // On page load, read from localStorage and series currTab if present
+  useEffect(() => {
+    const savedTab = localStorage.getItem("pokecard-currTab");
+    if (savedTab === "search" || savedTab === "wishlist") {
+      handlecurrTabChange(savedTab);
+
+      // Calculate the correct totalPages for the restored tab
+      const relevantCards = savedTab === "search" ? allCards : wishlistCards;
+      setPaginationData({
+        pageSize: 50,
+        currPage: 1,
+        totalPages: Math.max(1, Math.ceil(relevantCards.length / 50)),
+      });
+    }
+  }, [currTab]); //only load on wishlistCards change
 
   // Pagination for current pages
   const [paginationData, setPaginationData] = useState<PaginationData>({
@@ -111,14 +103,14 @@ const PokemonTCGApp = () => {
   });
 
   const exportJSON = () => {
-    if (inventoryCards.length === 0) { // nothing to export
-      alert("Error: Inventory is empty!");
+    if (wishlistCards.length === 0) { // nothing to export
+      alert("Error: Wishlist is empty!");
       return;
     }
 
     // create file in browser
-    const fileName = "pokecard-inventory";
-    const json = JSON.stringify(inventoryCards, null, 2);
+    const fileName = "pokecard-wishlist";
+    const json = JSON.stringify(wishlistCards, null, 2);
     const blob = new Blob([json], { type: "application/json" });
     const href = URL.createObjectURL(blob);
 
@@ -129,7 +121,7 @@ const PokemonTCGApp = () => {
     document.body.appendChild(link);
     link.click();
 
-    alert("Inventory exported successfully! Check your downloads folder for a file of format pokecard-inventory.json");
+    alert("Wishlist exported successfully! Check your downloads folder for a file of format pokecard-wishlist.json");
 
     // clean up "a" element & remove ObjectURL
     document.body.removeChild(link);
@@ -158,8 +150,8 @@ const PokemonTCGApp = () => {
               alert("Error: File is empty!");
               return;
             } else {
-              setInventoryCards(parsedData);
-              alert("File uploaded successfully! Inventory has been overwritten.");
+              setWishlistCards(parsedData);
+              alert("File uploaded successfully! Wishlist has been overwritten.");
             }
           }
         } catch (error) {}
@@ -169,15 +161,15 @@ const PokemonTCGApp = () => {
   };
 
   const filteredSearchCards = filterCards("search");
-  const filteredInventoryCards = filterCards("inventory");
+  const filteredWishlistCards = filterCards("wishlist");
 
   const paginatedCards =
-    currPage === "search"
+    currTab === "search"
       ? filteredSearchCards.slice(
           (paginationData.currPage - 1) * paginationData.pageSize,
           paginationData.currPage * paginationData.pageSize
         )
-      : filteredInventoryCards.slice(
+      : filteredWishlistCards.slice(
           (paginationData.currPage - 1) * paginationData.pageSize,
           paginationData.currPage * paginationData.pageSize
         );
@@ -185,12 +177,12 @@ const PokemonTCGApp = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   function filterCards(view: string) {
-    const toFilter = view === "search" ? cards : inventoryCards;
+    const toFilter = view === "search" ? cards : wishlistCards;
     const selectedSetData: CardData[] =
-      searchFilter.set === "All Sets"
+      searchFilter.series === "All Series"
         ? toFilter
         : toFilter.filter((card) => {
-            return card.set === searchFilter.set;
+            return card.series === searchFilter.series;
           });
     const filteredSetData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
@@ -211,24 +203,24 @@ const PokemonTCGApp = () => {
     return filteredSetData;
   }
 
-  function addCardToInventory(toAdd: CardData) {
-    if (inventoryCards.filter((card) => card.id === toAdd.id).length > 0) {
+  function addCardToWishlist(toAdd: CardData) {
+    if (wishlistCards.filter((card) => card.id === toAdd.id).length > 0) {
       return;
     } else {
-      setInventoryCards([...inventoryCards, toAdd]);
+      setWishlistCards([...wishlistCards, toAdd]);
     }
   }
 
-  function removeCardFromInventory(toRemove: CardData) {
-    const removedCards = inventoryCards.filter(
+  function removeCardFromWishlist(toRemove: CardData) {
+    const removedCards = wishlistCards.filter(
       (card) => card.id !== toRemove.id
     );
-    setInventoryCards(removedCards);
+    setWishlistCards(removedCards);
   }
 
-  function importCardInventory() {}
+  function importCardWishlist() {}
 
-  function exportCardInventory() {}
+  function exportCardWishlist() {}
 
   function addComment() {}
 
@@ -253,7 +245,7 @@ const PokemonTCGApp = () => {
       ...paginationData,
       currPage: 1,
       totalPages: Math.ceil(
-        (currPage === "search" ? filteredSearchCards : filteredInventoryCards)
+        (currTab === "search" ? filteredSearchCards : filteredWishlistCards)
           .length / 50
       ),
     });
@@ -265,13 +257,14 @@ const PokemonTCGApp = () => {
     });
   }, [searchFilter]);
 
-  function handleCurrPageChange(page: string) {
-    setCurrPage(page);
+  function handlecurrTabChange(tab: string) {
+    setcurrTab(tab);
+    localStorage.setItem("pokecard-currTab", tab); // Save to localStorage
     setPaginationData({
       pageSize: 50,
       currPage: 1,
       totalPages: Math.ceil(
-        (page === "search" ? cards : inventoryCards).length / 50
+        (tab === "search" ? cards : wishlistCards).length / 50
       ),
     });
   }
@@ -293,7 +286,7 @@ const PokemonTCGApp = () => {
                     name: searchTerm,
                     artist: searchFilter.artist,
                     rarity: searchFilter.rarity,
-                    set: searchFilter.set,
+                    series: searchFilter.series,
                   });
                 }
               }}
@@ -306,26 +299,26 @@ const PokemonTCGApp = () => {
                   name: searchTerm,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  set: searchFilter.set,
+                  series: searchFilter.series,
                 });
               }}
             />
           </div>
         </div>
-        <div className="pages">
+        <div className="tabs">
           <button
-            className={`page-button ${currPage === "search" ? "selected" : ""}`}
-            onClick={() => handleCurrPageChange("search")}
+            className={`tab-button ${currTab === "search" ? "selected" : ""}`}
+            onClick={() => handlecurrTabChange("search")}
           >
             Search
           </button>
           <button
-            className={`page-button ${
-              currPage === "inventory" ? "selected" : ""
+            className={`tab-button ${
+              currTab === "wishlist" ? "selected" : ""
             }`}
-            onClick={() => handleCurrPageChange("inventory")}
+            onClick={() => handlecurrTabChange("wishlist")}
           >
-            Inventory
+            Wishlist
           </button>
         </div>
       </div>
@@ -333,13 +326,13 @@ const PokemonTCGApp = () => {
         <div className="filter-sort">
           <div className="filters">
             <select
-              value={searchFilter.set}
+              value={searchFilter.series}
               onChange={(e) => {
                 setSearchFilter({
                   name: searchFilter.name,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  set: e.target.value,
+                  series: e.target.value,
                 });
               }}
               className="dropdown"
@@ -353,16 +346,16 @@ const PokemonTCGApp = () => {
           </div>
         </div>
         <FilterableCardList
-          currPage={currPage}
-          cardInventory={inventoryCards}
+          currTab={currTab}
+          cardWishlist={wishlistCards}
           cardData={cards}
           renderedCards={paginatedCards}
           setSearchFilter={setSearchFilter}
           setSortCategory={setSortCategory}
-          importCardInventory={importCardInventory}
-          exportCardInventory={exportCardInventory}
-          addCardToInventory={addCardToInventory}
-          removeCardFromInventory={removeCardFromInventory}
+          importCardWishlist={importCardWishlist}
+          exportCardWishlist={exportCardWishlist}
+          addCardToWishlist={addCardToWishlist}
+          removeCardFromWishlist={removeCardFromWishlist}
           setModalImage={setModalImage}
           addComment={addComment}
         />
@@ -383,7 +376,7 @@ const PokemonTCGApp = () => {
               exportJSON();
             }}
           >
-            Export Inventory
+            Export Wishlist
           </button>
         </div>
       </div>
