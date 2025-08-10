@@ -47,7 +47,7 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    series: "All Series",
+    set: "All Set",
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
@@ -60,7 +60,7 @@ const PokemonTCGApp = () => {
   const [currTab, setcurrTab] = useState<string>("search");
   const [favoriteArtists, setFavoriteArtists] = useState<string[]>([]);
 
-  // On page load, read from localStorage and series wishlistCards if present
+  // On page load, read from localStorage and set wishlistCards if present
   useEffect(() => {
     const storedWishlist = localStorage.getItem("pokecard-wishlist");
     if (storedWishlist) {
@@ -79,7 +79,7 @@ const PokemonTCGApp = () => {
     localStorage.setItem("pokecard-wishlist", JSON.stringify(wishlistCards));
   }, [wishlistCards]);
 
-  // On page load, read from localStorage and series currTab if present
+  // On page load, read from localStorage and set currTab if present
   useEffect(() => {
     const savedTab = localStorage.getItem("pokecard-currTab");
     if (savedTab === "search" || savedTab === "wishlist") {
@@ -179,10 +179,10 @@ const PokemonTCGApp = () => {
   function filterCards(view: string) {
     const toFilter = view === "search" ? cards : wishlistCards;
     const selectedSetData: CardData[] =
-      searchFilter.series === "All Series"
+      searchFilter.set === "All Set"
         ? toFilter
         : toFilter.filter((card) => {
-            return card.series === searchFilter.series;
+            return card.set === searchFilter.set;
           });
     const filteredSetData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
@@ -326,13 +326,13 @@ const PokemonTCGApp = () => {
         <div className="filter-sort">
           <div className="filters">
             <select
-              value={searchFilter.series}
+              value={searchFilter.set}
               onChange={(e) => {
                 setSearchFilter({
                   name: searchFilter.name,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  series: e.target.value,
+                  set: e.target.value,
                 });
               }}
               className="dropdown"
