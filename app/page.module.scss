@@ -1,3 +1,17 @@
+.verticalLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -68,7 +82,7 @@
   padding: 0 20px;
   border: 1px solid transparent;
   transition:
-    background 0.2s,
+    /* background 0.2s, */
     color 0.2s,
     border-color 0.2s;
   cursor: pointer;
@@ -153,15 +167,10 @@ a.secondary {
     min-width: auto;
   }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   .logo {
+//     filter: invert();
+//   }
+// }

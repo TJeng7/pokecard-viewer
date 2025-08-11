@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
+import styles from "./Header.module.scss"
+
 interface Props {
     searchFilter: SearchFilter;
     setSearchFilter: (filter: SearchFilter) => void;
@@ -11,10 +13,10 @@ interface Props {
 export const Header: React.FC<Props> = ({ searchFilter, setSearchFilter, currTab, handleCurrTabChange }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   return (
-  <div className="header">
-    <div className="header-search">
+  <div className={styles.header}>
+    <div className={styles.headerSearch}>
       <h1>Pokecard Viewer</h1>
-      <div className="search">
+      <div className={styles.search}>
         <input
           type="text"
           placeholder="Search for cards..."
@@ -30,10 +32,10 @@ export const Header: React.FC<Props> = ({ searchFilter, setSearchFilter, currTab
               });
             }
           }}
-          className="search-bar"
+          className={styles.searchBar}
         />
         <CiSearch
-          className="search-icon"
+          className={styles.searchIcon}
           onClick={() => {
             setSearchFilter({
               name: searchTerm,
@@ -45,17 +47,15 @@ export const Header: React.FC<Props> = ({ searchFilter, setSearchFilter, currTab
         />
       </div>
     </div>
-    <div className="tabs">
+    <div className={styles.tabs}>
       <button
-        className={`tab-button ${currTab === "search" ? "selected" : ""}`}
+        className={`${styles.tabButton} ${currTab === "search" ? styles.selected : ""}`}
         onClick={() => handleCurrTabChange("search")}
       >
         Search
       </button>
       <button
-        className={`tab-button ${
-          currTab === "wishlist" ? "selected" : ""
-        }`}
+        className={`${styles.tabButton} ${currTab === "wishlist" ? styles.selected : ""}`}
         onClick={() => handleCurrTabChange("wishlist")}
       >
         Wishlist

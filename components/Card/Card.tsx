@@ -1,5 +1,7 @@
 import { IoIosAdd, IoMdTrash } from "react-icons/io";
 
+import styles from "./Card.module.scss"
+
 type CardProps = {
   card: CardData;
   setModalImage: any;
@@ -16,38 +18,27 @@ export default function Card({
   removeCardFromWishlist,
 }: CardProps) {
   return (
-    <div key={card.id} className="card">
+    <div key={card.id} className={styles.card}>
       <img
         src={card.images?.small}
         alt={card.name}
         style={{ cursor: "pointer" }}
         onClick={() => setModalImage(card.images?.large || card.images?.small)}
       />
-      <div className="card-text">
-        <div className="card-name">{card.name || "Unknown Name"}</div>
-        <div className="card-details">
+      <div className={styles.cardText}>
+        <div className={styles.cardName}>{card.name || "Unknown Name"}</div>
+        <div className={styles.cardDetails}>
           <div>{card.rarity || "Unknown Rarity"}</div>
           <div>{card.artist || "Unknown Artist"}</div>
           <div>{card.series || "Unknown Series"}</div>
         </div>
       </div>
-      {isAdded ? (
-        <button
-          className="remove-wishlist"
-          onClick={() => removeCardFromWishlist(card)}
-          title="Remove from wishlist"
-        >
-          <IoMdTrash className="wishlist-icon" />
-        </button>
-      ) : (
-        <button
-          className="add-wishlist"
-          onClick={() => addCardToWishlist(card)}
-          title="Add to wishlist"
-        >
-          <IoIosAdd className="wishlist-icon" />
-        </button>
-      )}
+      <button
+        className={`${styles.wishlistButton} ${isAdded ? styles.remove : styles.add}`}
+        onClick={isAdded ? () => removeCardFromWishlist(card) : () => addCardToWishlist(card)}
+      >
+        {isAdded ? <IoMdTrash className={styles.wishlistIcon}/> : <IoIosAdd className={styles.wishlistIcon}/>}
+      </button>
     </div>
   );
 }

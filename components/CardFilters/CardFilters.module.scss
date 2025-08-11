@@ -1,0 +1,25 @@
+.filterSort {
+  display: flex;
+	width: 100%;
+
+	.filters {
+		gap: 10px;
+
+		.dropdown {
+			padding: 8px 20px;
+			background: none;
+			color: var(--light);
+			border: solid 1px var(--light);
+			border-radius: 5px;
+			font-family: "Kumbh Sans", sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			.dropdown::picker-icon {
+				color: blue;
+			}
+			.option {
+				color: black;
+			}
+		}
+	}
+}
