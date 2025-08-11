@@ -1,74 +1,16 @@
 "use client";
 
 import React, { useState, useEffect, ChangeEvent } from "react";
-import {
-  base, bw, dp, ex, pop, sm, sv, swsh, xy, ecard, gym, hgss, neo, np, pl, other
-} from "./index.js";
+
+import { CardFilters } from "../components/CardFilters"
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { ALL_CARDS } from "../consts/setData"
 
 import FilterableCardList from "@/components/FilterableCardList";
-import { Input, Pagination } from "@mui/material";
-import { CiSearch } from "react-icons/ci";
-import { IoIosArrowDown } from "react-icons/io";
-
-const allCards: CardData[] = [
-  ...base,
-  ...bw,
-  ...dp,
-  ...ex,
-  ...pop,
-  ...sm,
-  ...sv,
-  ...swsh,
-  ...xy,
-  ...ecard, 
-  ...gym, 
-  ...hgss, 
-  ...neo, 
-  ...np, 
-  ...pl, 
-  ...other
-];
-/*
-const setOptions: SetOption[] = [
-  { label: "Scarlet & Violet", data: sv },
-  { label: "Sword & Shield", data: swsh },
-  { label: "Sun & Moon", data: sm },
-  { label: "X & Y", data: xy },
-  { label: "Black & White", data: bw },
-  { label: "Diamond & Pearl", data: dp },
-  { label: "Pop Series", data: pop },
-  { label: "EX", data: ex },
-  { label: "Base Set", data: base },
-  { label: "E-Card", data: ecard },
-  { label: "Gym", data: gym },
-  { label: "HeartGold & SoulSilver", data: hgss },
-  { label: "Neo", data: neo },
-  { label: "NP", data: np },
-  { label: "Platinum", data: pl },
-  { label: "Other", data: other },
-  { label: "All Sets", data: allCards },
-];*/
-const setOptions: string[] = [
-  "Scarlet & Violet",
-  "Sword & Shield", 
-  "Sun & Moon", 
-  "X & Y", 
-  "Black & White", 
-  "Diamond & Pearl", 
-  "Pop Series", 
-  "EX", 
-  "Base Set", 
-  "E-Card", 
-  "Gym", 
-  "HeartGold & SoulSilver", 
-  "Neo",
-  "NP", 
-  "Platinum", 
-  "Other", 
-  "All Sets"];
+import { Pagination } from "@mui/material";
 
 const PokemonTCGApp = () => {
-  const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchFilter, setSearchFilter] = useState<SearchFilter>({
     name: "",
     artist: "",
@@ -77,7 +19,7 @@ const PokemonTCGApp = () => {
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
-  const [cards, setCards] = useState<CardData[]>(allCards);
+  const [cards, setCards] = useState<CardData[]>(ALL_CARDS);
   const [wishlistCards, setWishlistCards] = useState<CardData[]>([]);
 
   const [file, setFile] = useState<File | null>(null);
@@ -112,7 +54,7 @@ const PokemonTCGApp = () => {
       handlecurrTabChange(savedTab);
 
       // Calculate the correct totalPages for the restored tab
-      const relevantCards = savedTab === "search" ? allCards : wishlistCards;
+      const relevantCards = savedTab === "search" ? ALL_CARDS : wishlistCards;
       setPaginationData({
         pageSize: 50,
         currPage: 1,
@@ -125,7 +67,7 @@ const PokemonTCGApp = () => {
   const [paginationData, setPaginationData] = useState<PaginationData>({
     pageSize: 50,
     currPage: 1,
-    totalPages: Math.ceil(sv.length / 50),
+    totalPages: Math.ceil(ALL_CARDS.length / 50),
   });
 
   const exportJSON = () => {
@@ -297,80 +239,17 @@ const PokemonTCGApp = () => {
 
   return (
     <div className="main vertical-layout">
-      <div className="header">
-        <div className="header-search">
-          <h1>Pokecard Viewer</h1>
-          <div className="search">
-            <input
-              type="text"
-              placeholder="Search for cards..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setSearchFilter({
-                    name: searchTerm,
-                    artist: searchFilter.artist,
-                    rarity: searchFilter.rarity,
-                    set: searchFilter.set,
-                  });
-                }
-              }}
-              className="search-bar"
-            />
-            <CiSearch
-              className="search-icon"
-              onClick={() => {
-                setSearchFilter({
-                  name: searchTerm,
-                  artist: searchFilter.artist,
-                  rarity: searchFilter.rarity,
-                  set: searchFilter.set,
-                });
-              }}
-            />
-          </div>
-        </div>
-        <div className="tabs">
-          <button
-            className={`tab-button ${currTab === "search" ? "selected" : ""}`}
-            onClick={() => handlecurrTabChange("search")}
-          >
-            Search
-          </button>
-          <button
-            className={`tab-button ${
-              currTab === "wishlist" ? "selected" : ""
-            }`}
-            onClick={() => handlecurrTabChange("wishlist")}
-          >
-            Wishlist
-          </button>
-        </div>
-      </div>
+      <Header
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
+        currTab={currTab}
+        handleCurrTabChange={handlecurrTabChange}
+      />
       <div className="body">
-        <div className="filter-sort">
-          <div className="filters">
-            <select
-              value={searchFilter.set}
-              onChange={(e) => {
-                setSearchFilter({
-                  name: searchFilter.name,
-                  artist: searchFilter.artist,
-                  rarity: searchFilter.rarity,
-                  set: e.target.value,
-                });
-              }}
-              className="dropdown"
-            >
-              {setOptions.map((label) => (
-                <option key={label} value={label}>
-                    {label}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+        <CardFilters 
+          searchFilter={searchFilter}
+          setSearchFilter={setSearchFilter}
+        />
         <FilterableCardList
           currTab={currTab}
           cardWishlist={wishlistCards}
@@ -385,7 +264,7 @@ const PokemonTCGApp = () => {
           setModalImage={setModalImage}
           addComment={addComment}
         />
-        <div className="footer">
+        <div className="pagination">
           <Pagination
             count={paginationData.totalPages}
             onChange={handlePageChange}
@@ -396,18 +275,11 @@ const PokemonTCGApp = () => {
               },
             }}
           />
-          <div className="credits"> 
-            Credit to <a href="https://www.instagram.com/potato.stirfry/">potato.stirfry</a> on Instagram for background image.
-          </div>
-          <input type="file" onChange={importJSON} />
-          <button
-            onClick={() => {
-              exportJSON();
-            }}
-          >
-            Export Wishlist
-          </button>
         </div>
+        <Footer 
+          onImportJSON = {(e) => importJSON(e)}
+          onExportJSON = {exportJSON}
+        />
       </div>
       {modalImage && (
         <div className="modal-image" onClick={() => setModalImage(null)}>

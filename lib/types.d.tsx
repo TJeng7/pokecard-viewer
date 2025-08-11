@@ -1,5 +1,3 @@
-// Defines any types needed
-
 type CardData = {
   id: string;
   name: string;
