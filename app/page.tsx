@@ -1,15 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, ChangeEvent } from "react";
-import base from "../public/data/base.json";
-import bw from "../public/data/bw.json";
-import dp from "../public/data/dp.json";
-import ex from "../public/data/ex.json";
-import pop from "../public/data/pop.json";
-import sm from "../public/data/sm.json";
-import sv from "../public/data/sv.json";
-import swsh from "../public/data/swsh.json";
-import xy from "../public/data/xy.json";
+import {
+  base, bw, dp, ex, pop, sm, sv, swsh, xy, ecard, gym, hgss, neo, np, pl, other
+} from "./index.js";
 
 import FilterableCardList from "@/components/FilterableCardList";
 import { Input, Pagination } from "@mui/material";
@@ -26,8 +20,15 @@ const allCards: CardData[] = [
   ...sv,
   ...swsh,
   ...xy,
+  ...ecard, 
+  ...gym, 
+  ...hgss, 
+  ...neo, 
+  ...np, 
+  ...pl, 
+  ...other
 ];
-
+/*
 const setOptions: SetOption[] = [
   { label: "Scarlet & Violet", data: sv },
   { label: "Sword & Shield", data: swsh },
@@ -38,8 +39,33 @@ const setOptions: SetOption[] = [
   { label: "Pop Series", data: pop },
   { label: "EX", data: ex },
   { label: "Base Set", data: base },
-  { label: "All Series", data: allCards },
-];
+  { label: "E-Card", data: ecard },
+  { label: "Gym", data: gym },
+  { label: "HeartGold & SoulSilver", data: hgss },
+  { label: "Neo", data: neo },
+  { label: "NP", data: np },
+  { label: "Platinum", data: pl },
+  { label: "Other", data: other },
+  { label: "All Sets", data: allCards },
+];*/
+const setOptions: string[] = [
+  "Scarlet & Violet",
+  "Sword & Shield", 
+  "Sun & Moon", 
+  "X & Y", 
+  "Black & White", 
+  "Diamond & Pearl", 
+  "Pop Series", 
+  "EX", 
+  "Base Set", 
+  "E-Card", 
+  "Gym", 
+  "HeartGold & SoulSilver", 
+  "Neo",
+  "NP", 
+  "Platinum", 
+  "Other", 
+  "All Sets"];
 
 const PokemonTCGApp = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -47,7 +73,7 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    set: "All Set",
+    set: "All Sets",
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
@@ -179,7 +205,7 @@ const PokemonTCGApp = () => {
   function filterCards(view: string) {
     const toFilter = view === "search" ? cards : wishlistCards;
     const selectedSetData: CardData[] =
-      searchFilter.set === "All Set"
+      searchFilter.set === "All Sets"
         ? toFilter
         : toFilter.filter((card) => {
             return card.set === searchFilter.set;
@@ -286,7 +312,7 @@ const PokemonTCGApp = () => {
                     name: searchTerm,
                     artist: searchFilter.artist,
                     rarity: searchFilter.rarity,
-                    series: searchFilter.series,
+                    set: searchFilter.set,
                   });
                 }
               }}
@@ -299,7 +325,7 @@ const PokemonTCGApp = () => {
                   name: searchTerm,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  series: searchFilter.series,
+                  set: searchFilter.set,
                 });
               }}
             />
@@ -337,9 +363,9 @@ const PokemonTCGApp = () => {
               }}
               className="dropdown"
             >
-              {setOptions.map((opt) => (
-                <option key={opt.label} value={opt.label}>
-                  {opt.label}
+              {setOptions.map((label) => (
+                <option key={label} value={label}>
+                    {label}
                 </option>
               ))}
             </select>
@@ -370,7 +396,7 @@ const PokemonTCGApp = () => {
               },
             }}
           />
-          <div> 
+          <div className="credits"> 
             Credit to <a href="https://www.instagram.com/potato.stirfry/">potato.stirfry</a> on Instagram for background image.
           </div>
           <input type="file" onChange={importJSON} />

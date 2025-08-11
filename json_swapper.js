@@ -1,0 +1,516 @@
+var fs = require("fs");
+
+const base = [
+  {
+    "id": "np-1",
+    "name": "Kyogre ex",
+    "artist": "Hiromichi Sugiyama",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/1.png",
+      "large": "https://images.pokemontcg.io/np/1_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-2",
+    "name": "Groudon ex",
+    "artist": "Kazuo Yazawa",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/2.png",
+      "large": "https://images.pokemontcg.io/np/2_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-3",
+    "name": "Treecko",
+    "artist": "Atsuko Nishida",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/3.png",
+      "large": "https://images.pokemontcg.io/np/3_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-4",
+    "name": "Grovyle",
+    "artist": "Midori Harada",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/4.png",
+      "large": "https://images.pokemontcg.io/np/4_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-5",
+    "name": "Mudkip",
+    "artist": "Ken Sugimori",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/5.png",
+      "large": "https://images.pokemontcg.io/np/5_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-6",
+    "name": "Torchic",
+    "artist": "Ken Sugimori",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/6.png",
+      "large": "https://images.pokemontcg.io/np/6_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-7",
+    "name": "Treecko",
+    "artist": "Ken Sugimori",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/7.png",
+      "large": "https://images.pokemontcg.io/np/7_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-8",
+    "name": "Torchic",
+    "artist": "Atsuko Nishida",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/8.png",
+      "large": "https://images.pokemontcg.io/np/8_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-9",
+    "name": "Combusken",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/9.png",
+      "large": "https://images.pokemontcg.io/np/9_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-10",
+    "name": "Mudkip",
+    "artist": "Atsuko Nishida",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/10.png",
+      "large": "https://images.pokemontcg.io/np/10_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-11",
+    "name": "Marshtomp",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/11.png",
+      "large": "https://images.pokemontcg.io/np/11_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-12",
+    "name": "Pikachu",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/12.png",
+      "large": "https://images.pokemontcg.io/np/12_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-13",
+    "name": "Meowth",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/13.png",
+      "large": "https://images.pokemontcg.io/np/13_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-14",
+    "name": "Latias",
+    "artist": "Ken Sugimori",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/14.png",
+      "large": "https://images.pokemontcg.io/np/14_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-15",
+    "name": "Latios",
+    "artist": "Ken Sugimori",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/15.png",
+      "large": "https://images.pokemontcg.io/np/15_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-16",
+    "name": "Treecko",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/16.png",
+      "large": "https://images.pokemontcg.io/np/16_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-17",
+    "name": "Torchic",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/17.png",
+      "large": "https://images.pokemontcg.io/np/17_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-18",
+    "name": "Mudkip",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/18.png",
+      "large": "https://images.pokemontcg.io/np/18_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-19",
+    "name": "Whismur",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/19.png",
+      "large": "https://images.pokemontcg.io/np/19_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-20",
+    "name": "Ludicolo",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/20.png",
+      "large": "https://images.pokemontcg.io/np/20_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-21",
+    "name": "Jirachi",
+    "artist": "Atsuko Nishida",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/21.png",
+      "large": "https://images.pokemontcg.io/np/21_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-22",
+    "name": "Beldum",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/22.png",
+      "large": "https://images.pokemontcg.io/np/22_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-23",
+    "name": "Metang",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/23.png",
+      "large": "https://images.pokemontcg.io/np/23_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-24",
+    "name": "Chimecho",
+    "artist": "Atsuko Nishida",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/24.png",
+      "large": "https://images.pokemontcg.io/np/24_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-25",
+    "name": "Flygon",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/25.png",
+      "large": "https://images.pokemontcg.io/np/25_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-26",
+    "name": "Tropical Wind",
+    "artist": "Sumiyoshi Kizuki",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/26.png",
+      "large": "https://images.pokemontcg.io/np/26_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-27",
+    "name": "Tropical Tidal Wave",
+    "artist": "Sumiyoshi Kizuki",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/27.png",
+      "large": "https://images.pokemontcg.io/np/27_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-28",
+    "name": "Championship Arena",
+    "artist": "Ryo Ueda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/28.png",
+      "large": "https://images.pokemontcg.io/np/28_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-29",
+    "name": "Celebi",
+    "artist": "Hajime Kusajima",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/29.png",
+      "large": "https://images.pokemontcg.io/np/29_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-30",
+    "name": "Suicune",
+    "artist": "Atsuko Nishida",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/30.png",
+      "large": "https://images.pokemontcg.io/np/30_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-31",
+    "name": "Moltres ex",
+    "artist": "Ken Ikuji",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/31.png",
+      "large": "https://images.pokemontcg.io/np/31_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-32",
+    "name": "Articuno ex",
+    "artist": "Nakaoka",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/32.png",
+      "large": "https://images.pokemontcg.io/np/32_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-33",
+    "name": "Zapdos ex",
+    "artist": "K. Hoshiba",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/33.png",
+      "large": "https://images.pokemontcg.io/np/33_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-34",
+    "name": "Typhlosion",
+    "artist": "Hajime Kusajima",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/34.png",
+      "large": "https://images.pokemontcg.io/np/34_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-35",
+    "name": "Pikachu δ",
+    "artist": "Ryo Ueda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/35.png",
+      "large": "https://images.pokemontcg.io/np/35_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-36",
+    "name": "Tropical Tidal Wave",
+    "artist": "Sumiyoshi Kizuki",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/36.png",
+      "large": "https://images.pokemontcg.io/np/36_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-37",
+    "name": "Kyogre ex",
+    "artist": "Ryo Ueda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/37.png",
+      "large": "https://images.pokemontcg.io/np/37_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-38",
+    "name": "Groudon ex",
+    "artist": "Ryo Ueda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/38.png",
+      "large": "https://images.pokemontcg.io/np/38_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-39",
+    "name": "Rayquaza ex",
+    "artist": "Ryo Ueda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/39.png",
+      "large": "https://images.pokemontcg.io/np/39_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  },
+  {
+    "id": "np-40",
+    "name": "Mew",
+    "artist": "Masakazu Fukuda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/np/40.png",
+      "large": "https://images.pokemontcg.io/np/40_hires.png"
+    },
+    "set": "Nintendo Black Star Promos",
+    "series": "NP"
+  }
+];
+
+const newFile = base.map((card) => {
+  let newCard = card;
+
+  if (!card.rarity) {
+    newCard = {
+      ...newCard,
+      rarity: null,
+    };
+  }
+
+  if (!card.artist) {
+    newCard = {
+      ...newCard,
+      artist: null,
+    };
+  }
+
+  const sethold = card.set ? card.set.trim() : "";
+  newCard = {
+    ...newCard,
+    set: "NP",
+    series: sethold || "null",
+  };
+
+  return newCard;
+});
+
+fs.writeFile("./public/data/np.json", JSON.stringify(newFile), function (err) {
+  if (err) throw err;
+  console.log("formatted file");
+});

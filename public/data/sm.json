@@ -35458,5 +35458,221 @@
     },
     "series": "SM Black Star Promos",
     "set": "Sun & Moon"
+  },
+  {
+    "id": "det1-1",
+    "name": "Bulbasaur",
+    "artist": "MPC Film",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/1.png",
+      "large": "https://images.pokemontcg.io/det1/1_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-2",
+    "name": "Ludicolo",
+    "artist": "Framestore",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/2.png",
+      "large": "https://images.pokemontcg.io/det1/2_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-3",
+    "name": "Morelull",
+    "artist": "MPC Film",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/3.png",
+      "large": "https://images.pokemontcg.io/det1/3_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-4",
+    "name": "Charmander",
+    "artist": "MPC Film",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/4.png",
+      "large": "https://images.pokemontcg.io/det1/4_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-5",
+    "name": "Charizard",
+    "artist": "Framestore",
+    "rarity": "Rare Ultra",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/5.png",
+      "large": "https://images.pokemontcg.io/det1/5_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-6",
+    "name": "Arcanine",
+    "artist": "MPC Film",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/6.png",
+      "large": "https://images.pokemontcg.io/det1/6_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-7",
+    "name": "Psyduck",
+    "artist": "Framestore",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/7.png",
+      "large": "https://images.pokemontcg.io/det1/7_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-8",
+    "name": "Magikarp",
+    "artist": "Framestore",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/8.png",
+      "large": "https://images.pokemontcg.io/det1/8_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-9",
+    "name": "Greninja",
+    "artist": "MPC Film",
+    "rarity": "Rare Ultra",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/9.png",
+      "large": "https://images.pokemontcg.io/det1/9_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-10",
+    "name": "Detective Pikachu",
+    "artist": "MPC Film",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/10.png",
+      "large": "https://images.pokemontcg.io/det1/10_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-11",
+    "name": "Mr. Mime",
+    "artist": "MPC Film",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/11.png",
+      "large": "https://images.pokemontcg.io/det1/11_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-12",
+    "name": "Mewtwo",
+    "artist": "MPC Film",
+    "rarity": "Rare Ultra",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/12.png",
+      "large": "https://images.pokemontcg.io/det1/12_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-13",
+    "name": "Machamp",
+    "artist": "MPC Film",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/13.png",
+      "large": "https://images.pokemontcg.io/det1/13_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-14",
+    "name": "Jigglypuff",
+    "artist": "Framestore",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/14.png",
+      "large": "https://images.pokemontcg.io/det1/14_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-15",
+    "name": "Snubbull",
+    "artist": "Framestore",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/15.png",
+      "large": "https://images.pokemontcg.io/det1/15_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-16",
+    "name": "Lickitung",
+    "artist": "MPC Film",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/16.png",
+      "large": "https://images.pokemontcg.io/det1/16_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-17",
+    "name": "Ditto",
+    "artist": "MPC Film",
+    "rarity": "Rare Ultra",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/17.png",
+      "large": "https://images.pokemontcg.io/det1/17_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
+  },
+  {
+    "id": "det1-18",
+    "name": "Slaking",
+    "artist": "Framestore",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/det1/18.png",
+      "large": "https://images.pokemontcg.io/det1/18_hires.png"
+    },
+    "set": "Detective Pikachu",
+    "series": "Sun & Moon"
   }
 ]

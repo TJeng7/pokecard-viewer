@@ -1,0 +1,16 @@
+export const base = require("../public/data/base.json");
+export const bw = require("../public/data/bw.json");
+export const dp = require("../public/data/dp.json");
+export const ex = require("../public/data/ex.json");
+export const pop = require("../public/data/pop.json");
+export const sm = require("../public/data/sm.json");
+export const sv = require("../public/data/sv.json");
+export const swsh = require("../public/data/swsh.json");
+export const xy = require("../public/data/xy.json");
+export const ecard = require("../public/data/ecard.json");
+export const gym = require("../public/data/gym.json");
+export const hgss = require("../public/data/hgss.json");
+export const neo = require("../public/data/neo.json");
+export const np = require("../public/data/np.json");
+export const pl = require("../public/data/pl.json");
+export const other = require("../public/data/other.json");

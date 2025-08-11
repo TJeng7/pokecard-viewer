@@ -3,14 +3,14 @@
 type CardData = {
   id: string;
   name: string;
-  artist: string | null;
-  rarity: string | null;
+  artist: string | null | undefined;
+  rarity: string | null | undefined;
   images: {
     small: string;
     large: string;
   };
-  series: string | null;
-  set: string | null;
+  series: string | null | undefined;
+  set: string | null | undefined;
 };
 
 type CardComment = {
@@ -23,7 +23,7 @@ type SearchFilter = {
   name: string;
   artist: string;
   rarity: string;
-  series: string;
+  set: string;
 };
 
 type SetOption = {
