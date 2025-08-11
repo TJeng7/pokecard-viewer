@@ -2,6 +2,11 @@
 
 import React, { useState, useEffect, ChangeEvent } from "react";
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+
 import { CardFilters } from "../components/CardFilters/CardFilters"
 import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header/Header";
@@ -239,59 +244,61 @@ const PokemonTCGApp = () => {
   }
 
   return (
-    <div className={styles.verticalLayout}>
-      <Header
-        searchFilter={searchFilter}
-        setSearchFilter={setSearchFilter}
-        currTab={currTab}
-        handleCurrTabChange={handlecurrTabChange}
-      />
-      <div className={styles.cards}>
-        <CardFilters 
+    <QueryClientProvider client={new QueryClient()}>
+      <div className={styles.verticalLayout}>
+        <Header
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
-        />
-        <FilterableCardList
           currTab={currTab}
-          cardWishlist={wishlistCards}
-          cardData={cards}
-          renderedCards={paginatedCards}
-          setSearchFilter={setSearchFilter}
-          setSortCategory={setSortCategory}
-          importCardWishlist={importCardWishlist}
-          exportCardWishlist={exportCardWishlist}
-          addCardToWishlist={addCardToWishlist}
-          removeCardFromWishlist={removeCardFromWishlist}
-          setModalImage={setModalImage}
-          addComment={addComment}
+          handleCurrTabChange={handlecurrTabChange}
         />
-        <div className="pagination">
-          <Pagination
-            count={paginationData.totalPages}
-            onChange={handlePageChange}
-            page={paginationData.currPage}
-            sx={{
-              ".MuiButtonBase-root-MuiPaginationItem-root": {
-                color: "#f6f5ed",
-              },
-            }}
+        <div className={styles.cards}>
+          <CardFilters 
+            searchFilter={searchFilter}
+            setSearchFilter={setSearchFilter}
           />
+          <FilterableCardList
+            currTab={currTab}
+            cardWishlist={wishlistCards}
+            cardData={cards}
+            renderedCards={paginatedCards}
+            setSearchFilter={setSearchFilter}
+            setSortCategory={setSortCategory}
+            importCardWishlist={importCardWishlist}
+            exportCardWishlist={exportCardWishlist}
+            addCardToWishlist={addCardToWishlist}
+            removeCardFromWishlist={removeCardFromWishlist}
+            setModalImage={setModalImage}
+            addComment={addComment}
+          />
+          <div className="pagination">
+            <Pagination
+              count={paginationData.totalPages}
+              onChange={handlePageChange}
+              page={paginationData.currPage}
+              sx={{
+                ".MuiButtonBase-root-MuiPaginationItem-root": {
+                  color: "#f6f5ed",
+                },
+              }}
+            />
+          </div>
         </div>
+        <Footer 
+          onImportJSON = {(e) => importJSON(e)}
+          onExportJSON = {exportJSON}
+        />
+        {modalImage && (
+          <div className="modal-image" onClick={() => setModalImage(null)}>
+            <img
+              src={modalImage}
+              alt="Large Card"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </div>
-      <Footer 
-        onImportJSON = {(e) => importJSON(e)}
-        onExportJSON = {exportJSON}
-      />
-      {modalImage && (
-        <div className="modal-image" onClick={() => setModalImage(null)}>
-          <img
-            src={modalImage}
-            alt="Large Card"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-    </div>
+    </QueryClientProvider>
   );
 };
 

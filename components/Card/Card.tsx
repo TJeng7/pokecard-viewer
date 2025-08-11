@@ -1,4 +1,5 @@
 import { IoIosAdd, IoMdTrash } from "react-icons/io";
+import { useQuery } from '@tanstack/react-query';
 
 import styles from "./Card.module.scss"
 
@@ -17,6 +18,23 @@ export default function Card({
   addCardToWishlist,
   removeCardFromWishlist,
 }: CardProps) {
+  const { isPending, error, data } = useQuery({
+    queryKey: ['getCardPrices', card.id],
+    queryFn: () =>
+      fetch('https://api.pokemontcg.io/v2/cards/' + card.id, {
+        headers: {
+          'X-Api-Key': process.env.X_API_KEY || '',
+        },
+      }).then((res) => //how to param?
+        res.json(),
+      ),
+    staleTime: 1000 * 60 * 60 * 24 // 1 day
+  });
+  if (error) {
+    console.error("Error fetching card prices:", error);
+    return;
+  }
+
   return (
     <div key={card.id} className={styles.card}>
       <img
@@ -31,6 +49,9 @@ export default function Card({
           <div>{card.rarity || "Unknown Rarity"}</div>
           <div>{card.artist || "Unknown Artist"}</div>
           <div>{card.series || "Unknown Series"}</div>
+          {/* TODO: get all prices rather than just normal */}
+          { isPending ? <div>Loading...</div> : <div>{"Market price: " + (data?.data?.tcgplayer?.prices?.normal?.market ?? "unknown")}</div> } 
+          { isPending ? <div>Loading...</div> : <div>{"Last Update: " + (data?.data?.tcgplayer?.updatedAt ?? "unknown")}</div> }
         </div>
       </div>
       <button
