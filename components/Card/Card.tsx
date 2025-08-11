@@ -50,7 +50,7 @@ export default function Card({
           <div>{card.artist || "Unknown Artist"}</div>
           <div>{card.series || "Unknown Series"}</div>
           {/* TODO: get all prices rather than just normal */}
-          { isPending ? <div>Loading...</div> : <div>{"Market price: " + (data?.data?.tcgplayer?.prices?.normal?.market ?? "unknown")}</div> } 
+          { isPending ? <div>Loading...</div> : <div>{"Market price: " + (data?.data?.tcgplayer?.prices?.normal?.market ? new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(data?.data?.tcgplayer?.prices?.normal?.market): "unknown")}</div> } 
           { isPending ? <div>Loading...</div> : <div>{"Last Update: " + (data?.data?.tcgplayer?.updatedAt ?? "unknown")}</div> }
         </div>
       </div>
