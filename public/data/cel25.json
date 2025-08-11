@@ -1,0 +1,602 @@
+[
+  {
+    "id": "cel25-1",
+    "name": "Ho-Oh",
+    "artist": "Kouki Saitou",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/1.png",
+      "large": "https://images.pokemontcg.io/cel25/1_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-2",
+    "name": "Reshiram",
+    "artist": "Aya Kusube",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/2.png",
+      "large": "https://images.pokemontcg.io/cel25/2_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-3",
+    "name": "Kyogre",
+    "artist": "Ryuta Fuse",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/3.png",
+      "large": "https://images.pokemontcg.io/cel25/3_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-4",
+    "name": "Palkia",
+    "artist": "5ban Graphics",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/4.png",
+      "large": "https://images.pokemontcg.io/cel25/4_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-5",
+    "name": "Pikachu",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Rare Holo",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/5.png",
+      "large": "https://images.pokemontcg.io/cel25/5_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-6",
+    "name": "Flying Pikachu V",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo V",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/6.png",
+      "large": "https://images.pokemontcg.io/cel25/6_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-7",
+    "name": "Flying Pikachu VMAX",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo VMAX",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/7.png",
+      "large": "https://images.pokemontcg.io/cel25/7_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-8",
+    "name": "Surfing Pikachu V",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo V",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/8.png",
+      "large": "https://images.pokemontcg.io/cel25/8_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-9",
+    "name": "Surfing Pikachu VMAX",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo VMAX",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/9.png",
+      "large": "https://images.pokemontcg.io/cel25/9_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-10",
+    "name": "Zekrom",
+    "artist": "Aya Kusube",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/10.png",
+      "large": "https://images.pokemontcg.io/cel25/10_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-11",
+    "name": "Mew",
+    "artist": "Yuu Nishida",
+    "rarity": "Rare Holo",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/11.png",
+      "large": "https://images.pokemontcg.io/cel25/11_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-12",
+    "name": "Xerneas",
+    "artist": "AKIRA EGAWA",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/12.png",
+      "large": "https://images.pokemontcg.io/cel25/12_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-13",
+    "name": "Cosmog",
+    "artist": "kirisAki",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/13.png",
+      "large": "https://images.pokemontcg.io/cel25/13_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-14",
+    "name": "Cosmoem",
+    "artist": "kirisAki",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/14.png",
+      "large": "https://images.pokemontcg.io/cel25/14_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-15",
+    "name": "Lunala",
+    "artist": "kirisAki",
+    "rarity": "Rare Holo",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/15.png",
+      "large": "https://images.pokemontcg.io/cel25/15_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-16",
+    "name": "Zacian V",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Rare Holo V",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/16.png",
+      "large": "https://images.pokemontcg.io/cel25/16_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-17",
+    "name": "Groudon",
+    "artist": "Ryuta Fuse",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/17.png",
+      "large": "https://images.pokemontcg.io/cel25/17_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-18",
+    "name": "Zamazenta V",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Rare Holo V",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/18.png",
+      "large": "https://images.pokemontcg.io/cel25/18_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-19",
+    "name": "Yveltal",
+    "artist": "AKIRA EGAWA",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/19.png",
+      "large": "https://images.pokemontcg.io/cel25/19_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-20",
+    "name": "Dialga",
+    "artist": "5ban Graphics",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/20.png",
+      "large": "https://images.pokemontcg.io/cel25/20_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-21",
+    "name": "Solgaleo",
+    "artist": "kirisAki",
+    "rarity": "Rare Holo",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/21.png",
+      "large": "https://images.pokemontcg.io/cel25/21_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-22",
+    "name": "Lugia",
+    "artist": "Kouki Saitou",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/22.png",
+      "large": "https://images.pokemontcg.io/cel25/22_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-23",
+    "name": "Professor's Research (Professor Oak)",
+    "artist": "KIYOTAKA OSHIYAMA",
+    "rarity": "Rare Holo",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/23.png",
+      "large": "https://images.pokemontcg.io/cel25/23_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-24",
+    "name": "Professor's Research (Professor Oak)",
+    "artist": "Ken Sugimori",
+    "rarity": "Rare Ultra",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/24.png",
+      "large": "https://images.pokemontcg.io/cel25/24_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25-25",
+    "name": "Mew",
+    "artist": "Saki Hayashiro",
+    "rarity": "Rare Holo",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/25.png",
+      "large": "https://images.pokemontcg.io/cel25/25_hires.png"
+    },
+    "set": "Celebrations",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-2_A",
+    "name": "Blastoise",
+    "artist": "Ken Sugimori",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/2_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/2_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-4_A",
+    "name": "Charizard",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/4_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/4_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-15_A1",
+    "name": "Venusaur",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/15_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/15_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-15_A2",
+    "name": "Here Comes Team Rocket!",
+    "artist": "Ken Sugimori",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/15_B.png",
+      "large": "https://images.pokemontcg.io/cel25c/15_B_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-15_A3",
+    "name": "Rocket's Zapdos",
+    "artist": "Shin-ichi Yoshida",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/15_C.png",
+      "large": "https://images.pokemontcg.io/cel25c/15_C_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-15_A4",
+    "name": "Claydol",
+    "artist": "Midori Harada",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/15_D.png",
+      "large": "https://images.pokemontcg.io/cel25c/15_D_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-73_A",
+    "name": "Imposter Professor Oak",
+    "artist": "Ken Sugimori",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/73_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/73_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-8_A",
+    "name": "Dark Gyarados",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/8_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/8_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-24_A",
+    "name": "_____'s Pikachu",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/24_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/24_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-20_A",
+    "name": "Cleffa",
+    "artist": "Kagemaru Himeno",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/20_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/20_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-66_A",
+    "name": "Shining Magikarp",
+    "artist": "Ken Sugimori",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/66_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/66_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-9_A",
+    "name": "Team Magma's Groudon",
+    "artist": "Kazuo Yazawa",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/9_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/9_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-86_A",
+    "name": "Rocket's Admin.",
+    "artist": "Ken Sugimori",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/86_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/86_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-88_A",
+    "name": "Mew ex",
+    "artist": "Ryo Ueda",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/88_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/88_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-93_A",
+    "name": "Gardevoir ex δ",
+    "artist": "Masahiko Ishii",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/93_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/93_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-17_A",
+    "name": "Umbreon ★",
+    "artist": "Masakazu Fukuda",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/17_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/17_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-109_A",
+    "name": "Luxray GL LV.X",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/109_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/109_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-145_A",
+    "name": "Garchomp C LV.X",
+    "artist": "Shizurow",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/145_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/145_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-107_A",
+    "name": "Donphan",
+    "artist": "Kent Kanetsuna",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/107_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/107_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-113_A",
+    "name": "Reshiram",
+    "artist": "5ban Graphics",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/113_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/113_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-114_A",
+    "name": "Zekrom",
+    "artist": "5ban Graphics",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/114_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/114_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-54_A",
+    "name": "Mewtwo-EX",
+    "artist": "Shizurow",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/54_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/54_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-97_A",
+    "name": "Xerneas-EX",
+    "artist": "5ban Graphics",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/97_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/97_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-76_A",
+    "name": "M Rayquaza-EX",
+    "artist": "5ban Graphics",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/76_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/76_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  },
+  {
+    "id": "cel25c-60_A",
+    "name": "Tapu Lele-GX",
+    "artist": "5ban Graphics",
+    "rarity": "Classic Collection",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25c/60_A.png",
+      "large": "https://images.pokemontcg.io/cel25c/60_A_hires.png"
+    },
+    "set": "Celebrations: Classic Collection",
+    "series": "Sword & Shield"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "hsp-HGSS01",
+    "name": "Ho-Oh",
+    "artist": "Takashi Yamaguchi",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS01.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS01_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS02",
+    "name": "Lugia",
+    "artist": "Takashi Yamaguchi",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS02.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS02_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS03",
+    "name": "Pikachu",
+    "artist": "Kanako Eo",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS03.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS03_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS04",
+    "name": "Wobbuffet",
+    "artist": "match",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS04.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS04_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS05",
+    "name": "Hoothoot",
+    "artist": "Masakazu Fukuda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS05.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS05_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS06",
+    "name": "Noctowl",
+    "artist": "Masakazu Fukuda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS06.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS06_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS07",
+    "name": "Feraligatr",
+    "artist": "Kent Kanetsuna",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS07.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS07_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS08",
+    "name": "Meganium",
+    "artist": "Noriko Hotta",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS08.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS08_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS09",
+    "name": "Typhlosion",
+    "artist": "Wataru Kawahara",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS09.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS09_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS10",
+    "name": "Latias",
+    "artist": "Wataru Kawahara",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS10.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS10_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS11",
+    "name": "Latios",
+    "artist": "Wataru Kawahara",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS11.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS11_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS12",
+    "name": "Cleffa",
+    "artist": "Masakazu Fukuda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS12.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS12_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS13",
+    "name": "Smoochum",
+    "artist": "Midori Harada",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS13.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS13_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS14",
+    "name": "Lapras",
+    "artist": "Masakazu Fukuda",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS14.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS14_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS15",
+    "name": "Shuckle",
+    "artist": "match",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS15.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS15_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS16",
+    "name": "Plusle",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS16.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS16_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS17",
+    "name": "Minun",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS17.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS17_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS18",
+    "name": "Tropical Tidal Wave",
+    "artist": "Sumiyoshi Kizuki",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS18.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS18_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS19",
+    "name": "Raikou",
+    "artist": "Noriko Hotta",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS19.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS19_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS20",
+    "name": "Entei",
+    "artist": "Yuri Umemura",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS20.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS20_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS21",
+    "name": "Suicune",
+    "artist": "Hideaki Hakozaki",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS21.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS21_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS22",
+    "name": "Porygon",
+    "artist": "TOKIYA",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS22.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS22_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS23",
+    "name": "Porygon2",
+    "artist": "TOKIYA",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS23.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS23_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS24",
+    "name": "Hitmonchan",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS24.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS24_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  },
+  {
+    "id": "hsp-HGSS25",
+    "name": "Hitmonlee",
+    "artist": "Kouki Saitou",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://images.pokemontcg.io/hsp/HGSS25.png",
+      "large": "https://images.pokemontcg.io/hsp/HGSS25_hires.png"
+    },
+    "set": "HGSS Black Star Promos",
+    "series": "HeartGold & SoulSilver"
+  }
+]

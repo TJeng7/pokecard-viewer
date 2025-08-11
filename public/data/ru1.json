@@ -1,0 +1,178 @@
+[
+  {
+    "id": "ru1-1",
+    "name": "Venusaur",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/1.png",
+      "large": "https://images.pokemontcg.io/ru1/1_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-2",
+    "name": "Cherrim",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/2.png",
+      "large": "https://images.pokemontcg.io/ru1/2_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-3",
+    "name": "Ninetales",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/3.png",
+      "large": "https://images.pokemontcg.io/ru1/3_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-4",
+    "name": "Heatran",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/4.png",
+      "large": "https://images.pokemontcg.io/ru1/4_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-5",
+    "name": "Starmie",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/5.png",
+      "large": "https://images.pokemontcg.io/ru1/5_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-6",
+    "name": "Gyarados",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/6.png",
+      "large": "https://images.pokemontcg.io/ru1/6_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-7",
+    "name": "Pikachu",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/7.png",
+      "large": "https://images.pokemontcg.io/ru1/7_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-8",
+    "name": "Zapdos",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/8.png",
+      "large": "https://images.pokemontcg.io/ru1/8_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-9",
+    "name": "Mewtwo",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/9.png",
+      "large": "https://images.pokemontcg.io/ru1/9_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-10",
+    "name": "Mew",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/10.png",
+      "large": "https://images.pokemontcg.io/ru1/10_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-11",
+    "name": "Diglett",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/11.png",
+      "large": "https://images.pokemontcg.io/ru1/11_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-12",
+    "name": "Lucario",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/12.png",
+      "large": "https://images.pokemontcg.io/ru1/12_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-13",
+    "name": "Skuntank",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/13.png",
+      "large": "https://images.pokemontcg.io/ru1/13_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-14",
+    "name": "Bastiodon",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/14.png",
+      "large": "https://images.pokemontcg.io/ru1/14_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-15",
+    "name": "Rattata",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/15.png",
+      "large": "https://images.pokemontcg.io/ru1/15_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  },
+  {
+    "id": "ru1-16",
+    "name": "Bibarel",
+    "artist": "Pokemon Rumble",
+    "images": {
+      "small": "https://images.pokemontcg.io/ru1/16.png",
+      "large": "https://images.pokemontcg.io/ru1/16_hires.png"
+    },
+    "set": "Pokémon Rumble",
+    "series": "Other"
+  }
+]

@@ -1,15 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, ChangeEvent } from "react";
-import base from "../public/data/base.json";
-import bw from "../public/data/bw.json";
-import dp from "../public/data/dp.json";
-import ex from "../public/data/ex.json";
-import pop from "../public/data/pop.json";
-import sm from "../public/data/sm.json";
-import sv from "../public/data/sv.json";
-import swsh from "../public/data/swsh.json";
-import xy from "../public/data/xy.json";
+import {
+  base, bw, dp, ex, pop, sm, sv, swsh, xy, bp, cel25, col1, dc1, det1, ecard, fut20, g1, gym, hgss, hsp, mcd, neo, np, pgo, pl, ru1, si1, tk
+} from "./index.js";
 
 import FilterableCardList from "@/components/FilterableCardList";
 import { Input, Pagination } from "@mui/material";
@@ -26,6 +20,25 @@ const allCards: CardData[] = [
   ...sv,
   ...swsh,
   ...xy,
+  ...bp, 
+  ...cel25, 
+  ...col1, 
+  ...dc1, 
+  ...det1, 
+  ...ecard, 
+  ...fut20, 
+  ...g1, 
+  ...gym, 
+  ...hgss, 
+  ...hsp, 
+  ...mcd, 
+  ...neo, 
+  ...np, 
+  ...pgo, 
+  ...pl, 
+  ...ru1, 
+  ...si1, 
+  ...tk
 ];
 
 const setOptions: SetOption[] = [
@@ -38,6 +51,25 @@ const setOptions: SetOption[] = [
   { label: "Pop Series", data: pop },
   { label: "EX", data: ex },
   { label: "Base Set", data: base },
+  { label: "bp", data: bp },
+  { label: "cel25", data: cel25 },
+  { label: "col1", data: col1 },
+  { label: "dc1", data: dc1 },
+  { label: "det1", data: det1 },
+  { label: "ecard", data: ecard },
+  { label: "fut20", data: fut20 },
+  { label: "g1", data: g1 },
+  { label: "gym", data: gym },
+  { label: "hgss", data: hgss },
+  { label: "hsp", data: hsp },
+  { label: "mcd", data: mcd },
+  { label: "neo", data: neo },
+  { label: "np", data: np },
+  { label: "pgo", data: pgo },
+  { label: "pl", data: pl },
+  { label: "ru1", data: ru1 },
+  { label: "si1", data: si1 },
+  { label: "tk", data: tk },
   { label: "All Series", data: allCards },
 ];
 
@@ -47,7 +79,7 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    set: "All Set",
+    series: "All Series",
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
@@ -179,10 +211,10 @@ const PokemonTCGApp = () => {
   function filterCards(view: string) {
     const toFilter = view === "search" ? cards : wishlistCards;
     const selectedSetData: CardData[] =
-      searchFilter.set === "All Set"
+      searchFilter.series === "All Series"
         ? toFilter
         : toFilter.filter((card) => {
-            return card.set === searchFilter.set;
+            return card.series === searchFilter.series;
           });
     const filteredSetData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
@@ -326,13 +358,13 @@ const PokemonTCGApp = () => {
         <div className="filter-sort">
           <div className="filters">
             <select
-              value={searchFilter.set}
+              value={searchFilter.series}
               onChange={(e) => {
                 setSearchFilter({
                   name: searchFilter.name,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  set: e.target.value,
+                  series: e.target.value,
                 });
               }}
               className="dropdown"
