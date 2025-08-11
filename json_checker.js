@@ -2,2038 +2,3797 @@ var fs = require("fs");
 
 const base = [
   {
-    "id": "bp-1",
-    "name": "Electabuzz",
-    "artist": "Ken Sugimori",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/1.png",
-      "large": "https://images.pokemontcg.io/bp/1_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-2",
-    "name": "Hitmonchan",
-    "artist": "Ken Sugimori",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/2.png",
-      "large": "https://images.pokemontcg.io/bp/2_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-3",
-    "name": "Professor Elm",
-    "artist": "Ken Sugimori",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/3.png",
-      "large": "https://images.pokemontcg.io/bp/3_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-4",
-    "name": "Rocket's Scizor",
-    "artist": "K Hoshiba",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/4.png",
-      "large": "https://images.pokemontcg.io/bp/4_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-5",
-    "name": "Rocket's Sneasel",
-    "artist": "Katsura Tabata",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/5.png",
-      "large": "https://images.pokemontcg.io/bp/5_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-6",
-    "name": "Dark Ivysaur",
-    "artist": "Shin-ichi Yoshida",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/6.png",
-      "large": "https://images.pokemontcg.io/bp/6_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-7",
-    "name": "Dark Venusaur",
-    "artist": "Shin-ichi Yoshida",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/7.png",
-      "large": "https://images.pokemontcg.io/bp/7_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-8",
-    "name": "Rocket's Mewtwo",
-    "artist": "Shin-ichi Yoshida",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/8.png",
-      "large": "https://images.pokemontcg.io/bp/8_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "bp-9",
-    "name": "Rocket's Hitmonchan",
-    "artist": "Ken Sugimori",
-    "rarity": "Promo",
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/9.png",
-      "large": "https://images.pokemontcg.io/bp/9_hires.png"
-    },
-    "set": "Best of Game",
-    "series": "Other"
-  },
-  {
-    "id": "fut20-1",
-    "name": "Pikachu on the Ball",
-    "artist": "The Pokémon Company Art Team",
-    "images": {
-      "small": "https://images.pokemontcg.io/fut20/1.png",
-      "large": "https://images.pokemontcg.io/fut20/1_hires.png"
-    },
-    "set": "Pokémon Futsal Collection",
-    "series": "Other"
-  },
-  {
-    "id": "fut20-2",
-    "name": "Eevee on the Ball",
-    "artist": "The Pokémon Company Art Team",
-    "images": {
-      "small": "https://images.pokemontcg.io/fut20/2.png",
-      "large": "https://images.pokemontcg.io/fut20/2_hires.png"
-    },
-    "set": "Pokémon Futsal Collection",
-    "series": "Other"
-  },
-  {
-    "id": "fut20-3",
-    "name": "Grookey on the Ball",
-    "artist": "The Pokémon Company Art Team",
-    "images": {
-      "small": "https://images.pokemontcg.io/fut20/3.png",
-      "large": "https://images.pokemontcg.io/fut20/3_hires.png"
-    },
-    "set": "Pokémon Futsal Collection",
-    "series": "Other"
-  },
-  {
-    "id": "fut20-4",
-    "name": "Scorbunny on the Ball",
-    "artist": "The Pokémon Company Art Team",
-    "images": {
-      "small": "https://images.pokemontcg.io/fut20/4.png",
-      "large": "https://images.pokemontcg.io/fut20/4_hires.png"
-    },
-    "set": "Pokémon Futsal Collection",
-    "series": "Other"
-  },
-  {
-    "id": "fut20-5",
-    "name": "Sobble on the Ball",
-    "artist": "The Pokémon Company Art Team",
-    "images": {
-      "small": "https://images.pokemontcg.io/fut20/5.png",
-      "large": "https://images.pokemontcg.io/fut20/5_hires.png"
-    },
-    "set": "Pokémon Futsal Collection",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-1",
+    "id": "zsv10pt5-1",
     "name": "Snivy",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/1.png",
-      "large": "https://images.pokemontcg.io/mcd11/1_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-2",
-    "name": "Maractus",
-    "artist": "Kagemaru Himeno",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/2.png",
-      "large": "https://images.pokemontcg.io/mcd11/2_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-3",
-    "name": "Tepig",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/3.png",
-      "large": "https://images.pokemontcg.io/mcd11/3_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-4",
-    "name": "Oshawott",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/4.png",
-      "large": "https://images.pokemontcg.io/mcd11/4_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-5",
-    "name": "Alomomola",
-    "artist": "sui",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/5.png",
-      "large": "https://images.pokemontcg.io/mcd11/5_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-6",
-    "name": "Blitzle",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/6.png",
-      "large": "https://images.pokemontcg.io/mcd11/6_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-7",
-    "name": "Munna",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/7.png",
-      "large": "https://images.pokemontcg.io/mcd11/7_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-8",
-    "name": "Sandile",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/8.png",
-      "large": "https://images.pokemontcg.io/mcd11/8_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-9",
-    "name": "Zorua",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/9.png",
-      "large": "https://images.pokemontcg.io/mcd11/9_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-10",
-    "name": "Klink",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/10.png",
-      "large": "https://images.pokemontcg.io/mcd11/10_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-11",
-    "name": "Pidove",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/11.png",
-      "large": "https://images.pokemontcg.io/mcd11/11_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd11-12",
-    "name": "Audino",
-    "artist": "MAHOU",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd11/12.png",
-      "large": "https://images.pokemontcg.io/mcd11/12_hires.png"
-    },
-    "set": "McDonald's Collection 2011",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-1",
-    "name": "Servine",
-    "artist": "Kagemaru Himeno",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/1.png",
-      "large": "https://images.pokemontcg.io/mcd12/1_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-2",
-    "name": "Pansage",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/2.png",
-      "large": "https://images.pokemontcg.io/mcd12/2_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-3",
-    "name": "Dwebble",
-    "artist": "MAHOU",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/3.png",
-      "large": "https://images.pokemontcg.io/mcd12/3_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-4",
-    "name": "Pignite",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/4.png",
-      "large": "https://images.pokemontcg.io/mcd12/4_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-5",
-    "name": "Dewott",
-    "artist": "Masakazu Fukuda",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/5.png",
-      "large": "https://images.pokemontcg.io/mcd12/5_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-6",
-    "name": "Emolga",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/6.png",
-      "large": "https://images.pokemontcg.io/mcd12/6_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-7",
-    "name": "Woobat",
-    "artist": "Masakazu Fukuda",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/7.png",
-      "large": "https://images.pokemontcg.io/mcd12/7_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-8",
-    "name": "Drilbur",
-    "artist": "match",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/8.png",
-      "large": "https://images.pokemontcg.io/mcd12/8_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-9",
-    "name": "Purrloin",
-    "artist": "Atsuko Nishida",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/9.png",
-      "large": "https://images.pokemontcg.io/mcd12/9_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-10",
-    "name": "Scraggy",
-    "artist": "Masakazu Fukuda",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/10.png",
-      "large": "https://images.pokemontcg.io/mcd12/10_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-11",
-    "name": "Klang",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/11.png",
-      "large": "https://images.pokemontcg.io/mcd12/11_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd12-12",
-    "name": "Axew",
-    "artist": "Atsuko Nishida",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd12/12.png",
-      "large": "https://images.pokemontcg.io/mcd12/12_hires.png"
-    },
-    "set": "McDonald's Collection 2012",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-1",
-    "name": "Weedle",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/1.png",
-      "large": "https://images.pokemontcg.io/mcd14/1_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-2",
-    "name": "Chespin",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/2.png",
-      "large": "https://images.pokemontcg.io/mcd14/2_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-3",
-    "name": "Fennekin",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/3.png",
-      "large": "https://images.pokemontcg.io/mcd14/3_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-4",
-    "name": "Froakie",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/4.png",
-      "large": "https://images.pokemontcg.io/mcd14/4_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-5",
-    "name": "Pikachu",
-    "artist": "MAHOU",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/5.png",
-      "large": "https://images.pokemontcg.io/mcd14/5_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-6",
-    "name": "Inkay",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/6.png",
-      "large": "https://images.pokemontcg.io/mcd14/6_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-7",
-    "name": "Honedge",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/7.png",
-      "large": "https://images.pokemontcg.io/mcd14/7_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-8",
-    "name": "Snubbull",
-    "artist": "Naoki Saito",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/8.png",
-      "large": "https://images.pokemontcg.io/mcd14/8_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-9",
-    "name": "Swirlix",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/9.png",
-      "large": "https://images.pokemontcg.io/mcd14/9_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-10",
-    "name": "Bunnelby",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/10.png",
-      "large": "https://images.pokemontcg.io/mcd14/10_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-11",
-    "name": "Fletchling",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/11.png",
-      "large": "https://images.pokemontcg.io/mcd14/11_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd14-12",
-    "name": "Furfrou",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd14/12.png",
-      "large": "https://images.pokemontcg.io/mcd14/12_hires.png"
-    },
-    "set": "McDonald's Collection 2014",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-1",
-    "name": "Treecko",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/1.png",
-      "large": "https://images.pokemontcg.io/mcd15/1_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-2",
-    "name": "Lotad",
-    "artist": "Kanako Eo",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/2.png",
-      "large": "https://images.pokemontcg.io/mcd15/2_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-3",
-    "name": "Torchic",
-    "artist": "sui",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/3.png",
-      "large": "https://images.pokemontcg.io/mcd15/3_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-4",
-    "name": "Staryu",
-    "artist": "Tomokazu Komiya",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/4.png",
-      "large": "https://images.pokemontcg.io/mcd15/4_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-5",
-    "name": "Mudkip",
-    "artist": "Aya Kusube",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/5.png",
-      "large": "https://images.pokemontcg.io/mcd15/5_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-6",
-    "name": "Pikachu",
-    "artist": "Naoki Saito",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/6.png",
-      "large": "https://images.pokemontcg.io/mcd15/6_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-7",
-    "name": "Electrike",
-    "artist": "Sumiyoshi Kizuki",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd15/7.png",
-      "large": "https://images.pokemontcg.io/mcd15/7_hires.png"
-    },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
-  },
-  {
-    "id": "mcd15-8",
-    "name": "Rhyhorn",
-    "artist": "Midori Harada",
+    "artist": "Susumu Maeya",
     "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd15/8.png",
-      "large": "https://images.pokemontcg.io/mcd15/8_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/1.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/1_hires.png"
     },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd15-9",
-    "name": "Meditite",
-    "artist": "sui",
+    "id": "zsv10pt5-2",
+    "name": "Servine",
+    "artist": "Susumu Maeya",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd15/9.png",
-      "large": "https://images.pokemontcg.io/mcd15/9_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/2.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/2_hires.png"
     },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd15-10",
-    "name": "Marill",
-    "artist": "Shigenori Negishi",
+    "id": "zsv10pt5-3",
+    "name": "Serperior ex",
+    "artist": "PLANETA Igarashi",
+    "rarity": "Double Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd15/10.png",
-      "large": "https://images.pokemontcg.io/mcd15/10_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/3.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/3_hires.png"
     },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd15-11",
-    "name": "Zigzagoon",
-    "artist": "Sumiyoshi Kizuki",
+    "id": "zsv10pt5-4",
+    "name": "Pansage",
+    "artist": "kurumitsu",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd15/11.png",
-      "large": "https://images.pokemontcg.io/mcd15/11_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/4.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/4_hires.png"
     },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd15-12",
-    "name": "Skitty",
-    "artist": "Yuka Morii",
+    "id": "zsv10pt5-5",
+    "name": "Simisage",
+    "artist": "kurumitsu",
+    "rarity": "Uncommon",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd15/12.png",
-      "large": "https://images.pokemontcg.io/mcd15/12_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/5.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/5_hires.png"
     },
-    "set": "McDonald's Collection 2015",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-1",
-    "name": "Vulpix",
-    "artist": "kirisAki",
+    "id": "zsv10pt5-6",
+    "name": "Petilil",
+    "artist": "mele",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd16/1.png",
-      "large": "https://images.pokemontcg.io/mcd16/1_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/6.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/6_hires.png"
     },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-2",
-    "name": "Torchic",
-    "artist": "sui",
+    "id": "zsv10pt5-7",
+    "name": "Lilligant",
+    "artist": "mele",
+    "rarity": "Uncommon",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd16/2.png",
-      "large": "https://images.pokemontcg.io/mcd16/2_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/7.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/7_hires.png"
     },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-3",
-    "name": "Fennekin",
-    "artist": "5ban Graphics",
+    "id": "zsv10pt5-8",
+    "name": "Maractus",
+    "artist": "mingo",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd16/3.png",
-      "large": "https://images.pokemontcg.io/mcd16/3_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/8.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/8_hires.png"
     },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-4",
-    "name": "Magikarp",
-    "artist": "Akira Komayama",
+    "id": "zsv10pt5-9",
+    "name": "Karrablast",
+    "artist": "DOM",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd16/4.png",
-      "large": "https://images.pokemontcg.io/mcd16/4_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/9.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/9_hires.png"
     },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-5",
-    "name": "Totodile",
-    "artist": "Kagemaru Himeno",
+    "id": "zsv10pt5-10",
+    "name": "Foongus",
+    "artist": "Kurata So",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd16/5.png",
-      "large": "https://images.pokemontcg.io/mcd16/5_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/10.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/10_hires.png"
     },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-6",
-    "name": "Pikachu",
-    "artist": "Naoki Saito",
+    "id": "zsv10pt5-11",
+    "name": "Amoonguss",
+    "artist": "Kurata So",
+    "rarity": "Uncommon",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd16/6.png",
-      "large": "https://images.pokemontcg.io/mcd16/6_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/11.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/11_hires.png"
     },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd16-7",
-    "name": "Scraggy",
-    "artist": "Tomokazu Komiya",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd16/7.png",
-      "large": "https://images.pokemontcg.io/mcd16/7_hires.png"
-    },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
-  },
-  {
-    "id": "mcd16-8",
-    "name": "Jigglypuff",
-    "artist": "Kanako Eo",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd16/8.png",
-      "large": "https://images.pokemontcg.io/mcd16/8_hires.png"
-    },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
-  },
-  {
-    "id": "mcd16-9",
-    "name": "Togepi",
-    "artist": "HiRON",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd16/9.png",
-      "large": "https://images.pokemontcg.io/mcd16/9_hires.png"
-    },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
-  },
-  {
-    "id": "mcd16-10",
-    "name": "Dedenne",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd16/10.png",
-      "large": "https://images.pokemontcg.io/mcd16/10_hires.png"
-    },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
-  },
-  {
-    "id": "mcd16-11",
-    "name": "Meowth",
-    "artist": "Kanako Eo",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd16/11.png",
-      "large": "https://images.pokemontcg.io/mcd16/11_hires.png"
-    },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
-  },
-  {
-    "id": "mcd16-12",
-    "name": "Eevee",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd16/12.png",
-      "large": "https://images.pokemontcg.io/mcd16/12_hires.png"
-    },
-    "set": "McDonald's Collection 2016",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-1",
-    "name": "Rowlet",
-    "artist": "Megumi Mizutani",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/1.png",
-      "large": "https://images.pokemontcg.io/mcd17/1_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-2",
-    "name": "Grubbin",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/2.png",
-      "large": "https://images.pokemontcg.io/mcd17/2_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-3",
-    "name": "Litten",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/3.png",
-      "large": "https://images.pokemontcg.io/mcd17/3_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-4",
-    "name": "Popplio",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/4.png",
-      "large": "https://images.pokemontcg.io/mcd17/4_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-5",
-    "name": "Pikachu",
-    "artist": "kirisAki",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/5.png",
-      "large": "https://images.pokemontcg.io/mcd17/5_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-6",
-    "name": "Cosmog",
-    "artist": "Megumi Mizutani",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/6.png",
-      "large": "https://images.pokemontcg.io/mcd17/6_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-7",
-    "name": "Crabrawler",
-    "artist": "Shin Nagasawa",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/7.png",
-      "large": "https://images.pokemontcg.io/mcd17/7_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-8",
-    "name": "Alolan Meowth",
-    "artist": "Kagemaru Himeno",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/8.png",
-      "large": "https://images.pokemontcg.io/mcd17/8_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-9",
-    "name": "Alolan Diglett",
-    "artist": "Megumi Mizutani",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/9.png",
-      "large": "https://images.pokemontcg.io/mcd17/9_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-10",
-    "name": "Cutiefly",
-    "artist": "Hitoshi Ariga",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/10.png",
-      "large": "https://images.pokemontcg.io/mcd17/10_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-11",
-    "name": "Pikipek",
-    "artist": "Shin Nagasawa",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/11.png",
-      "large": "https://images.pokemontcg.io/mcd17/11_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd17-12",
-    "name": "Yungoos",
-    "artist": "match",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd17/12.png",
-      "large": "https://images.pokemontcg.io/mcd17/12_hires.png"
-    },
-    "set": "McDonald's Collection 2017",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-1",
-    "name": "Growlithe",
-    "artist": "MAHOU",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/1.png",
-      "large": "https://images.pokemontcg.io/mcd18/1_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-2",
-    "name": "Psyduck",
-    "artist": "Shibuzoh.",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/2.png",
-      "large": "https://images.pokemontcg.io/mcd18/2_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-3",
-    "name": "Horsea",
-    "artist": "Saya Tsuruta",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/3.png",
-      "large": "https://images.pokemontcg.io/mcd18/3_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-4",
-    "name": "Pikachu",
-    "artist": "Shibuzoh.",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/4.png",
-      "large": "https://images.pokemontcg.io/mcd18/4_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-5",
-    "name": "Slowpoke",
-    "artist": "Mina Nakai",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/5.png",
-      "large": "https://images.pokemontcg.io/mcd18/5_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-6",
-    "name": "Machop",
-    "artist": "Masakazu Fukuda",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/6.png",
-      "large": "https://images.pokemontcg.io/mcd18/6_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-7",
-    "name": "Cubone",
-    "artist": "sui",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/7.png",
-      "large": "https://images.pokemontcg.io/mcd18/7_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-8",
-    "name": "Magnemite",
-    "artist": "MAHOU",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/8.png",
-      "large": "https://images.pokemontcg.io/mcd18/8_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-9",
-    "name": "Dratini",
-    "artist": "Naoyo Kimura",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/9.png",
-      "large": "https://images.pokemontcg.io/mcd18/9_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-10",
-    "name": "Chansey",
-    "artist": "Megumi Mizutani",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/10.png",
-      "large": "https://images.pokemontcg.io/mcd18/10_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-11",
-    "name": "Eevee",
-    "artist": "Shibuzoh.",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/11.png",
-      "large": "https://images.pokemontcg.io/mcd18/11_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd18-12",
-    "name": "Porygon",
-    "artist": "Shin Nagasawa",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/12.png",
-      "large": "https://images.pokemontcg.io/mcd18/12_hires.png"
-    },
-    "set": "McDonald's Collection 2018",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-1",
-    "name": "Caterpie",
-    "artist": "Sekio",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/1.png",
-      "large": "https://images.pokemontcg.io/mcd19/1_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-2",
-    "name": "Alolan Exeggutor",
-    "artist": "Satoshi Shirai",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/2.png",
-      "large": "https://images.pokemontcg.io/mcd19/2_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-3",
-    "name": "Magmar",
-    "artist": "Yumi",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/3.png",
-      "large": "https://images.pokemontcg.io/mcd19/3_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-4",
-    "name": "Alolan Sandshrew",
-    "artist": "Shin Nagasawa",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/4.png",
-      "large": "https://images.pokemontcg.io/mcd19/4_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-5",
-    "name": "Lapras",
-    "artist": "Saya Tsuruta",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/5.png",
-      "large": "https://images.pokemontcg.io/mcd19/5_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-6",
-    "name": "Pikachu",
-    "artist": "Kagemaru Himeno",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/6.png",
-      "large": "https://images.pokemontcg.io/mcd19/6_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-7",
-    "name": "Gastly",
-    "artist": "Shibuzoh.",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/7.png",
-      "large": "https://images.pokemontcg.io/mcd19/7_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-8",
-    "name": "Mankey",
-    "artist": "Miki Tanaka",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/8.png",
-      "large": "https://images.pokemontcg.io/mcd19/8_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-9",
-    "name": "Onix",
-    "artist": "Mitsuhiro Arita",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/9.png",
-      "large": "https://images.pokemontcg.io/mcd19/9_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-10",
-    "name": "Alolan Meowth",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/10.png",
-      "large": "https://images.pokemontcg.io/mcd19/10_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-11",
-    "name": "Alolan Dugtrio",
-    "artist": "Megumi Mizutani",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/11.png",
-      "large": "https://images.pokemontcg.io/mcd19/11_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd19-12",
-    "name": "Eevee",
-    "artist": "Atsuko Nishida",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd19/12.png",
-      "large": "https://images.pokemontcg.io/mcd19/12_hires.png"
-    },
-    "set": "McDonald's Collection 2019",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-1",
-    "name": "Bulbasaur",
-    "artist": "Mizue",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/1.png",
-      "large": "https://images.pokemontcg.io/mcd21/1_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-2",
-    "name": "Chikorita",
-    "artist": "sowsow",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/2.png",
-      "large": "https://images.pokemontcg.io/mcd21/2_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-3",
-    "name": "Treecko",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/3.png",
-      "large": "https://images.pokemontcg.io/mcd21/3_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-4",
-    "name": "Turtwig",
-    "artist": "OOYAMA",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/4.png",
-      "large": "https://images.pokemontcg.io/mcd21/4_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-5",
-    "name": "Snivy",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/5.png",
-      "large": "https://images.pokemontcg.io/mcd21/5_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-6",
-    "name": "Chespin",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/6.png",
-      "large": "https://images.pokemontcg.io/mcd21/6_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-7",
-    "name": "Rowlet",
-    "artist": "Megumi Mizutani",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/7.png",
-      "large": "https://images.pokemontcg.io/mcd21/7_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-8",
-    "name": "Grookey",
-    "artist": "kirisAki",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/8.png",
-      "large": "https://images.pokemontcg.io/mcd21/8_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-9",
-    "name": "Charmander",
-    "artist": "Kagemaru Himeno",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/9.png",
-      "large": "https://images.pokemontcg.io/mcd21/9_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-10",
-    "name": "Cyndaquil",
-    "artist": "kirisAki",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/10.png",
-      "large": "https://images.pokemontcg.io/mcd21/10_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-11",
-    "name": "Torchic",
-    "artist": "sui",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/11.png",
-      "large": "https://images.pokemontcg.io/mcd21/11_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-12",
-    "name": "Chimchar",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/12.png",
-      "large": "https://images.pokemontcg.io/mcd21/12_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-13",
-    "name": "Tepig",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/13.png",
-      "large": "https://images.pokemontcg.io/mcd21/13_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-14",
-    "name": "Fennekin",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/14.png",
-      "large": "https://images.pokemontcg.io/mcd21/14_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-15",
-    "name": "Litten",
-    "artist": "Akira Komayama",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/15.png",
-      "large": "https://images.pokemontcg.io/mcd21/15_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-16",
-    "name": "Scorbunny",
-    "artist": "Hitoshi Ariga",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/16.png",
-      "large": "https://images.pokemontcg.io/mcd21/16_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-17",
-    "name": "Squirtle",
-    "artist": "tetsuya koizumi",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/17.png",
-      "large": "https://images.pokemontcg.io/mcd21/17_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-18",
-    "name": "Totodile",
-    "artist": "Kagemaru Himeno",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/18.png",
-      "large": "https://images.pokemontcg.io/mcd21/18_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-19",
-    "name": "Mudkip",
-    "artist": "Aya Kusube",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/19.png",
-      "large": "https://images.pokemontcg.io/mcd21/19_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-20",
-    "name": "Piplup",
-    "artist": "Shibuzoh.",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/20.png",
-      "large": "https://images.pokemontcg.io/mcd21/20_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-21",
-    "name": "Oshawott",
-    "artist": "Ken Sugimori",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/21.png",
-      "large": "https://images.pokemontcg.io/mcd21/21_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-22",
-    "name": "Froakie",
-    "artist": "5ban Graphics",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/22.png",
-      "large": "https://images.pokemontcg.io/mcd21/22_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-23",
-    "name": "Popplio",
-    "artist": "Kouki Saitou",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/23.png",
-      "large": "https://images.pokemontcg.io/mcd21/23_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-24",
-    "name": "Sobble",
-    "artist": "Mizue",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/24.png",
-      "large": "https://images.pokemontcg.io/mcd21/24_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd21-25",
-    "name": "Pikachu",
-    "artist": "Sanosuke Sakuma",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd21/25.png",
-      "large": "https://images.pokemontcg.io/mcd21/25_hires.png"
-    },
-    "set": "McDonald's Collection 2021",
-    "series": "Other"
-  },
-  {
-    "id": "mcd22-1",
-    "name": "Ledyba",
-    "artist": "Naoyo Kimura",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd22/1.png",
-      "large": "https://images.pokemontcg.io/mcd22/1_hires.png"
-    },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
-  },
-  {
-    "id": "mcd22-2",
-    "name": "Rowlet",
-    "artist": "HYOGONOSUKE",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd22/2.png",
-      "large": "https://images.pokemontcg.io/mcd22/2_hires.png"
-    },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
-  },
-  {
-    "id": "mcd22-3",
-    "name": "Gossifleur",
-    "artist": "Mizue",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd22/3.png",
-      "large": "https://images.pokemontcg.io/mcd22/3_hires.png"
-    },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
-  },
-  {
-    "id": "mcd22-4",
-    "name": "Growlithe",
-    "artist": "Narumi Sato",
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd22/4.png",
-      "large": "https://images.pokemontcg.io/mcd22/4_hires.png"
-    },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
-  },
-  {
-    "id": "mcd22-5",
+    "id": "zsv10pt5-12",
     "name": "Victini",
-    "artist": "Teeziro",
+    "artist": "Natsumi Yoshida",
+    "rarity": "Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/5.png",
-      "large": "https://images.pokemontcg.io/mcd22/5_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/12.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/12_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-6",
-    "name": "Lapras",
-    "artist": "Atsushi Furusawa",
+    "id": "zsv10pt5-13",
+    "name": "Darumaka",
+    "artist": "svlt",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/6.png",
-      "large": "https://images.pokemontcg.io/mcd22/6_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/13.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/13_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-7",
-    "name": "Pikachu",
-    "artist": "chibi",
+    "id": "zsv10pt5-14",
+    "name": "Darmanitan",
+    "artist": "svlt",
+    "rarity": "Uncommon",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/7.png",
-      "large": "https://images.pokemontcg.io/mcd22/7_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/14.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/14_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-8",
-    "name": "Chinchou",
-    "artist": "sowsow",
+    "id": "zsv10pt5-15",
+    "name": "Larvesta",
+    "artist": "mashu",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/8.png",
-      "large": "https://images.pokemontcg.io/mcd22/8_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/15.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/15_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-9",
-    "name": "Flaaffy",
-    "artist": "sui",
+    "id": "zsv10pt5-16",
+    "name": "Volcarona",
+    "artist": "mashu",
+    "rarity": "Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/9.png",
-      "large": "https://images.pokemontcg.io/mcd22/9_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/16.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/16_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-10",
+    "id": "zsv10pt5-17",
+    "name": "Panpour",
+    "artist": "Makura Tami",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/17.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/17_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-18",
+    "name": "Simipour",
+    "artist": "Makura Tami",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/18.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/18_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-19",
+    "name": "Tympole",
+    "artist": "Yukihiro Tada",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/19.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/19_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-20",
+    "name": "Palpitoad",
+    "artist": "Yukihiro Tada",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/20.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/20_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-21",
+    "name": "Seismitoad",
+    "artist": "Yukihiro Tada",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/21.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/21_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-22",
+    "name": "Tirtouga",
+    "artist": "Gemi",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/22.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/22_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-23",
+    "name": "Carracosta",
+    "artist": "Gemi",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/23.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/23_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-24",
+    "name": "Alomomola",
+    "artist": "Tika Matsuno",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/24.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/24_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-25",
+    "name": "Cubchoo",
+    "artist": "OOYAMA",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/25.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/25_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-26",
+    "name": "Beartic",
+    "artist": "OOYAMA",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/26.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/26_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-27",
+    "name": "Cryogonal",
+    "artist": "Kyoko Umemoto",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/27.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/27_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-28",
+    "name": "Kyurem ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/28.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/28_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-29",
+    "name": "Emolga",
+    "artist": "Tomowaka",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/29.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/29_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-30",
     "name": "Tynamo",
-    "artist": "sowsow",
+    "artist": "Jerky",
+    "rarity": "Common",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/10.png",
-      "large": "https://images.pokemontcg.io/mcd22/10_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/30.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/30_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-11",
-    "name": "Cutiefly",
-    "artist": "Yukiko Baba",
+    "id": "zsv10pt5-31",
+    "name": "Eelektrik",
+    "artist": "Jerky",
+    "rarity": "Uncommon",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/11.png",
-      "large": "https://images.pokemontcg.io/mcd22/11_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/31.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/31_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-12",
-    "name": "Bewear",
-    "artist": "Shigenori Negishi",
+    "id": "zsv10pt5-32",
+    "name": "Eelektross",
+    "artist": "Jerky",
+    "rarity": "Uncommon",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/12.png",
-      "large": "https://images.pokemontcg.io/mcd22/12_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/32.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/32_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-13",
-    "name": "Pangoro",
-    "artist": "HYOGONOSUKE",
+    "id": "zsv10pt5-33",
+    "name": "Thundurus",
+    "artist": "hncl",
+    "rarity": "Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/13.png",
-      "large": "https://images.pokemontcg.io/mcd22/13_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/33.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/33_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-14",
-    "name": "Drampa",
+    "id": "zsv10pt5-34",
+    "name": "Zekrom ex",
+    "artist": "takuyoa",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/34.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/34_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-35",
+    "name": "Munna",
+    "artist": "Eri Kamei",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/35.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/35_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-36",
+    "name": "Musharna",
+    "artist": "Eri Kamei",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/36.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/36_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-37",
+    "name": "Solosis",
+    "artist": "LINNE",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/37.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/37_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-38",
+    "name": "Duosion",
+    "artist": "LINNE",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/38.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/38_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-39",
+    "name": "Reuniclus",
+    "artist": "LINNE",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/39.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/39_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-40",
+    "name": "Elgyem",
+    "artist": "Apios",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/40.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/40_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-41",
+    "name": "Beheeyem",
+    "artist": "Apios",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/41.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/41_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-42",
+    "name": "Golett",
+    "artist": "Uta",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/42.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/42_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-43",
+    "name": "Golurk",
+    "artist": "Uta",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/43.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/43_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-44",
+    "name": "Meloetta ex",
+    "artist": "5ban Graphics",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/44.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/44_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-45",
+    "name": "Drilbur",
+    "artist": "OKACHEKE",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/45.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/45_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-46",
+    "name": "Excadrill ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/46.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/46_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-47",
+    "name": "Timburr",
+    "artist": "Shinya Mizuno",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/47.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/47_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-48",
+    "name": "Gurdurr",
+    "artist": "Shinya Mizuno",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/48.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/48_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-49",
+    "name": "Conkeldurr",
+    "artist": "Shinya Mizuno",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/49.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/49_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-50",
+    "name": "Throh",
+    "artist": "Shin Nagasawa",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/50.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/50_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-51",
+    "name": "Dwebble",
+    "artist": "Tetsu Kayama",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/51.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/51_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-52",
+    "name": "Crustle",
+    "artist": "Tetsu Kayama",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/52.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/52_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-53",
+    "name": "Landorus",
+    "artist": "Kazumasa Yasukuni",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/53.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/53_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-54",
+    "name": "Venipede",
+    "artist": "okayamatakatoshi",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/54.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/54_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-55",
+    "name": "Whirlipede",
+    "artist": "okayamatakatoshi",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/55.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/55_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-56",
+    "name": "Scolipede",
+    "artist": "okayamatakatoshi",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/56.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/56_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-57",
+    "name": "Sandile",
+    "artist": "Gapao",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/57.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/57_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-58",
+    "name": "Krokorok",
+    "artist": "Gapao",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/58.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/58_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-59",
+    "name": "Krookodile",
+    "artist": "Gapao",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/59.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/59_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-60",
+    "name": "Escavalier",
+    "artist": "DOM",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/60.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/60_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-61",
+    "name": "Klink",
+    "artist": "Amelicart",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/61.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/61_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-62",
+    "name": "Klang",
+    "artist": "Amelicart",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/62.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/62_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-63",
+    "name": "Klinklang",
+    "artist": "Amelicart",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/63.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/63_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-64",
+    "name": "Pawniard",
+    "artist": "Oku",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/64.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/64_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-65",
+    "name": "Bisharp",
+    "artist": "Oku",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/65.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/65_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-66",
+    "name": "Cobalion",
+    "artist": "HICO KIM",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/66.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/66_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-67",
+    "name": "Genesect ex",
+    "artist": "5ban Graphics",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/67.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/67_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-68",
+    "name": "Axew",
+    "artist": "Taiga Kasai",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/68.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/68_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-69",
+    "name": "Fraxure",
+    "artist": "Taiga Kasai",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/69.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/69_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-70",
+    "name": "Haxorus",
+    "artist": "Taiga Kasai",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/70.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/70_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-71",
+    "name": "Pidove",
+    "artist": "Tomomi Ozaki",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/71.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/71_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-72",
+    "name": "Tranquill",
+    "artist": "Tomomi Ozaki",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/72.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/72_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-73",
+    "name": "Unfezant",
+    "artist": "Tomomi Ozaki",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/73.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/73_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-74",
+    "name": "Audino",
+    "artist": "Saya Tsuruta",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/74.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/74_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-75",
+    "name": "Minccino",
+    "artist": "Ayako Ozaki",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/75.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/75_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-76",
+    "name": "Cinccino",
+    "artist": "Ayako Ozaki",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/76.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/76_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-77",
+    "name": "Rufflet",
+    "artist": "Kedamahadaitai Yawarakai",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/77.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/77_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-78",
+    "name": "Braviary",
+    "artist": "Kedamahadaitai Yawarakai",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/78.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/78_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-79",
+    "name": "Air Balloon",
+    "artist": "Studio Bora Inc.",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/79.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/79_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-80",
+    "name": "Antique Cover Fossil",
+    "artist": "DOM",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/80.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/80_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-81",
+    "name": "Energy Coin",
+    "artist": "Toyste Beach",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/81.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/81_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-82",
+    "name": "Fennel",
+    "artist": "Yuu Nishida",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/82.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/82_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-83",
+    "name": "N's Plan",
+    "artist": "hncl",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/83.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/83_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-84",
+    "name": "Pokégear 3.0",
+    "artist": "Toyste Beach",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/84.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/84_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-85",
+    "name": "Professor's Research",
+    "artist": "Taira Akitsu",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/85.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/85_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-86",
+    "name": "Prism Energy",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/86.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/86_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-87",
+    "name": "Snivy",
+    "artist": "Yoshimi Miyoshi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/87.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/87_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-88",
+    "name": "Servine",
+    "artist": "Jiro Sasumo",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/88.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/88_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-89",
+    "name": "Pansage",
+    "artist": "saino misaki",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/89.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/89_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-90",
+    "name": "Simisage",
+    "artist": "Yuka Tanaka",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/90.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/90_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-91",
+    "name": "Petilil",
+    "artist": "Tika Matsuno",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/91.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/91_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-92",
+    "name": "Lilligant",
+    "artist": "En Morikura",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/92.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/92_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-93",
+    "name": "Maractus",
+    "artist": "Heisuke Kitazawa",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/93.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/93_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-94",
+    "name": "Karrablast",
     "artist": "Tomokazu Komiya",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/14.png",
-      "large": "https://images.pokemontcg.io/mcd22/14_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/94.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/94_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "mcd22-15",
-    "name": "Smeargle",
-    "artist": "Kouki Saitou",
+    "id": "zsv10pt5-95",
+    "name": "Foongus",
+    "artist": "buchi",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/mcd22/15.png",
-      "large": "https://images.pokemontcg.io/mcd22/15_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/95.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/95_hires.png"
     },
-    "set": "McDonald's Collection 2022",
-    "series": "Other"
-  },
- {
-    "id": "ru1-1",
-    "name": "Venusaur",
-    "artist": "Pokemon Rumble",
-    "images": {
-      "small": "https://images.pokemontcg.io/ru1/1.png",
-      "large": "https://images.pokemontcg.io/ru1/1_hires.png"
-    },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-2",
-    "name": "Cherrim",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-96",
+    "name": "Amoonguss",
+    "artist": "OKUBO",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/2.png",
-      "large": "https://images.pokemontcg.io/ru1/2_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/96.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/96_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-3",
-    "name": "Ninetales",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-97",
+    "name": "Darumaka",
+    "artist": "Tomowaka",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/3.png",
-      "large": "https://images.pokemontcg.io/ru1/3_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/97.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/97_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-4",
-    "name": "Heatran",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-98",
+    "name": "Darmanitan",
+    "artist": "Nisota Niso",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/4.png",
-      "large": "https://images.pokemontcg.io/ru1/4_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/98.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/98_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-5",
-    "name": "Starmie",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-99",
+    "name": "Larvesta",
+    "artist": "Katsunori Sato",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/5.png",
-      "large": "https://images.pokemontcg.io/ru1/5_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/99.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/99_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-6",
-    "name": "Gyarados",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-100",
+    "name": "Volcarona",
+    "artist": "AKIRA EGAWA",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/6.png",
-      "large": "https://images.pokemontcg.io/ru1/6_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/100.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/100_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-7",
-    "name": "Pikachu",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-101",
+    "name": "Panpour",
+    "artist": "Hoshino KURO",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/7.png",
-      "large": "https://images.pokemontcg.io/ru1/7_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/101.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/101_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-8",
-    "name": "Zapdos",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-102",
+    "name": "Simipour",
+    "artist": "Yoriyuki Ikegami",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/8.png",
-      "large": "https://images.pokemontcg.io/ru1/8_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/102.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/102_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-9",
-    "name": "Mewtwo",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-103",
+    "name": "Tympole",
+    "artist": "aspara",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/9.png",
-      "large": "https://images.pokemontcg.io/ru1/9_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/103.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/103_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-10",
-    "name": "Mew",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-104",
+    "name": "Palpitoad",
+    "artist": "KEIICHIRO ITO",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/10.png",
-      "large": "https://images.pokemontcg.io/ru1/10_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/104.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/104_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-11",
-    "name": "Diglett",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-105",
+    "name": "Seismitoad",
+    "artist": "Shinji Kanda",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/11.png",
-      "large": "https://images.pokemontcg.io/ru1/11_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/105.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/105_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-12",
-    "name": "Lucario",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-106",
+    "name": "Tirtouga",
+    "artist": "Akino Fukuji",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/12.png",
-      "large": "https://images.pokemontcg.io/ru1/12_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/106.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/106_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-13",
-    "name": "Skuntank",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-107",
+    "name": "Carracosta",
+    "artist": "Takeshi Nakamura",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/13.png",
-      "large": "https://images.pokemontcg.io/ru1/13_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/107.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/107_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-14",
-    "name": "Bastiodon",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-108",
+    "name": "Alomomola",
+    "artist": "Rond",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/14.png",
-      "large": "https://images.pokemontcg.io/ru1/14_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/108.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/108_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-15",
-    "name": "Rattata",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-109",
+    "name": "Cubchoo",
+    "artist": "osare",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/15.png",
-      "large": "https://images.pokemontcg.io/ru1/15_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/109.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/109_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "ru1-16",
-    "name": "Bibarel",
-    "artist": "Pokemon Rumble",
+    "id": "zsv10pt5-110",
+    "name": "Beartic",
+    "artist": "Whisker",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/ru1/16.png",
-      "large": "https://images.pokemontcg.io/ru1/16_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/110.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/110_hires.png"
     },
-    "set": "Pokémon Rumble",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-1",
-    "name": "Mew",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-111",
+    "name": "Cryogonal",
+    "artist": "rika",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/1.png",
-      "large": "https://images.pokemontcg.io/si1/1_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/111.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/111_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-2",
-    "name": "Pidgeot",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-112",
+    "name": "Emolga",
+    "artist": "Tomomi Ozaki",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/2.png",
-      "large": "https://images.pokemontcg.io/si1/2_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/112.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/112_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-3",
-    "name": "Onix",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-113",
+    "name": "Tynamo",
+    "artist": "ryoma uratsuka",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/3.png",
-      "large": "https://images.pokemontcg.io/si1/3_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/113.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/113_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-4",
-    "name": "Togepi",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-114",
+    "name": "Eelektrik",
+    "artist": "Kurata So",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/4.png",
-      "large": "https://images.pokemontcg.io/si1/4_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/114.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/114_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-5",
-    "name": "Ivysaur",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-115",
+    "name": "Eelektross",
+    "artist": "Yukiko Baba",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/5.png",
-      "large": "https://images.pokemontcg.io/si1/5_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/115.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/115_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-6",
-    "name": "Raticate",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-116",
+    "name": "Munna",
+    "artist": "miki kudo",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/6.png",
-      "large": "https://images.pokemontcg.io/si1/6_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/116.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/116_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-7",
-    "name": "Ledyba",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-117",
+    "name": "Musharna",
+    "artist": "Mizue",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/7.png",
-      "large": "https://images.pokemontcg.io/si1/7_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/117.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/117_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-8",
-    "name": "Jigglypuff",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-118",
+    "name": "Solosis",
+    "artist": "USGMEN",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/8.png",
-      "large": "https://images.pokemontcg.io/si1/8_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/118.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/118_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-9",
-    "name": "Butterfree",
-    "artist": "Keiko Fukuyama",
+    "id": "zsv10pt5-119",
+    "name": "Duosion",
+    "artist": "Kedamahadaitai Yawarakai",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/9.png",
-      "large": "https://images.pokemontcg.io/si1/9_hires.png"
+      "small": "https://images.pokemontcg.io/zsv10pt5/119.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/119_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "Black Bolt"
   },
   {
-    "id": "si1-10",
-    "name": "Tentacruel",
+    "id": "zsv10pt5-120",
+    "name": "Elgyem",
+    "artist": "Masako Tomii",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/120.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/120_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-121",
+    "name": "Beheeyem",
+    "artist": "Aya Kusube",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/121.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/121_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-122",
+    "name": "Golett",
+    "artist": "Nabatame Kazutaka",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/122.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/122_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-123",
+    "name": "Golurk",
+    "artist": "Shinya Mizuno",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/123.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/123_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-124",
+    "name": "Drilbur",
+    "artist": "Koji Nakata",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/124.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/124_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-125",
+    "name": "Timburr",
+    "artist": "Shigenori Negishi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/125.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/125_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-126",
+    "name": "Gurdurr",
+    "artist": "Souichirou Gunjima",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/126.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/126_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-127",
+    "name": "Conkeldurr",
+    "artist": "Kazumasa Yasukuni",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/127.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/127_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-128",
+    "name": "Throh",
+    "artist": "GOSSAN",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/128.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/128_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-129",
+    "name": "Dwebble",
+    "artist": "Shimaris Yukichi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/129.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/129_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-130",
+    "name": "Crustle",
+    "artist": "MINAMINAMI Take",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/130.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/130_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-131",
+    "name": "Landorus",
+    "artist": "SIE NANAHARA",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/131.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/131_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-132",
+    "name": "Venipede",
+    "artist": "Apios",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/132.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/132_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-133",
+    "name": "Whirlipede",
+    "artist": "kurumitsu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/133.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/133_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-134",
+    "name": "Scolipede",
+    "artist": "Oku",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/134.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/134_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-135",
+    "name": "Sandile",
+    "artist": "Fujimoto Gold",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/135.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/135_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-136",
+    "name": "Krokorok",
+    "artist": "Tonji Matsuno",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/136.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/136_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-137",
+    "name": "Krookodile",
+    "artist": "Uninori",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/137.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/137_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-138",
+    "name": "Escavalier",
+    "artist": "Uta",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/138.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/138_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-139",
+    "name": "Klink",
+    "artist": "Nobuhiro Imagawa",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/139.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/139_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-140",
+    "name": "Klang",
+    "artist": "okayamatakatoshi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/140.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/140_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-141",
+    "name": "Klinklang",
+    "artist": "Yuka Morii",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/141.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/141_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-142",
+    "name": "Pawniard",
+    "artist": "Dsuke",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/142.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/142_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-143",
+    "name": "Bisharp",
+    "artist": "toriyufu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/143.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/143_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-144",
+    "name": "Cobalion",
+    "artist": "hncl",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/144.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/144_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-145",
+    "name": "Axew",
+    "artist": "Ayako Ozaki",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/145.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/145_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-146",
+    "name": "Fraxure",
+    "artist": "Yuya Oka",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/146.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/146_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-147",
+    "name": "Haxorus",
+    "artist": "akagi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/147.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/147_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-148",
+    "name": "Pidove",
+    "artist": "Mori Yuu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/148.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/148_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-149",
+    "name": "Tranquill",
+    "artist": "cochi8i",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/149.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/149_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-150",
+    "name": "Unfezant",
+    "artist": "Yoshioka",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/150.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/150_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-151",
+    "name": "Audino",
+    "artist": "Asako Ito",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/151.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/151_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-152",
+    "name": "Minccino",
+    "artist": "Natsumi Yoshida",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/152.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/152_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-153",
+    "name": "Cinccino",
+    "artist": "tono",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/153.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/153_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-154",
+    "name": "Rufflet",
+    "artist": "Miki Tanaka",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/154.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/154_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-155",
+    "name": "Braviary",
+    "artist": "kamonabe",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/155.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/155_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-156",
+    "name": "Serperior ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/156.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/156_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-157",
+    "name": "Kyurem ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/157.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/157_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-158",
+    "name": "Zekrom ex",
+    "artist": "takuyoa",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/158.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/158_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-159",
+    "name": "Meloetta ex",
+    "artist": "5ban Graphics",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/159.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/159_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-160",
+    "name": "Excadrill ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/160.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/160_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-161",
+    "name": "Genesect ex",
+    "artist": "5ban Graphics",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/161.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/161_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-162",
+    "name": "Fennel",
+    "artist": "Yuu Nishida",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/162.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/162_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-163",
+    "name": "N's Plan",
+    "artist": "hncl",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/163.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/163_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-164",
+    "name": "Serperior ex",
+    "artist": "Ryota Murayama",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/164.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/164_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-165",
+    "name": "Kyurem ex",
+    "artist": "chibi",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/165.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/165_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-166",
+    "name": "Zekrom ex",
+    "artist": "danciao",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/166.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/166_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-167",
+    "name": "Meloetta ex",
+    "artist": "LINNE",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/167.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/167_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-168",
+    "name": "Excadrill ex",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/168.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/168_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-169",
+    "name": "Genesect ex",
+    "artist": "kantaro",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/169.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/169_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-170",
+    "name": "N's Plan",
+    "artist": "REND",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/170.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/170_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-171",
+    "name": "Victini",
+    "artist": "5ban Graphics",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/171.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/171_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "zsv10pt5-172",
+    "name": "Zekrom ex",
+    "artist": "takuyoa",
+    "rarity": "Black White Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/zsv10pt5/172.png",
+      "large": "https://images.pokemontcg.io/zsv10pt5/172_hires.png"
+    },
+    "series": "Black Bolt"
+  },
+  {
+    "id": "rsv10pt5-1",
+    "name": "Sewaddle",
+    "artist": "Oswaldo KATO",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/1.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/1_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-2",
+    "name": "Swadloon",
+    "artist": "Oswaldo KATO",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/2.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/2_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-3",
+    "name": "Leavanny",
+    "artist": "Oswaldo KATO",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/3.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/3_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-4",
+    "name": "Cottonee",
+    "artist": "sui",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/4.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/4_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-5",
+    "name": "Whimsicott ex",
+    "artist": "5ban Graphics",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/5.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/5_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-6",
+    "name": "Deerling",
+    "artist": "Narano",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/6.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/6_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-7",
+    "name": "Sawsbuck",
+    "artist": "Narano",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/7.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/7_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-8",
+    "name": "Shelmet",
+    "artist": "Saboteri",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/8.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/8_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-9",
+    "name": "Accelgor",
+    "artist": "Saboteri",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/9.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/9_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-10",
+    "name": "Virizion",
+    "artist": "Felicia Chen",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/10.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/10_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-11",
+    "name": "Tepig",
+    "artist": "Teeziro",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/11.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/11_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-12",
+    "name": "Pignite",
+    "artist": "Teeziro",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/12.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/12_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-13",
+    "name": "Emboar",
+    "artist": "Teeziro",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/13.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/13_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-14",
+    "name": "Pansear",
+    "artist": "Julie Hang",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/14.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/14_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-15",
+    "name": "Simisear",
+    "artist": "Julie Hang",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/15.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/15_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-16",
+    "name": "Litwick",
+    "artist": "satoma",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/16.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/16_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-17",
+    "name": "Lampent",
+    "artist": "satoma",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/17.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/17_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-18",
+    "name": "Chandelure",
+    "artist": "satoma",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/18.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/18_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-19",
+    "name": "Heatmor",
+    "artist": "Minahamu",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/19.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/19_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-20",
+    "name": "Reshiram ex",
+    "artist": "5ban Graphics",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/20.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/20_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-21",
+    "name": "Oshawott",
+    "artist": "rika",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/21.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/21_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-22",
+    "name": "Dewott",
+    "artist": "rika",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/22.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/22_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-23",
+    "name": "Samurott",
+    "artist": "rika",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/23.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/23_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-24",
+    "name": "Basculin",
+    "artist": "KEIICHIRO ITO",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/24.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/24_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-25",
+    "name": "Ducklett",
+    "artist": "Mizue",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/25.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/25_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-26",
+    "name": "Swanna",
+    "artist": "Mizue",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/26.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/26_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-27",
+    "name": "Vanillite",
+    "artist": "cochi8i",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/27.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/27_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-28",
+    "name": "Vanillish",
+    "artist": "cochi8i",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/28.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/28_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-29",
+    "name": "Vanilluxe",
+    "artist": "cochi8i",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/29.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/29_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-30",
+    "name": "Keldeo ex",
+    "artist": "PLANETA Yamashita",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/30.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/30_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-31",
+    "name": "Blitzle",
+    "artist": "Mugi Hamada",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/31.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/31_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-32",
+    "name": "Zebstrika",
+    "artist": "Mugi Hamada",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/32.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/32_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-33",
+    "name": "Joltik",
+    "artist": "Shimaris Yukichi",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/33.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/33_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-34",
+    "name": "Galvantula",
+    "artist": "Shimaris Yukichi",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/34.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/34_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-35",
+    "name": "Stunfisk",
+    "artist": "Yuya Oka",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/35.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/35_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-36",
+    "name": "Woobat",
+    "artist": "Wintr Wandr",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/36.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/36_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-37",
+    "name": "Swoobat",
+    "artist": "Wintr Wandr",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/37.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/37_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-38",
+    "name": "Sigilyph",
+    "artist": "Krgc",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/38.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/38_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-39",
+    "name": "Yamask",
+    "artist": "Bun Toujo",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/39.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/39_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-40",
+    "name": "Cofagrigus",
+    "artist": "Bun Toujo",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/40.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/40_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-41",
+    "name": "Gothita",
+    "artist": "Mousho",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/41.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/41_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-42",
+    "name": "Gothorita",
+    "artist": "Mousho",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/42.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/42_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-43",
+    "name": "Gothitelle",
+    "artist": "Mousho",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/43.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/43_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-44",
+    "name": "Frillish",
+    "artist": "MARINA Chikazawa",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/44.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/44_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-45",
+    "name": "Jellicent ex",
+    "artist": "PLANETA Igarashi",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/45.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/45_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-46",
+    "name": "Roggenrola",
+    "artist": "Anesaki Dynamic",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/46.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/46_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-47",
+    "name": "Boldore",
+    "artist": "Anesaki Dynamic",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/47.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/47_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-48",
+    "name": "Gigalith",
+    "artist": "Anesaki Dynamic",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/48.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/48_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-49",
+    "name": "Sawk",
+    "artist": "Dsuke",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/49.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/49_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-50",
+    "name": "Archen",
+    "artist": "Haru Akasaka",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/50.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/50_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-51",
+    "name": "Archeops",
+    "artist": "Haru Akasaka",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/51.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/51_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-52",
+    "name": "Mienfoo",
+    "artist": "Keisin",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/52.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/52_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-53",
+    "name": "Mienshao",
+    "artist": "Keisin",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/53.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/53_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-54",
+    "name": "Terrakion",
+    "artist": "Tonji Matsuno",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/54.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/54_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-55",
+    "name": "Purrloin",
+    "artist": "Yuu Nishida",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/55.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/55_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-56",
+    "name": "Liepard",
+    "artist": "Yuu Nishida",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/56.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/56_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-57",
+    "name": "Scraggy",
+    "artist": "osare",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/57.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/57_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-58",
+    "name": "Scrafty",
+    "artist": "osare",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/58.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/58_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-59",
+    "name": "Trubbish",
+    "artist": "OKUBO",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/59.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/59_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-60",
+    "name": "Garbodor",
+    "artist": "OKUBO",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/60.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/60_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-61",
+    "name": "Zorua",
+    "artist": "akagi",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/61.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/61_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-62",
+    "name": "Zoroark",
+    "artist": "akagi",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/62.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/62_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-63",
+    "name": "Vullaby",
+    "artist": "Pani Kobayashi",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/63.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/63_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-64",
+    "name": "Mandibuzz",
+    "artist": "Pani Kobayashi",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/64.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/64_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-65",
+    "name": "Deino",
+    "artist": "kodama",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/65.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/65_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-66",
+    "name": "Zweilous",
+    "artist": "kodama",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/66.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/66_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-67",
+    "name": "Hydreigon ex",
+    "artist": "5ban Graphics",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/67.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/67_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-68",
+    "name": "Ferroseed",
+    "artist": "Hasuno",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/68.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/68_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-69",
+    "name": "Ferrothorn",
+    "artist": "Hasuno",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/69.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/69_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-70",
+    "name": "Durant",
+    "artist": "Yuka Morii",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/70.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/70_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-71",
+    "name": "Druddigon",
+    "artist": "Nurikabe",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/71.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/71_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-72",
+    "name": "Patrat",
+    "artist": "Ounishi",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/72.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/72_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-73",
+    "name": "Watchog",
+    "artist": "Ounishi",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/73.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/73_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-74",
+    "name": "Lillipup",
+    "artist": "sowsow",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/74.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/74_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-75",
+    "name": "Herdier",
+    "artist": "sowsow",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/75.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/75_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-76",
+    "name": "Stoutland",
+    "artist": "sowsow",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/76.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/76_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-77",
+    "name": "Bouffalant ex",
+    "artist": "PLANETA Tsuji",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/77.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/77_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-78",
+    "name": "Tornadus",
+    "artist": "Nisota Niso",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/78.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/78_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-79",
+    "name": "Antique Plume Fossil",
+    "artist": "AYUMI ODASHIMA",
+    "rarity": "Common",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/79.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/79_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-80",
+    "name": "Brave Bangle",
+    "artist": "Toyste Beach",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/80.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/80_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-81",
+    "name": "Cheren",
+    "artist": "Atsushi Furusawa",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/81.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/81_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-82",
+    "name": "Energy Retrieval",
+    "artist": "Studio Bora Inc.",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/82.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/82_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-83",
+    "name": "Harlequin",
+    "artist": "Teeziro",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/83.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/83_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-84",
+    "name": "Hilda",
+    "artist": "yuu",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/84.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/84_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-85",
+    "name": "Tool Scrapper",
+    "artist": "Studio Bora Inc.",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/85.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/85_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-86",
+    "name": "Ignition Energy",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/86.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/86_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-87",
+    "name": "Sewaddle",
+    "artist": "nisimono",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/87.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/87_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-88",
+    "name": "Swadloon",
+    "artist": "0313",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/88.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/88_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-89",
+    "name": "Leavanny",
+    "artist": "mashu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/89.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/89_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-90",
+    "name": "Cottonee",
+    "artist": "Keisin",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/90.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/90_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-91",
+    "name": "Deerling",
+    "artist": "takashi shiraishi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/91.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/91_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-92",
+    "name": "Sawsbuck",
+    "artist": "Yano Keiji",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/92.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/92_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-93",
+    "name": "Shelmet",
+    "artist": "Mékayu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/93.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/93_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-94",
+    "name": "Accelgor",
+    "artist": "Taiga Kasai",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/94.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/94_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-95",
+    "name": "Virizion",
+    "artist": "kodama",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/95.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/95_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-96",
+    "name": "Tepig",
+    "artist": "Orca",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/96.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/96_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-97",
+    "name": "Pignite",
+    "artist": "Masa",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/97.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/97_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-98",
+    "name": "Emboar",
+    "artist": "NC Empire",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/98.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/98_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-99",
+    "name": "Pansear",
+    "artist": "GOTO minori",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/99.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/99_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-100",
+    "name": "Simisear",
+    "artist": "sowsow",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/100.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/100_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-101",
+    "name": "Litwick",
     "artist": "Naoyo Kimura",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/10.png",
-      "large": "https://images.pokemontcg.io/si1/10_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/101.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/101_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-11",
-    "name": "Marill",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-102",
+    "name": "Lampent",
+    "artist": "Ligton",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/11.png",
-      "large": "https://images.pokemontcg.io/si1/11_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/102.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/102_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-12",
-    "name": "Lapras",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-103",
+    "name": "Chandelure",
+    "artist": "Kuroimori",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/12.png",
-      "large": "https://images.pokemontcg.io/si1/12_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/103.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/103_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-13",
-    "name": "Exeggutor",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-104",
+    "name": "Heatmor",
+    "artist": "Kariya",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/13.png",
-      "large": "https://images.pokemontcg.io/si1/13_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/104.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/104_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-14",
-    "name": "Slowking",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-105",
+    "name": "Oshawott",
+    "artist": "OKACHEKE",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/14.png",
-      "large": "https://images.pokemontcg.io/si1/14_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/105.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/105_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-15",
-    "name": "Wartortle",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-106",
+    "name": "Dewott",
+    "artist": "Taira Akitsu",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/15.png",
-      "large": "https://images.pokemontcg.io/si1/15_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/106.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/106_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-16",
-    "name": "Lickitung",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-107",
+    "name": "Samurott",
+    "artist": "DOM",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/16.png",
-      "large": "https://images.pokemontcg.io/si1/16_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/107.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/107_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-17",
-    "name": "Vileplume",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-108",
+    "name": "Basculin",
+    "artist": "Nakamura Ippan",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/17.png",
-      "large": "https://images.pokemontcg.io/si1/17_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/108.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/108_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
   },
   {
-    "id": "si1-18",
-    "name": "Primeape",
-    "artist": "Naoyo Kimura",
+    "id": "rsv10pt5-109",
+    "name": "Ducklett",
+    "artist": "GIDORA",
+    "rarity": "Illustration Rare",
     "images": {
-      "small": "https://images.pokemontcg.io/si1/18.png",
-      "large": "https://images.pokemontcg.io/si1/18_hires.png"
+      "small": "https://images.pokemontcg.io/rsv10pt5/109.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/109_hires.png"
     },
-    "set": "Southern Islands",
-    "series": "Other"
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-110",
+    "name": "Swanna",
+    "artist": "Gemi",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/110.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/110_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-111",
+    "name": "Vanillite",
+    "artist": "Mina Nakai",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/111.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/111_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-112",
+    "name": "Vanillish",
+    "artist": "Yoko Hishida",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/112.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/112_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-113",
+    "name": "Vanilluxe",
+    "artist": "aoki",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/113.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/113_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-114",
+    "name": "Blitzle",
+    "artist": "Natsumi Miyanose",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/114.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/114_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-115",
+    "name": "Zebstrika",
+    "artist": "REND",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/115.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/115_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-116",
+    "name": "Joltik",
+    "artist": "HYOGONOSUKE",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/116.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/116_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-117",
+    "name": "Galvantula",
+    "artist": "Akira Komayama",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/117.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/117_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-118",
+    "name": "Stunfisk",
+    "artist": "Toshinao Aoki",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/118.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/118_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-119",
+    "name": "Woobat",
+    "artist": "Shibuzoh.",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/119.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/119_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-120",
+    "name": "Swoobat",
+    "artist": "Saboteri",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/120.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/120_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-121",
+    "name": "Sigilyph",
+    "artist": "mingo",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/121.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/121_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-122",
+    "name": "Yamask",
+    "artist": "YASHIRO Nanaco",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/122.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/122_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-123",
+    "name": "Cofagrigus",
+    "artist": "Haru Akasaka",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/123.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/123_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-124",
+    "name": "Gothita",
+    "artist": "Kanami Ogata",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/124.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/124_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-125",
+    "name": "Gothorita",
+    "artist": "Terada Tera",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/125.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/125_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-126",
+    "name": "Frillish",
+    "artist": "Shinya Komatsu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/126.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/126_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-127",
+    "name": "Roggenrola",
+    "artist": "Yuriko Akase",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/127.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/127_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-128",
+    "name": "Boldore",
+    "artist": "Krgc",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/128.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/128_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-129",
+    "name": "Gigalith",
+    "artist": "toi8",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/129.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/129_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-130",
+    "name": "Sawk",
+    "artist": "nagimiso",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/130.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/130_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-131",
+    "name": "Archen",
+    "artist": "Ounishi",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/131.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/131_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-132",
+    "name": "Archeops",
+    "artist": "Jerky",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/132.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/132_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-133",
+    "name": "Mienfoo",
+    "artist": "Iori Suzuki",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/133.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/133_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-134",
+    "name": "Mienshao",
+    "artist": "Atsuya Uki",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/134.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/134_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-135",
+    "name": "Terrakion",
+    "artist": "Shiburingaru",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/135.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/135_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-136",
+    "name": "Purrloin",
+    "artist": "Mugi Hamada",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/136.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/136_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-137",
+    "name": "Liepard",
+    "artist": "matazo",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/137.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/137_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-138",
+    "name": "Scraggy",
+    "artist": "Nelnal",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/138.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/138_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-139",
+    "name": "Scrafty",
+    "artist": "Tetsu Kayama",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/139.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/139_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-140",
+    "name": "Trubbish",
+    "artist": "Oswaldo KATO",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/140.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/140_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-141",
+    "name": "Garbodor",
+    "artist": "Gapao",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/141.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/141_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-142",
+    "name": "Zorua",
+    "artist": "Naoki Saito",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/142.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/142_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-143",
+    "name": "Zoroark",
+    "artist": "Iwamoto05",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/143.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/143_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-144",
+    "name": "Vullaby",
+    "artist": "Saya Tsuruta",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/144.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/144_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-145",
+    "name": "Mandibuzz",
+    "artist": "Bun Toujo",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/145.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/145_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-146",
+    "name": "Deino",
+    "artist": "Teeziro",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/146.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/146_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-147",
+    "name": "Zweilous",
+    "artist": "Kyoko Umemoto",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/147.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/147_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-148",
+    "name": "Ferroseed",
+    "artist": "Nurikabe",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/148.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/148_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-149",
+    "name": "Ferrothorn",
+    "artist": "Minahamu",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/149.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/149_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-150",
+    "name": "Durant",
+    "artist": "Scav",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/150.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/150_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-151",
+    "name": "Druddigon",
+    "artist": "Kamome Shirahama",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/151.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/151_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-152",
+    "name": "Patrat",
+    "artist": "Yukihiro Tada",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/152.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/152_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-153",
+    "name": "Watchog",
+    "artist": "Mousho",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/153.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/153_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-154",
+    "name": "Lillipup",
+    "artist": "Narumi Sato",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/154.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/154_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-155",
+    "name": "Herdier",
+    "artist": "Makura Tami",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/155.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/155_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-156",
+    "name": "Stoutland",
+    "artist": "Eri Kamei",
+    "rarity": "Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/156.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/156_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-157",
+    "name": "Whimsicott ex",
+    "artist": "5ban Graphics",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/157.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/157_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-158",
+    "name": "Reshiram ex",
+    "artist": "5ban Graphics",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/158.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/158_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-159",
+    "name": "Keldeo ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/159.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/159_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-160",
+    "name": "Jellicent ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/160.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/160_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-161",
+    "name": "Hydreigon ex",
+    "artist": "5ban Graphics",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/161.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/161_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-162",
+    "name": "Bouffalant ex",
+    "artist": "N-DESIGN Inc.",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/162.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/162_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-163",
+    "name": "Harlequin",
+    "artist": "Teeziro",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/163.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/163_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-164",
+    "name": "Hilda",
+    "artist": "yuu",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/164.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/164_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-165",
+    "name": "Whimsicott ex",
+    "artist": "mele",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/165.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/165_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-166",
+    "name": "Reshiram ex",
+    "artist": "kawayoo",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/166.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/166_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-167",
+    "name": "Keldeo ex",
+    "artist": "Yuu Nishida",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/167.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/167_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-168",
+    "name": "Jellicent ex",
+    "artist": "Narano",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/168.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/168_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-169",
+    "name": "Hydreigon ex",
+    "artist": "Takumi Wada",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/169.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/169_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-170",
+    "name": "Bouffalant ex",
+    "artist": "Rianti Hidayat",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/170.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/170_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-171",
+    "name": "Hilda",
+    "artist": "Naoki Saito",
+    "rarity": "Special Illustration Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/171.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/171_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-172",
+    "name": "Victini",
+    "artist": "5ban Graphics",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/172.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/172_hires.png"
+    },
+    "series": "White Flare"
+  },
+  {
+    "id": "rsv10pt5-173",
+    "name": "Reshiram ex",
+    "artist": "5ban Graphics",
+    "rarity": "Black White Rare",
+    "images": {
+      "small": "https://images.pokemontcg.io/rsv10pt5/173.png",
+      "large": "https://images.pokemontcg.io/rsv10pt5/173_hires.png"
+    },
+    "series": "White Flare"
   }
 ]
 ;
@@ -2058,14 +3817,14 @@ const newFile = base.map((card) => {
   if (!card.set) {
     newCard = {
       ...newCard,
-      set: "Other",
+      set: "Scarlet & Violet",
     };
   }
 
   return newCard;
 });
 
-fs.writeFile("./public/data/other.json", JSON.stringify(newFile), function (err) {
+fs.writeFile("./public/data/svp.json", JSON.stringify(newFile), function (err) {
   if (err) throw err;
   console.log("formatted file");
 });
