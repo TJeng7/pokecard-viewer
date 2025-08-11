@@ -26,7 +26,7 @@ export const Header: React.FC<Props> = ({ searchFilter, setSearchFilter, currTab
                 name: searchTerm,
                 artist: searchFilter.artist,
                 rarity: searchFilter.rarity,
-                series: searchFilter.series,
+                set: searchFilter.set,
               });
             }
           }}
@@ -39,7 +39,7 @@ export const Header: React.FC<Props> = ({ searchFilter, setSearchFilter, currTab
               name: searchTerm,
               artist: searchFilter.artist,
               rarity: searchFilter.rarity,
-              series: searchFilter.series,
+              set: searchFilter.set,
             });
           }}
         />
