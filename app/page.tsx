@@ -2,13 +2,14 @@
 
 import React, { useState, useEffect, ChangeEvent } from "react";
 
-import { CardFilters } from "../components/CardFilters"
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { CardFilters } from "../components/CardFilters/CardFilters"
+import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/Header/Header";
 import { ALL_CARDS } from "../consts/setData"
 
-import FilterableCardList from "@/components/FilterableCardList";
+import FilterableCardList from "@/components/FilterableCardList/FilterableCardList";
 import { Pagination } from "@mui/material";
+import styles from "./page.module.scss"
 
 const PokemonTCGApp = () => {
   const [searchFilter, setSearchFilter] = useState<SearchFilter>({
@@ -238,14 +239,14 @@ const PokemonTCGApp = () => {
   }
 
   return (
-    <div className="main vertical-layout">
+    <div className={styles.verticalLayout}>
       <Header
         searchFilter={searchFilter}
         setSearchFilter={setSearchFilter}
         currTab={currTab}
         handleCurrTabChange={handlecurrTabChange}
       />
-      <div className="body">
+      <div className={styles.cards}>
         <CardFilters 
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
@@ -276,11 +277,11 @@ const PokemonTCGApp = () => {
             }}
           />
         </div>
-        <Footer 
-          onImportJSON = {(e) => importJSON(e)}
-          onExportJSON = {exportJSON}
-        />
       </div>
+      <Footer 
+        onImportJSON = {(e) => importJSON(e)}
+        onExportJSON = {exportJSON}
+      />
       {modalImage && (
         <div className="modal-image" onClick={() => setModalImage(null)}>
           <img

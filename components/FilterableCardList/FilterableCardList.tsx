@@ -1,5 +1,7 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../Card/Card";
+
+import styles from "./FilterableCardList.module.scss"
 
 type FilterableCardListProps = {
   currTab: string;
@@ -46,5 +48,5 @@ export default function FilterableCardList({
     );
   });
 
-  return <div className="card-list">{cards}</div>;
+  return <div className={styles.cardList}>{cards}</div>;
 }

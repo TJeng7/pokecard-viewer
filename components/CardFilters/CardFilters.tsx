@@ -1,4 +1,6 @@
-import { SET_OPTIONS } from "../consts/setData";
+import { SET_OPTIONS } from "../../consts/setData";
+
+import styles from "./CardFilters.module.scss"
 
 interface Props {
 	searchFilter: SearchFilter;
@@ -7,8 +9,8 @@ interface Props {
 
 export const CardFilters: React.FC<Props> = ({ searchFilter, setSearchFilter }) => {
 	return(
-		<div className="filter-sort">
-			<div className="filters">
+		<div className={styles.filterSort}>
+			<div className={styles.filters}>
 				<select
 					value={searchFilter.set}
 					onChange={(e) => {
@@ -19,10 +21,10 @@ export const CardFilters: React.FC<Props> = ({ searchFilter, setSearchFilter }) 
 						set: e.target.value,
 					});
 					}}
-					className="dropdown"
+					className={styles.dropdown}
 				>
 				{SET_OPTIONS.map((label) => (
-					<option key={label} value={label}>
+					<option key={label} value={label} className={styles.option}>
 							{label}
 					</option>
 				))}
