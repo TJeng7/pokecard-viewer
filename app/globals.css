@@ -256,6 +256,16 @@ h1 {
   gap: 30px;
 }
 
+.credits {
+  font-size: 12px;
+  text-align: center;
+  color: var(--light-pale);
+}
+.credits.hover {
+  text-decoration: underline;
+  color: var(--dark);
+}
+
 /* FILTER AND SORT CSS */
 .filter-sort {
   display: flex;

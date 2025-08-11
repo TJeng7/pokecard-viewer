@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, ChangeEvent } from "react";
 import {
-  base, bw, dp, ex, pop, sm, sv, swsh, xy, bp, cel25, col1, dc1, det1, ecard, fut20, g1, gym, hgss, hsp, mcd, neo, np, pgo, pl, ru1, si1, tk
+  base, bw, dp, ex, pop, sm, sv, swsh, xy, ecard, gym, hgss, neo, np, pl, other
 } from "./index.js";
 
 import FilterableCardList from "@/components/FilterableCardList";
@@ -20,25 +20,13 @@ const allCards: CardData[] = [
   ...sv,
   ...swsh,
   ...xy,
-  ...bp, 
-  ...cel25, 
-  ...col1, 
-  ...dc1, 
-  ...det1, 
   ...ecard, 
-  ...fut20, 
-  ...g1, 
   ...gym, 
   ...hgss, 
-  ...hsp, 
-  ...mcd, 
   ...neo, 
   ...np, 
-  ...pgo, 
   ...pl, 
-  ...ru1, 
-  ...si1, 
-  ...tk
+  ...other
 ];
 
 const setOptions: SetOption[] = [
@@ -51,26 +39,14 @@ const setOptions: SetOption[] = [
   { label: "Pop Series", data: pop },
   { label: "EX", data: ex },
   { label: "Base Set", data: base },
-  { label: "bp", data: bp },
-  { label: "cel25", data: cel25 },
-  { label: "col1", data: col1 },
-  { label: "dc1", data: dc1 },
-  { label: "det1", data: det1 },
-  { label: "ecard", data: ecard },
-  { label: "fut20", data: fut20 },
-  { label: "g1", data: g1 },
-  { label: "gym", data: gym },
-  { label: "hgss", data: hgss },
-  { label: "hsp", data: hsp },
-  { label: "mcd", data: mcd },
-  { label: "neo", data: neo },
-  { label: "np", data: np },
-  { label: "pgo", data: pgo },
-  { label: "pl", data: pl },
-  { label: "ru1", data: ru1 },
-  { label: "si1", data: si1 },
-  { label: "tk", data: tk },
-  { label: "All Series", data: allCards },
+  { label: "E-Card", data: ecard }, //not showing
+  { label: "Gym", data: gym }, //not showing
+  { label: "HeartGold & SoulSilver", data: hgss },
+  { label: "Neo", data: neo }, //not showing
+  { label: "NP", data: np }, //not showing
+  { label: "Platinum", data: pl },
+  { label: "Other", data: other }, //not showing
+  { label: "All Sets", data: allCards },
 ];
 
 const PokemonTCGApp = () => {
@@ -79,7 +55,7 @@ const PokemonTCGApp = () => {
     name: "",
     artist: "",
     rarity: "",
-    series: "All Series",
+    set: "All Sets",
   });
   const [sortCategory, setSortCategory] = useState<string>("Relevance");
 
@@ -211,10 +187,10 @@ const PokemonTCGApp = () => {
   function filterCards(view: string) {
     const toFilter = view === "search" ? cards : wishlistCards;
     const selectedSetData: CardData[] =
-      searchFilter.series === "All Series"
+      searchFilter.set === "All Sets"
         ? toFilter
         : toFilter.filter((card) => {
-            return card.series === searchFilter.series;
+            return card.set === searchFilter.set;
           });
     const filteredSetData: CardData[] = selectedSetData.filter((card) => {
       const nameMatch =
@@ -318,7 +294,7 @@ const PokemonTCGApp = () => {
                     name: searchTerm,
                     artist: searchFilter.artist,
                     rarity: searchFilter.rarity,
-                    series: searchFilter.series,
+                    set: searchFilter.set,
                   });
                 }
               }}
@@ -331,7 +307,7 @@ const PokemonTCGApp = () => {
                   name: searchTerm,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  series: searchFilter.series,
+                  set: searchFilter.set,
                 });
               }}
             />
@@ -358,20 +334,20 @@ const PokemonTCGApp = () => {
         <div className="filter-sort">
           <div className="filters">
             <select
-              value={searchFilter.series}
+              value={searchFilter.set}
               onChange={(e) => {
                 setSearchFilter({
                   name: searchFilter.name,
                   artist: searchFilter.artist,
                   rarity: searchFilter.rarity,
-                  series: e.target.value,
+                  set: e.target.value,
                 });
               }}
               className="dropdown"
             >
-              {setOptions.map((opt) => (
-                <option key={opt.label} value={opt.label}>
-                  {opt.label}
+              {[...new Set(setOptions.map((opt) => opt.label))].map((label) => (
+                <option key={label} value={label}>
+                  {label}
                 </option>
               ))}
             </select>
@@ -402,7 +378,7 @@ const PokemonTCGApp = () => {
               },
             }}
           />
-          <div> 
+          <div className="credits"> 
             Credit to <a href="https://www.instagram.com/potato.stirfry/">potato.stirfry</a> on Instagram for background image.
           </div>
           <input type="file" onChange={importJSON} />
