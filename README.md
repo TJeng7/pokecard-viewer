@@ -1,4 +1,4 @@
-# Note: This project utilizes calls to the following API service, and will cease to function properly upon the API's decline: https://github.com/PokemonTCG/pokemon-tcg-data
+# Note: This project utilizes images from the following service, and will cease to function properly upon the its decline: https://github.com/PokemonTCG/pokemon-tcg-data
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
