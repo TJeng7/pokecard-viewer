@@ -28,7 +28,7 @@ const allCards: CardData[] = [
   ...pl, 
   ...other
 ];
-
+/*
 const setOptions: SetOption[] = [
   { label: "Scarlet & Violet", data: sv },
   { label: "Sword & Shield", data: swsh },
@@ -39,15 +39,33 @@ const setOptions: SetOption[] = [
   { label: "Pop Series", data: pop },
   { label: "EX", data: ex },
   { label: "Base Set", data: base },
-  { label: "E-Card", data: ecard }, //not showing
-  { label: "Gym", data: gym }, //not showing
+  { label: "E-Card", data: ecard },
+  { label: "Gym", data: gym },
   { label: "HeartGold & SoulSilver", data: hgss },
-  { label: "Neo", data: neo }, //not showing
-  { label: "NP", data: np }, //not showing
+  { label: "Neo", data: neo },
+  { label: "NP", data: np },
   { label: "Platinum", data: pl },
-  { label: "Other", data: other }, //not showing
+  { label: "Other", data: other },
   { label: "All Sets", data: allCards },
-];
+];*/
+const setOptions: string[] = [
+  "Scarlet & Violet",
+  "Sword & Shield", 
+  "Sun & Moon", 
+  "X & Y", 
+  "Black & White", 
+  "Diamond & Pearl", 
+  "Pop Series", 
+  "EX", 
+  "Base Set", 
+  "E-Card", 
+  "Gym", 
+  "HeartGold & SoulSilver", 
+  "Neo",
+  "NP", 
+  "Platinum", 
+  "Other", 
+  "All Sets"];
 
 const PokemonTCGApp = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -345,9 +363,9 @@ const PokemonTCGApp = () => {
               }}
               className="dropdown"
             >
-              {[...new Set(setOptions.map((opt) => opt.label))].map((label) => (
+              {setOptions.map((label) => (
                 <option key={label} value={label}>
-                  {label}
+                    {label}
                 </option>
               ))}
             </select>
