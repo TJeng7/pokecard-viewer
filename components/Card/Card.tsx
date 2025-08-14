@@ -11,17 +11,35 @@ type CardProps = {
   removeCardFromWishlist: any;
 };
 
-function displayPrices(tcgplayerData: any) {
-  if (!tcgplayerData) {
+type APIResponse = {
+  data: {
+    tcgplayer: {
+      url: string;
+      updatedAt: string;
+      prices: {
+        [key: string]: {
+          low: number | null;
+          mid: number | null;
+          high: number | null;
+          market: number | null;
+          directLow: number | null;
+        };
+      };
+    };
+  };
+}
+
+function displayPrices(APIData: APIResponse | undefined) {
+  if (!APIData) {
     return null;
   }
 
   return (
     <div> 
-      {Object.entries(tcgplayerData.prices).map(([priceType, priceData]) => (
+      {Object.entries(APIData.data.tcgplayer.prices).map(([priceType, priceData]) => (
         <div className={styles.priceText} key={priceType}>
           <p> 
-            <a href={tcgplayerData.url} target="_blank">
+            <a href={APIData.data.tcgplayer.url} target="_blank">
             <b>{priceType}</b>
             {` - $${priceData.market || "N/A"}`}
             </a>
@@ -33,7 +51,7 @@ function displayPrices(tcgplayerData: any) {
             {priceData.high ? <p>High: ${priceData.high}</p> : <p></p>} 
             {priceData.market ? <p>Market: ${priceData.market}</p> : <p></p>} 
             {priceData.directLow ? <p>Direct Low: ${priceData.directLow}</p> : <p></p>} 
-            {<div className={styles.lastUpdatedText}>{"Last Update: " + (tcgplayerData?.updatedAt ?? "unknown")}</div>}
+            {<div className={styles.lastUpdatedText}>{"Last Update: " + (APIData.data.tcgplayer?.updatedAt ?? "unknown")}</div>}
           </div>
         </div>
       ))}
@@ -48,7 +66,7 @@ export default function Card({
   addCardToWishlist,
   removeCardFromWishlist,
 }: CardProps) {
-  const { isPending, error, data } = useQuery({
+  const { isPending, error, data } = useQuery<APIResponse>({
     queryKey: ['getCardPrices', card.id],
     queryFn: () =>
       fetch('https://api.pokemontcg.io/v2/cards/' + card.id, {
@@ -77,7 +95,7 @@ export default function Card({
         <div className={styles.cardName}>{card.name || "Unknown Name"}</div>
         <div className={styles.cardContainer}>
           <div className={styles.cardDetails}>
-            { isPending ? <div>Loading...</div> : <div>{(displayPrices(data?.data?.tcgplayer) ? displayPrices(data?.data?.tcgplayer) : "unknown prices")}</div> } 
+            { isPending ? <div>Loading...</div> : <div>{(displayPrices(data) ? displayPrices(data) : "unknown prices")}</div> } 
             {/* <div>{card.rarity || "Unknown Rarity"}</div> */}
             <div>{card.artist || "Unknown Artist"}</div>
             <div className={styles.series}>{card.series || "Unknown Series"}</div>
