@@ -25,15 +25,22 @@
 			font-size: 14px;
 			font-weight: 500;
 		}
+
+			.series {
+				white-space: nowrap; /* Prevents text from wrapping */
+				overflow: hidden;    /* Hides any overflowing text */
+				text-overflow: ellipsis; /* Optional: adds an ellipsis for hidden text */
+			}
 	}
+
 	.wishlistButton {
 		width: 35px;
 		height: 35px;
+		bottom: 10px;
+		right: 10px;
+		position: absolute;
 		border-radius: 5px;
 		padding: 5px;
-		position: absolute;
-		bottom: 15px;
-		right: 15px;
 		border: none;
 
 		&.add {
@@ -57,4 +64,39 @@
 			color: var(--dark);
 		}
 	}
+}
+
+.priceText {
+	display: flex;
+	position: relative;
+}
+.priceText .priceTip {
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	text-wrap: nowrap;
+	inset-block-end: 18px;
+	left: -12px;
+	visibility: hidden;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin: 10px;
+	position: absolute;
+	background: var(--light);
+	z-index: 9999;
+}
+.priceText:hover .priceTip {
+	visibility: visible;
+	opacity: 1;
+}
+
+.lastUpdatedText {
+	font-size: 10px;
+	color: #acacacdd;
+}
+
+.cardContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
 }

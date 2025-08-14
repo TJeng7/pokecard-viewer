@@ -11,6 +11,36 @@ type CardProps = {
   removeCardFromWishlist: any;
 };
 
+function displayPrices(tcgplayerData: any) {
+  if (!tcgplayerData) {
+    return null;
+  }
+
+  return (
+    <div> 
+      {Object.entries(tcgplayerData.prices).map(([priceType, priceData]) => (
+        <div className={styles.priceText} key={priceType}>
+          <p> 
+            <a href={tcgplayerData.url} target="_blank">
+            <b>{priceType}</b>
+            {` - $${priceData.market || "N/A"}`}
+            </a>
+          </p>
+          <div className={styles.priceTip}>
+            <h3>{priceType}</h3>
+            {priceData.low ? <p>Low: ${priceData.low}</p> : <p></p>} 
+            {priceData.mid ? <p>Mid: ${priceData.mid}</p> : <p></p>} 
+            {priceData.high ? <p>High: ${priceData.high}</p> : <p></p>} 
+            {priceData.market ? <p>Market: ${priceData.market}</p> : <p></p>} 
+            {priceData.directLow ? <p>Direct Low: ${priceData.directLow}</p> : <p></p>} 
+            {<div className={styles.lastUpdatedText}>{"Last Update: " + (tcgplayerData?.updatedAt ?? "unknown")}</div>}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Card({
   card,
   setModalImage,
@@ -45,21 +75,23 @@ export default function Card({
       />
       <div className={styles.cardText}>
         <div className={styles.cardName}>{card.name || "Unknown Name"}</div>
-        <div className={styles.cardDetails}>
-          <div>{card.rarity || "Unknown Rarity"}</div>
-          <div>{card.artist || "Unknown Artist"}</div>
-          <div>{card.series || "Unknown Series"}</div>
-          {/* TODO: get all prices rather than just normal */}
-          { isPending ? <div>Loading...</div> : <div>{"Market price: " + (data?.data?.tcgplayer?.prices?.normal?.market ? new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(data?.data?.tcgplayer?.prices?.normal?.market): "unknown")}</div> } 
-          { isPending ? <div>Loading...</div> : <div>{"Last Update: " + (data?.data?.tcgplayer?.updatedAt ?? "unknown")}</div> }
+        <div className={styles.cardContainer}>
+          <div className={styles.cardDetails}>
+            { isPending ? <div>Loading...</div> : <div>{(displayPrices(data?.data?.tcgplayer) ? displayPrices(data?.data?.tcgplayer) : "unknown prices")}</div> } 
+            {/* <div>{card.rarity || "Unknown Rarity"}</div> */}
+            <div>{card.artist || "Unknown Artist"}</div>
+            <div className={styles.series}>{card.series || "Unknown Series"}</div>
+          </div>
+          <button
+            className={`${styles.wishlistButton} ${isAdded ? styles.remove : styles.add}`}
+            onClick={isAdded ? () => removeCardFromWishlist(card) : () => addCardToWishlist(card)}
+          >
+            {isAdded ? <IoMdTrash className={styles.wishlistIcon}/> : <IoIosAdd className={styles.wishlistIcon}/>}
+          </button>
         </div>
+        
       </div>
-      <button
-        className={`${styles.wishlistButton} ${isAdded ? styles.remove : styles.add}`}
-        onClick={isAdded ? () => removeCardFromWishlist(card) : () => addCardToWishlist(card)}
-      >
-        {isAdded ? <IoMdTrash className={styles.wishlistIcon}/> : <IoIosAdd className={styles.wishlistIcon}/>}
-      </button>
+
     </div>
   );
 }
