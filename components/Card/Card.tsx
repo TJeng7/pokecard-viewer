@@ -11,6 +11,31 @@ type CardProps = {
   removeCardFromWishlist: any;
 };
 
+function displayPrices(pricesData: any) {
+  if (!pricesData) {
+    return null;
+  }
+
+  return (
+    <div> 
+      {Object.entries(pricesData).map(([priceType, priceData]) => (
+        <div className="priceText" key={priceType}>
+          <h3>{priceType}</h3>
+          <p>Market: ${priceData.market || 'N/A'}</p>
+          <div className="priceTip">
+            <h3>{priceType}</h3>
+            {priceData.low ? <p>Low: ${priceData.low}</p> : <p></p>} 
+            {priceData.mid ? <p>Mid: ${priceData.mid}</p> : <p></p>} 
+            {priceData.high ? <p>High: ${priceData.high}</p> : <p></p>} 
+            {priceData.market ? <p>Market: ${priceData.market}</p> : <p></p>} 
+            {priceData.directLow ? <p>Direct Low: ${priceData.directLow}</p> : <p></p>} 
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Card({
   card,
   setModalImage,
@@ -50,7 +75,7 @@ export default function Card({
           <div>{card.artist || "Unknown Artist"}</div>
           <div>{card.series || "Unknown Series"}</div>
           {/* TODO: get all prices rather than just normal */}
-          { isPending ? <div>Loading...</div> : <div>{"Market price: " + (data?.data?.tcgplayer?.prices?.normal?.market ? new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(data?.data?.tcgplayer?.prices?.normal?.market): "unknown")}</div> } 
+          { isPending ? <div>Loading...</div> : <div>{(displayPrices(data?.data?.tcgplayer?.prices) ? displayPrices(data?.data?.tcgplayer?.prices) : "unknown prices")}</div> } 
           { isPending ? <div>Loading...</div> : <div>{"Last Update: " + (data?.data?.tcgplayer?.updatedAt ?? "unknown")}</div> }
         </div>
       </div>
